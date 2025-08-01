@@ -1,0 +1,47 @@
+.header-wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  margin-top: 20px;
+}
+
+
+ .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    > svg {
+      width: 35px;
+      height: 35px;
+    }
+    > a {
+        font-family: "Bricolage";
+        color: white;
+        text-decoration: none;
+    }
+  }
+
+  .language-switch {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >svg:first-child {
+                position: absolute;
+                right: 124px;
+            }
+        }
+        >h3:first-child {
+            color: rgba(248, 122, 85, 1);
+        }
+        > h3 {
+            font-family: "Bricolage";
+            font-size: 13px;
+            color: white;
+
+        }
+    }
