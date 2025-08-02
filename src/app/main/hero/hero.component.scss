@@ -1,6 +1,5 @@
-
-div {
-    width: 100%;
+.hero-background {
+  width: 100%;
 
   > img {
     position: absolute;
@@ -8,3 +7,161 @@ div {
     height: 100vh;
   }
 }
+
+.t-p-section {
+  position: absolute;
+  width: 100%;
+
+  > div:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    > div:last-of-type {
+      display: flex;
+      justify-content: end;
+      width: 910px;
+      > button {
+        width: 160px;
+        height: 45px;
+        border-radius: 50px;
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid white;
+        box-shadow: 2px 4px #f8f9fa;
+        color: white;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.main-wrapper {  
+    display: flex;
+    flex-direction: column;
+
+      > button {
+        position: absolute;
+        top: 30%;
+        width: 160px;
+        height: 45px;
+        border-radius: 50px;
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid white;
+        color: white;
+        font-size: 20px;
+      }
+}
+
+.frontend-wrapper {
+    display: flex;
+    align-items: end;
+    gap: 60px;
+    
+  > div:first-of-type {
+    > span {
+      font-size: 148px;
+      color: white;
+      font-weight: 700;
+    }
+  }
+  > div:last-of-type {
+    position: relative;  
+
+    > img {
+      display: block;
+      max-width: 100%;   
+      height: auto;
+    }
+
+    > span {
+      position: absolute; 
+      top: 80%;          
+      left: 30%;          
+      transform: translate(-50%, -50%);
+      color: rgb(0, 0, 0);       
+      font-weight: 700;
+      font-size: 24px;    
+      transform: rotate(8deg);
+      font-family: "Kalam";
+    }
+  }
+}
+
+.dev-wrapper {
+  > div {
+    padding-left: 150px;
+    > span {
+      font-size: 148px;
+      color: white;
+      font-weight: 700;
+    }
+  }
+}
+
+.socials-section {
+  position: absolute;
+  bottom: 135px;
+  left: 80px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    > button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      background-color: rgba(255, 255, 255, 0);
+      border-radius: 50px;
+      border: 2px solid white;
+
+      transition: background 4s ease;
+      &:hover {
+        
+      }
+
+      > img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@keyframes socials {
+    from {
+        min-height: 0;
+    }
+    to {
+        min-height: 100%;
+    }
+}
+
+/* .photo-section {
+position: absolute;
+width:87%;
+
+  > div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 75vh;
+    > img {
+     
+    }
+
+    > span {
+      
+
+      font-family: "Kalam";
+      font-weight: 700;
+      font-size: 1.5rem;
+      white-space: nowrap;
+      transform: rotate(8deg);
+      color: #000000;
+      z-index: 20;
+    }
+  }
+} */
