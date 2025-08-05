@@ -9,7 +9,7 @@
 }
 
 .t-p-section {
-  position: absolute;
+position: relative;
   width: 100%;
 
   > div:first-of-type {
@@ -36,28 +36,28 @@
   }
 }
 
-.main-wrapper {  
-    display: flex;
-    flex-direction: column;
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
 
-      > button {
-        position: absolute;
-        top: 30%;
-        width: 160px;
-        height: 45px;
-        border-radius: 50px;
-        background-color: rgba(0, 0, 0, 0);
-        border: 1px solid white;
-        color: white;
-        font-size: 20px;
-      }
+  > button {
+    position: absolute;
+    top: 30%;
+    width: 160px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    color: white;
+    font-size: 20px;
+  }
 }
 
 .frontend-wrapper {
-    display: flex;
-    align-items: end;
-    gap: 60px;
-    
+  display: flex;
+  align-items: end;
+  gap: 60px;
+
   > div:first-of-type {
     > span {
       font-size: 148px;
@@ -66,22 +66,22 @@
     }
   }
   > div:last-of-type {
-    position: relative;  
+    position: relative;
 
     > img {
       display: block;
-      max-width: 100%;   
+      max-width: 100%;
       height: auto;
     }
 
     > span {
-      position: absolute; 
-      top: 80%;          
-      left: 30%;          
+      position: absolute;
+      top: 80%;
+      left: 30%;
       transform: translate(-50%, -50%);
-      color: rgb(0, 0, 0);       
+      color: rgb(0, 0, 0);
       font-weight: 700;
-      font-size: 24px;    
+      font-size: 24px;
       transform: rotate(8deg);
       font-family: "Kalam";
     }
@@ -116,10 +116,10 @@
       background-color: rgba(255, 255, 255, 0);
       border-radius: 50px;
       border: 2px solid white;
-
-      transition: background 4s ease;
+      box-shadow: inset 0 0 0 0 #3355ff;
+      transition: ease-in 0.2s;
       &:hover {
-        
+        box-shadow:inset 0 -38px 0 0 #3355ff;
       }
 
       > img {
@@ -130,14 +130,7 @@
   }
 }
 
-@keyframes socials {
-    from {
-        min-height: 0;
-    }
-    to {
-        min-height: 100%;
-    }
-}
+
 
 /* .photo-section {
 position: absolute;
