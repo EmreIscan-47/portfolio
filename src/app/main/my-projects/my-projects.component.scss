@@ -1,0 +1,142 @@
+.section-projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 3dvb;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  gap: 30px 200px;
+  > div {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+.projects-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 40px;
+  > h3 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  > div {
+    > h1 {
+      font-weight: 700;
+      font-size: 64px;
+      margin-block-start: 1rem;
+      margin-block-end: 0;
+    }
+    > img {
+      width: 250px;
+    }
+  }
+
+  > span {
+    margin-block-start: 2rem;
+  }
+}
+
+.join-content {
+  > div:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 560px;
+    height: 400px;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+
+    > img:first-child {
+      width: 500px;
+      height: 300px;
+      transition: transform 0.3s ease;
+      object-fit: cover;
+      animation: updown 2s linear infinite alternate;
+      transform-origin: right top;
+    }
+    > img:last-child {
+      position: absolute;
+      top: 220px;
+      left: 20px;
+      width: 140px !important;
+      height: 140px;
+    }
+
+    &:hover > img:first-child {
+     transform: scale(1.15);
+    
+       animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes updown {
+  to {
+    transform: translateY(-25px);
+  }
+}
+
+.epl-content {
+  > div {
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+
+    > div {
+      position: absolute;
+      width: 100%;
+      height: 40%;
+      border-radius: 0 0 0 50px;
+      top: 230px;
+    }
+    > img {
+      width: 100%;
+      height: 355.59px;
+      border-radius: 50px;
+      object-fit: cover;
+      transform-origin: right top;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    &:hover > img {
+      transform: scale(1.05);
+    }
+    &:hover > div {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    }
+  }
+}
+.other-content {
+  > div {
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    > div {
+      position: absolute;
+      width: 100%;
+      height: 40%;
+      border-radius: 0 0 0 50px;
+      top: 230px;
+    }
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transform-origin: right top;
+      transition: transform 0.3s ease;
+      &:hover {
+        box-shadow: inset 0 -40px 0 0 black !important;
+      }
+    }
+    &:hover > img {
+      transform: scale(1.05);
+    }
+    &:hover > div {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      
+    }
+  }
+}

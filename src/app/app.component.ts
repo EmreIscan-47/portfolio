@@ -5,11 +5,13 @@ import { HeroComponent } from './main/hero/hero.component';
 import { MyProjectsComponent } from './main/my-projects/my-projects.component';
 import { AboutMeComponent } from './main/about-me/about-me.component';
 import { SkillsComponent } from './main/skills/skills.component';
+import { TestimonialsComponent } from './main/testimonials/testimonials.component';
+import { ContactInfoComponent } from './main/contact-info/contact-info.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeroComponent, MyProjectsComponent, AboutMeComponent, SkillsComponent],
+  imports: [CommonModule, RouterOutlet, HeroComponent, MyProjectsComponent, AboutMeComponent, SkillsComponent, TestimonialsComponent, ContactInfoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
