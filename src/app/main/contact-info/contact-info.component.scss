@@ -1,6 +1,5 @@
 .contact-background {
   width: 100%;
-
   > img {
     position: absolute;
     width: 100%;
@@ -8,24 +7,133 @@
   }
 }
 
-
 .section-contacts {
-    position: relative;
-    display: flex;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 
-    width: 100%;
-    height: 100vh;
-   
-    >div:first-of-type {
-         margin-top: 100px;
-      >div {
-        >img {
-            width: 55px;
-        }
+  width: 100%;
+  height: 100vh;
+
+  > div:first-of-type {
+    margin-top: 100px;
+    width: 600px;
+    > h2 {
+      font-weight: 500;
+      font-size: 20px;
+      color: white;
+      margin-block-start: 3rem;
+      margin-block-end: 0;
+    }
+
+    > h1 {
+      margin-block-start: 0;
+      font-weight: 700;
+      font-size: 64px;
+      color: white;
+    }
+
+    > span {
+      font-weight: 400;
+      font-size: 18px;
+      color: white;
+    }
+    > div {
+      display: flex;
+      width: 600px;
+      justify-content: end;
+      > img {
+        margin-top: 40px;
+        width: 280px;
       }
     }
-    >div:last-child {
-        width: 800px;
+  }
+  > div:nth-child(2) {
+    width: 500px;
+  }
+
+  > div:nth-child(3) {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 40;
+  }
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin-top: 250px;
+  > div:first-of-type {
+    margin-bottom: 30px;
+    > div {
+      border-top: 0.01em solid #3355ff00;
+      border-bottom: 0.01em solid #f7c518;
+      > h2:first-child {
+        margin-left: 20px;
+        font-weight: 500;
+        font-size: 24px;
+        color: white;
+     
+      }
+
+      > h2:last-child {
+        margin-left: 20px;
+        font-weight: 300;
+        font-size: 18px;
+        color: white;
+      }
+
+      &:hover {
+        border-top: 0.1em solid #3355ff;
+        border-bottom: 0.1em solid #3355ff;
+      }
+
+      &:hover > h2:first-child {
+        color: #de6d4c;
+      }
     }
+  }
+
+  > div:nth-child(3) {
+    display: flex;
+    justify-content: end;
+    width: 500px;
+    > button {
+      width: 150px;
+      height: 40px;
+      border-radius: 50px;
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid rgba(255, 255, 255, 0.408);
+      box-shadow: 2px 4px rgba(255, 255, 255, 0.408);
+      color: rgba(255, 255, 255, 0.408);
+      font-size: 20px;
+    }
+  }
+}
+
+.checkbox-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  > mat-checkbox {
+    padding: 2px;
+    color: #3355ff;
+    &:hover {
+      background-color: #3355ff6a;
+    }
+  }
+  > h2 {
+    width: 500px;
+    font-weight: 300;
+    font-size: 15px;
+    color: white;
+    > a {
+      text-decoration: none;
+      color: #3355ff;
+    }
+  }
 }
