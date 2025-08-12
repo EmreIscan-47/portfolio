@@ -5,13 +5,26 @@
   margin-top: 20px;
 }
 
+
+.header-mobile-content {
+  display: none;
+  @media (max-width: 850px) {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+  }
+}
+
 .header-content {
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 70px;
-
-  > svg {
+  
+  @media (max-width: 850px) {
+    display: none;
+  }
+  > img {
     width: 45px;
     height: 45px;
   }
@@ -25,7 +38,7 @@
 
   > a {
     font-family: "Bricolage";
-    font-size: 20px;
+    font-size: 16px;
     color: white;
     text-decoration: none;
   }
@@ -52,7 +65,7 @@
 
   > a {
     font-family: "Bricolage";
-    font-size: 20px;
+    font-size:  16px;
     color: white;
     text-decoration: none;
   }
@@ -80,7 +93,7 @@
 
   > a {
     font-family: "Bricolage";
-    font-size: 20px;
+    font-size:  16px;
     color: white;
     text-decoration: none;
   }
@@ -106,7 +119,7 @@
 
   > a {
     font-family: "Bricolage";
-    font-size: 20px;
+    font-size:  16px;
     color: white;
     text-decoration: none;
   }
@@ -148,7 +161,7 @@
   }
   > h3 {
     font-family: "Bricolage";
-    font-size: 16px;
+    font-size: 12px;
     color: white;
   }
 }
