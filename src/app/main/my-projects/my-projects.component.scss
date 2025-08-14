@@ -6,9 +6,13 @@
   margin-top: 200px;
   margin-bottom: 50px;
   gap: 30px 200px;
+
   > div {
     width: 500px;
     height: 500px;
+    @media (max-width: 1275px) {
+      height: auto;
+    }
   }
 }
 
@@ -26,10 +30,11 @@
       font-weight: 700;
       font-size: 64px;
       margin-block-start: 1rem;
-      margin-block-end: 0;
+      margin-block-end: 1.5rem;
     }
     > img {
       width: 250px;
+      height: 20px;
     }
   }
 
@@ -39,6 +44,9 @@
 }
 
 .join-content {
+  > h3 {
+    font-weight: 600;
+  }
   > div:first-of-type {
     display: flex;
     justify-content: center;
@@ -48,14 +56,22 @@
     position: relative;
     border-radius: 50px;
     overflow: hidden;
+    @media (max-width: 700px) {
+      width: 100%;
+      height: 250px;
+    }
 
     > img:first-child {
       width: 500px;
       height: 300px;
       transition: transform 0.3s ease;
       object-fit: cover;
-      animation: updown 2s linear infinite alternate;
+      animation: updown 1.5s linear infinite alternate;
       transform-origin: right top;
+      @media (max-width: 700px) {
+        width: 100%;
+        height: auto;
+      }
     }
     > img:last-child {
       position: absolute;
@@ -63,12 +79,24 @@
       left: 20px;
       width: 140px !important;
       height: 140px;
+      @media (max-width: 700px) {
+        top: 55%;
+        left: 10%;
+        width: 100px !important;
+        height: 100px;
+      }
+      @media (max-width: 500px) {
+        top: 65%;
+        left: 10%;
+        width: 70px !important;
+        height: 70px;
+      }
     }
 
     &:hover > img:first-child {
-     transform: scale(1.15);
-    
-       animation-play-state: paused;
+      transform: scale(1.15);
+
+      animation-play-state: paused;
     }
   }
 }
@@ -80,17 +108,30 @@
 }
 
 .epl-content {
-  > div {
+  > h3 {
+    font-weight: 600;
+  }
+  > span {
+  }
+  > div:first-of-type {
     position: relative;
     border-radius: 50px;
     overflow: hidden;
-
+    @media (max-width: 700px) {
+      border-radius: 30px;
+      height: auto;
+    }
     > div {
       position: absolute;
       width: 100%;
       height: 40%;
       border-radius: 0 0 0 50px;
       top: 230px;
+      @media (max-width: 700px) {
+        border-radius: 0 0 0 30px;
+        top: 70px;
+        height: 100%;
+      }
     }
     > img {
       width: 100%;
@@ -99,6 +140,10 @@
       object-fit: cover;
       transform-origin: right top;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      @media (max-width: 700px) {
+        border-radius: 30px;
+        height: auto;
+      }
     }
 
     &:hover > img {
@@ -110,16 +155,45 @@
   }
 }
 .other-content {
-  > div {
+  @media (max-width: 1275px) {
+    margin-bottom: 100px;
+  }
+  > span {
+    margin-block-end: 2rem;
+  }
+  > h3 {
+    font-weight: 600;
+  }
+  > div:first-of-type {
     position: relative;
     border-radius: 50px;
     overflow: hidden;
+    @media (max-width: 700px) {
+      border-radius: 30px;
+      height: auto;
+    }
     > div {
       position: absolute;
       width: 100%;
       height: 40%;
       border-radius: 0 0 0 50px;
       top: 230px;
+
+      @media (max-width: 500px) {
+        top: 180px;
+
+        z-index: 3;
+      }
+      @media (max-width: 400px) {
+        top: 155px;
+
+        z-index: 3;
+      }
+      @media (max-width: 350px) {
+        top: 135px;
+
+        z-index: 3;
+      }
     }
     > img {
       width: 100%;
@@ -127,8 +201,11 @@
       object-fit: contain;
       transform-origin: right top;
       transition: transform 0.3s ease;
+      @media (max-width: 700px) {
+        height: auto;
+      }
       &:hover {
-        box-shadow: inset 0 -40px 0 0 black !important;
+        box-shadow: inset 0 -60px 0 0 black !important;
       }
     }
     &:hover > img {
@@ -136,7 +213,24 @@
     }
     &:hover > div {
       background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-      
+    }
+  }
+}
+
+.project-detail-button {
+  display: none;
+  @media (max-width: 1275px) {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    > button {
+      width: 120px;
+      height: 35px;
+      border-radius: 50px;
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid rgb(0, 0, 0);
+      box-shadow: 2px 4px #000000;
+      font-size: 14px;
     }
   }
 }
