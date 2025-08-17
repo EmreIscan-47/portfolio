@@ -4,15 +4,21 @@
   > img {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 920px;
     object-fit: cover;
+    @media (max-width: 650px) {
+      height: 820px;
+    }
   }
 }
 
 .t-p-section {
   position: relative;
   width: 100%;
-
+  height: 820px;
+  @media (max-width: 1025px) {
+ height: 920px;
+  }
   > div:first-of-type {
     display: flex;
     justify-content: center;
@@ -80,7 +86,7 @@
     }
     @media (max-width: 850px) {
       position: relative;
-        top: 20%;
+      top: 20%;
     }
     @media (max-width: 450px) {
       width: 120px;
@@ -152,8 +158,8 @@
     padding-left: 150px;
     @media (max-width: 850px) {
       padding-left: 0;
-       margin-top: 40px;
-       margin-bottom: 0px;
+      margin-top: 40px;
+      margin-bottom: 0px;
     }
     > span {
       font-size: 148px;
