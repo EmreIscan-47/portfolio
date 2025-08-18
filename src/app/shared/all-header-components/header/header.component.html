@@ -7,10 +7,7 @@
       <img src="./../../../../assets/img/header/logo-no-hover.png" alt="" />
       }
     </div>
-    <div
-      (click)="dropDownHover = true"
-      
-    >
+    <div (click)="dropDownHover = true; toggleDropdown()" clickable>
       @if (dropDownHover) {
       <img src="./../../../../assets/img/header/hover_dropdown.png" alt="" />
       } @else {
@@ -72,6 +69,88 @@
         </svg>
       </div>
       <h3>DE</h3>
+    </div>
+  </div>
+</section>
+
+<section >
+  <div class="overlay-menu" [ngClass]="{
+    'default-layer ': styleStatus === 0,
+    'overlay-visible': styleStatus === 1,
+    'overlay-hidden': styleStatus === 2
+  }" >
+
+  </div>
+  <div  class="dropdown-menu"
+  [ngClass]="{
+    defaultDropdown : styleStatus === 0,
+    dropDownActivated: styleStatus === 1,
+    dropDownDeactivated: styleStatus === 2
+  }"> 
+    <div class="header-mobile">
+      <div class="about-me-a">
+        <a href="">About me</a>
+        <img src="./../../../../assets/img/1.png" alt="" />
+      </div>
+      <div class="skills-a">
+        <a href="">Skills</a>
+        <img src="./../../../../assets/img/2.png" alt="" />
+      </div>
+      <div class="projects-a">
+        <a href="">Projects</a>
+        <img src="./../../../../assets/img/3.png" alt="" />
+      </div>
+      <div class="contact-a">
+        <a href="">Contact</a>
+        <img src="./../../../../assets/img/4.png" alt="" />
+      </div>
+
+      <div class="language-switch">
+        <h3>EN</h3>
+        <div>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 0.5C12.1421 0.5 15.5 3.85786 15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5Z"
+              fill="#3355FF"
+              stroke="#F8F9FA"
+            />
+          </svg>
+          <svg
+            width="32"
+            height="8"
+            viewBox="0 0 32 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 0.5H28C29.933 0.5 31.5 2.067 31.5 4C31.5 5.933 29.933 7.5 28 7.5H4C2.067 7.5 0.5 5.933 0.5 4C0.5 2.067 2.067 0.5 4 0.5Z"
+              fill="#F87A55"
+              stroke="#F8F9FA"
+            />
+          </svg>
+        </div>
+        <h3>DE</h3>
+      </div>
+
+      <section class="socials-section">
+        <div>
+          <button>
+            <img src="./../../../assets/img/linked-In.png" alt="" />
+          </button>
+          <button>
+            <img src="./../../../assets/img/github.png" alt="" />
+          </button>
+          <button>
+            <img src="./../../../assets/img/mail.png" alt="" />
+          </button>
+        </div>
+      </section>
     </div>
   </div>
 </section>

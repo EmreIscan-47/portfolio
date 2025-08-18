@@ -35,11 +35,31 @@
     > img {
       width: 250px;
       height: 20px;
+      animation: line 3.5s linear infinite;
+      transition: clip-path 0.5s ease;
     }
   }
 
   > span {
     margin-block-start: 2rem;
+  }
+}
+
+@keyframes line {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  5% {
+    clip-path: inset(0 0 0 0);
+  }
+  70% {
+    clip-path: inset(0 0 0 0);
+  }
+  80% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 100% 0 0);
   }
 }
 
@@ -100,6 +120,8 @@
     }
   }
 }
+
+
 
 @keyframes updown {
   to {

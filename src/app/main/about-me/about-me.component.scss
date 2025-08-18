@@ -21,7 +21,6 @@
     margin-left: 0;
   }
 
-
   @media (max-width: 650px) {
     margin-left: 0px;
     align-items: start;
@@ -94,6 +93,8 @@
         }
 
         > img {
+          animation: line 3.5s linear infinite;
+          transition: clip-path 0.5s ease;
           @media (max-width: 450px) {
             width: 250px;
           }
@@ -121,6 +122,24 @@
         }
       }
     }
+  }
+}
+
+@keyframes line {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  5% {
+    clip-path: inset(0 0 0 0);
+  }
+  70% {
+    clip-path: inset(0 0 0 0);
+  }
+  80% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 100% 0 0);
   }
 }
 

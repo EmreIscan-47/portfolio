@@ -7,7 +7,7 @@
     width: 100%;
     height: 780px;
     @media (max-width: 1250px) {
-       height: 880px;
+      height: 880px;
     }
     @media (max-width: 800px) {
       object-fit: cover;
@@ -76,40 +76,66 @@
   }
 
   > div:last-child {
+    overflow: hidden;
     position: relative;
     display: flex;
     justify-content: end;
-    height: 130px;
-    @media (max-width: 1250px) {
-      height: 10px;
-      width: 150px;
-    }
+    align-items: start;
+    width: 270px;
+    height: 87px;
+   @media (max-width: 1250px) {
+    height: 57px;
+  }
     > h1 {
       position: relative;
+      margin: 30px 10px 20px 20px;
+      
       font-size: 64px;
       font-weight: 800;
       color: white;
-      width: 250px;
+
       z-index: 3;
-      @media (max-width: 1250px) {
-        width: 150px;
+       @media (max-width: 1250px) {
+            margin: 12px 10px 20px 20px;
         font-size: 42px;
       }
     }
 
     > img {
       position: absolute;
-      width: 261px;
-      height: 80px;
-      top: -26px;
-      left: -15px;
-      transform: scaleX(-1);
+      top: 4px;
+      left: 10px;
+      width: 260px;
       object-fit: contain;
-      @media (max-width: 1250px) {
-        width: 170px;
-        top: -23px;
+      animation: skills-img 3.5s ease-in;
+      transform-origin: right bottom;
+      animation-iteration-count: infinite;
+       @media (max-width: 1250px) {
+        width: 180px;
+        top: 0px;
+        left: 90px;
       }
     }
+
+    
+  }
+}
+
+@keyframes skills-img {
+  0% {
+    transform: rotate(-110deg);
+  }
+  5% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(-110deg);
+  }
+  100% {
+    transform: rotate(-110deg);
   }
 }
 
