@@ -4,10 +4,11 @@
   > img {
     position: absolute;
     width: 100%;
-    height: 920px;
+    height: 100vh;
+    min-height: 820px;
     object-fit: cover;
     @media (max-width: 650px) {
-      height: 820px;
+      min-height: 820px;
     }
   }
 }
@@ -15,9 +16,9 @@
 .t-p-section {
   position: relative;
   width: 100%;
-  height: 820px;
+height: 100vh;
   @media (max-width: 1025px) {
- height: 920px;
+ min-height: 920px;
   }
   > div:first-of-type {
     display: flex;
