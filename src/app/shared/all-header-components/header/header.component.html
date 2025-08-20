@@ -7,8 +7,8 @@
       <img src="./../../../../assets/img/header/logo-no-hover.png" alt="" />
       }
     </div>
-    <div (click)="dropDownHover = true; toggleDropdown()" clickable>
-      @if (dropDownHover) {
+    <div (click)="openDropdown()" clickable>
+      @if (dropDownOpen) {
       <img src="./../../../../assets/img/header/hover_dropdown.png" alt="" />
       } @else {
       <img src="./../../../../assets/img/header/default_dropdown.png" alt="" />
@@ -23,14 +23,14 @@
       <img src="./../../../../assets/img/header/logo-no-hover.png" alt="" />
       }
     </div>
-    <div class="about-me-a">
+    <div class="about-me-a" [ngClass]="{'about-me-a-showcase': otherLayout }">
       <a href="">About me</a>
       <img src="./../../../../assets/img/1.png" alt="" />
     </div>
-    <div class="skills-a">
+    <div class="skills-a" [ngClass]="{'skills-a-showcase': otherLayout }">
       <a href="">Skills</a> <img src="./../../../../assets/img/2.png" alt="" />
     </div>
-    <div class="projects-a">
+    <div class="projects-a" >
       <a href="">Projects</a>
       <img src="./../../../../assets/img/3.png" alt="" />
     </div>
@@ -78,15 +78,34 @@
     'default-layer ': styleStatus === 0,
     'overlay-visible': styleStatus === 1,
     'overlay-hidden': styleStatus === 2
-  }" >
+  }" 
+  >
 
   </div>
+
   <div  class="dropdown-menu"
   [ngClass]="{
     defaultDropdown : styleStatus === 0,
     dropDownActivated: styleStatus === 1,
     dropDownDeactivated: styleStatus === 2
   }"> 
+  <div>
+     <div (mouseenter)="yellowlogo = true" (mouseleave)="yellowlogo = false">
+      @if (yellowlogo) {
+      <img src="./../../../../assets/img/header/logo_hover.png" alt="" />
+      } @else {
+      <img src="./../../../../assets/img/header/logo-no-hover.png" alt="" />
+      }
+    </div>
+
+    <div (click)="closeDropdown()" clickable>
+      @if (closeButtonActive) {
+      <img src="./../../../../assets/img/header/close_hover.png" alt="" />
+      } @else {
+      <img src="./../../../../assets/img/header/close_dropdown.png" alt="" />
+      }
+    </div>
+  </div>
     <div class="header-mobile">
       <div class="about-me-a">
         <a href="">About me</a>

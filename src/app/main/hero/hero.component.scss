@@ -16,9 +16,9 @@
 .t-p-section {
   position: relative;
   width: 100%;
-height: 100vh;
+  height: 100vh;
   @media (max-width: 1025px) {
- min-height: 920px;
+    min-height: 920px;
   }
   > div:first-of-type {
     display: flex;
@@ -54,6 +54,14 @@ height: 100vh;
         box-shadow: 2px 4px #f8f9fa;
         color: white;
         font-size: 20px;
+        transition: all 0.1s;
+        transform-origin: right bottom;
+        &:hover {
+          box-shadow: none;
+
+          background-color: rgb(248, 122, 85);
+          transform: translate(4px, 4px);
+        }
         @media (max-width: 450px) {
           width: 120px;
           height: 40px;
@@ -81,6 +89,9 @@ height: 100vh;
     border: 1px solid white;
     color: white;
     font-size: 20px;
+    &:hover {
+      cursor: default;
+    }
     @media (max-width: 1050px) {
       width: 140px;
       height: 40px;
@@ -104,10 +115,17 @@ height: 100vh;
     margin-top: 80px;
   }
   > div:first-of-type {
+    cursor: pointer;
+    box-sizing: border-box;
     > span {
+      position: relative;
+      display: inline-block;
+      /*  letter-spacing: 0.05em; */
       font-size: 148px;
       color: white;
       font-weight: 700;
+      transition: transform 0.1s;
+      z-index: 0;
       @media (max-width: 1050px) {
         font-size: 102px;
       }
@@ -117,6 +135,20 @@ height: 100vh;
       @media (max-width: 450px) {
         font-size: 52px;
       }
+    }
+    > span.firstLetter {
+      &:hover {
+        position: relative;
+        padding: 0 6px;
+        z-index: 1;
+        text-transform: lowercase !important;
+      }
+    }
+    > span.active {
+      text-transform: uppercase;
+      color: rgb(247, 197, 24);
+
+      z-index: 1;
     }
   }
   > div:last-of-type {
@@ -154,6 +186,7 @@ height: 100vh;
 
 .dev-wrapper {
   > div {
+    cursor: pointer;
     margin-top: 80px;
     margin-bottom: 70px;
     padding-left: 150px;
@@ -166,6 +199,10 @@ height: 100vh;
       font-size: 148px;
       color: white;
       font-weight: 700;
+      &:hover {
+        text-transform: lowercase;
+        color: rgb(247, 197, 24);
+      }
       @media (max-width: 1050px) {
         font-size: 102px;
       }

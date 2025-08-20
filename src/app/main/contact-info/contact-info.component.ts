@@ -10,5 +10,8 @@ import { FooterComponent } from '../../shared/all-footer-components/footer/foote
   styleUrl: './contact-info.component.scss'
 })
 export class ContactInfoComponent {
-
+isButtonDisabled = true;
+ toggleButton() {
+    this.isButtonDisabled = !this.isButtonDisabled;
+  }
 }

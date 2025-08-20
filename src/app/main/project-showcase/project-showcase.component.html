@@ -1,0 +1,65 @@
+<app-header [otherLayout]="showOtherLayout"></app-header>
+
+<section class="project-showcase-background">
+  <!--     <img src="./../../../assets/img/project-showcase/showcase-background.png" alt=""> -->
+</section>
+
+<section class="section-project-showcase">
+  <div class="top-showcase-wrapper">
+    <div class="left-showcase-wrapper">
+      <div>
+        <h1>El-Polo Loco</h1>
+        <img
+          src="./../../../assets/img/project-showcase/blue_line.png"
+          alt=""
+        />
+      </div>
+      <div>
+        <div>
+          <h2>Description</h2>
+          <span
+            >Jump, run and throw game based on object-oriented approach. Help
+            Pepe to find coins and tabasco salsa to fight against the crazy
+            hen.</span
+          >
+        </div>
+
+        <div>
+          <h2>Implementation Details</h2>
+          <span
+            >Short text that describes your role or the workflow for this
+            specific project. Let a recruiter know more about your knowledge and
+            ability to work independently or collaboratively in a structured
+            way.</span
+          >
+        </div>
+        <div>
+          <h3>
+            Duration:
+            <h3>3 weeks</h3>
+          </h3>
+        </div>
+        <div class="skill-set">
+          <div *ngFor="let item of elPoloLocoSkills; let i = index">
+            <img src="{{ elPoloLocoSkills[i].logo }}" alt="" />
+            <h3>{{ elPoloLocoSkills[i].name }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-showcase-wrapper">
+      <div>
+        <div>
+            <img src="./../../../assets/img/project-showcase/el-pollo-loco.jpg" alt="">
+            <img src="" alt="">
+        </div>
+        <div>
+          <button><a href="">GitHub</a></button>
+          <button><a href="">Live Test</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div></div>
+</section>

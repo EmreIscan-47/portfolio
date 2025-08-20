@@ -3,28 +3,38 @@ html,
 body {
   padding: 0;
   margin: 0;
-
+  scroll-behavior: smooth;
 }
 
 body.dropdown-active {
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 * {
-    font-family: "Bricolage";
+  font-family: "Bricolage";
 }
 
 @font-face {
-    font-family: "Bricolage";
-    src: url("./assets/fonts/BricolageGrotesque-VariableFont.ttf");
+  font-family: "Bricolage";
+  src: url("./assets/fonts/BricolageGrotesque-VariableFont.ttf");
 }
 
 @font-face {
-    font-family: "Kalam";
-    src: url("./assets/fonts/Kalam-Regular.ttf");
+  font-family: "Kalam";
+  src: url("./assets/fonts/Kalam-Regular.ttf");
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
 
-
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

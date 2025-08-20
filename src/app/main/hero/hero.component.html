@@ -6,18 +6,27 @@
 <section class="t-p-section">
   <div>
     <div class="main-wrapper">
-      <button >Hello world</button>
+      <button>Hello world</button>
 
       <div class="frontend-wrapper">
         <div>
-          <span>F</span>
+          <span
+            *ngFor="let item of firstWrapper; let isFirst = first; let i = index"
+            (mouseenter)="onMouseEnter(i)"
+            (mouseleave)="onMouseLeave()"
+            [class.firstLetter]="isFirst"
+            [class.active] = "hoveredIndex === i"
+            >{{ item }}</span
+          >
+
+          <!--   <span>F</span>
           <span>r</span>
           <span>o</span>
           <span>n</span>
           <span>t</span>
           <span>e</span>
           <span>n</span>
-          <span>d</span>
+          <span>d</span> -->
         </div>
         <div class="polaroid">
           <img
@@ -29,15 +38,7 @@
       </div>
       <div class="dev-wrapper">
         <div>
-          <span>D</span>
-          <span>E</span>
-          <span>V</span>
-          <span>E</span>
-          <span>L</span>
-          <span>O</span>
-          <span>P</span>
-          <span>E</span>
-          <span>R</span>
+          <span *ngFor="let item of secondWrapper">{{ item }}</span>
         </div>
       </div>
     </div>

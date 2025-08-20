@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,18 +10,30 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   yellowlogo = false;
-  dropDownHover = false;
+  dropDownOpen = false;
+  closeButtonActive = false;
+ @Input() otherLayout = false;
+
   dropDownActive = true;
   styleStatus = 0;
 
-   toggleDropdown() {
+  openDropdown() {
+    this.styleStatus = 1;
+    this.dropDownOpen = true;
+    document.body.classList.add('dropdown-active');
+    setTimeout(() => {
+      this.dropDownOpen = false;
+    }, 2000);
+  }
 
-     this.styleStatus = this.styleStatus === 1 ? 2: 1;
-
-     if (this.styleStatus == 1) {
-      document.body.classList.add("dropdown-active");
-     } else {
-       document.body.classList.remove("dropdown-active");
-     }
-   }
+  closeDropdown() {
+    this.styleStatus = 2;
+    this.closeButtonActive = true;
+    this.dropDownOpen = true;
+    document.body.classList.remove('dropdown-active');
+    setTimeout(() => {
+      this.closeButtonActive = false;
+      this.dropDownOpen = false;
+    }, 2000);
+  }
 }
