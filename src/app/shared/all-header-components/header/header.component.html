@@ -23,19 +23,21 @@
       <img src="./../../../../assets/img/header/logo-no-hover.png" alt="" />
       }
     </div>
-    <div class="about-me-a" [ngClass]="{'about-me-a-showcase': otherLayout }">
-      <a href="">About me</a>
+    <div class="about-me-a" [ngClass]="{ 'about-me-a-showcase': otherLayout }">
+      <a href="#about">About me</a>
       <img src="./../../../../assets/img/1.png" alt="" />
     </div>
-    <div class="skills-a" [ngClass]="{'skills-a-showcase': otherLayout }">
-      <a href="">Skills</a> <img src="./../../../../assets/img/2.png" alt="" />
+    <div class="skills-a" [ngClass]="{ 'skills-a-showcase': otherLayout }">
+      <a href="#skills">Skills</a>
+      <img src="./../../../../assets/img/2.png" alt="" />
     </div>
-    <div class="projects-a" [ngClass]="{'projects-a-showcase': otherLayout }">
-      <a href="">Projects</a>
+    <div class="projects-a" [ngClass]="{ 'projects-a-showcase': otherLayout }">
+      <a href="#my-projects">Projects</a>
       <img src="./../../../../assets/img/3.png" alt="" />
     </div>
-    <div class="contact-a" [ngClass]="{'contacts-a-showcase': otherLayout }">
-      <a href="">Contact</a> <img src="./../../../../assets/img/4.png" alt="" />
+    <div class="contact-a" [ngClass]="{ 'contacts-a-showcase': otherLayout }">
+      <a href="#contact-me">Contact</a>
+      <img src="./../../../../assets/img/4.png" alt="" />
     </div>
 
     <div class="language-switch">
@@ -73,54 +75,58 @@
   </div>
 </section>
 
-<section >
-  <div class="overlay-menu" [ngClass]="{
-    'default-layer ': styleStatus === 0,
-    'overlay-visible': styleStatus === 1,
-    'overlay-hidden': styleStatus === 2
-  }" 
+<section>
+  <div
+    class="overlay-menu"
+    [ngClass]="{
+      'default-layer ': styleStatus === 0,
+      'overlay-visible': styleStatus === 1 || styleStatus === 3,
+      'overlay-hidden': styleStatus === 2 || styleStatus === 4,
+    }"
+  ></div>
+
+  <div
+    class="dropdown-menu"
+    [ngClass]="{
+      defaultDropdown: styleStatus === 0,
+      dropDownActivated: styleStatus === 1,
+      dropDownDeactivated: styleStatus === 2,
+      dropDownActivatedShowcase: styleStatus === 3,
+      dropDownDeactivatedShowcase: styleStatus === 4,
+    }"
   >
+    <div>
+      <div (mouseenter)="yellowlogo = true" (mouseleave)="yellowlogo = false">
+        @if (yellowlogo) {
+        <img src="./../../../../assets/img/header/logo_hover.png" alt="" />
+        } @else {
+        <img src="./../../../../assets/img/header/logo-no-hover.png" alt="" />
+        }
+      </div>
 
-  </div>
-
-  <div  class="dropdown-menu"
-  [ngClass]="{
-    defaultDropdown : styleStatus === 0,
-    dropDownActivated: styleStatus === 1,
-    dropDownDeactivated: styleStatus === 2
-  }"> 
-  <div>
-     <div (mouseenter)="yellowlogo = true" (mouseleave)="yellowlogo = false">
-      @if (yellowlogo) {
-      <img src="./../../../../assets/img/header/logo_hover.png" alt="" />
-      } @else {
-      <img src="./../../../../assets/img/header/logo-no-hover.png" alt="" />
-      }
+      <div (click)="closeDropdown()" clickable>
+        @if (closeButtonActive) {
+        <img src="./../../../../assets/img/header/close_hover.png" alt="" />
+        } @else {
+        <img src="./../../../../assets/img/header/close_dropdown.png" alt="" />
+        }
+      </div>
     </div>
-
-    <div (click)="closeDropdown()" clickable>
-      @if (closeButtonActive) {
-      <img src="./../../../../assets/img/header/close_hover.png" alt="" />
-      } @else {
-      <img src="./../../../../assets/img/header/close_dropdown.png" alt="" />
-      }
-    </div>
-  </div>
     <div class="header-mobile">
       <div class="about-me-a">
-        <a href="">About me</a>
+        <a (click)="closeDropdown()" href="#about">About me</a>
         <img src="./../../../../assets/img/1.png" alt="" />
       </div>
       <div class="skills-a">
-        <a href="">Skills</a>
+        <a (click)="closeDropdown()" href="#skills">Skills</a>
         <img src="./../../../../assets/img/2.png" alt="" />
       </div>
       <div class="projects-a">
-        <a href="">Projects</a>
+        <a (click)="closeDropdown()" href="#my-projects">Projects</a>
         <img src="./../../../../assets/img/3.png" alt="" />
       </div>
       <div class="contact-a">
-        <a href="">Contact</a>
+        <a (click)="closeDropdown()" href="#contact-me">Contact</a>
         <img src="./../../../../assets/img/4.png" alt="" />
       </div>
 

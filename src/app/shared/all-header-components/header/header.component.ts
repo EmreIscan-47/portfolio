@@ -12,13 +12,20 @@ export class HeaderComponent {
   yellowlogo = false;
   dropDownOpen = false;
   closeButtonActive = false;
- @Input() otherLayout = false;
+  @Input() otherLayout = false;
 
   dropDownActive = true;
   styleStatus = 0;
 
   openDropdown() {
-    this.styleStatus = 1;
+    if (this.otherLayout) {
+      console.log("yo");
+      
+      this.styleStatus = 3;
+    } else {
+      this.styleStatus = 1;
+    }
+
     this.dropDownOpen = true;
     document.body.classList.add('dropdown-active');
     setTimeout(() => {
@@ -27,7 +34,11 @@ export class HeaderComponent {
   }
 
   closeDropdown() {
-    this.styleStatus = 2;
+     if (this.otherLayout) {
+      this.styleStatus = 4;
+    } else {
+      this.styleStatus = 2;
+    }
     this.closeButtonActive = true;
     this.dropDownOpen = true;
     document.body.classList.remove('dropdown-active');

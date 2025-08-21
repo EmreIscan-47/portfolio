@@ -21,4 +21,11 @@ export class HeroComponent {
   onMouseLeave() {
   this.hoveredIndex = null;
   }
+
+   goTo(url: string) {
+    const element = document.getElementById(url);
+    if (element) {
+      element.scrollIntoView();
+    }
+  }
 }

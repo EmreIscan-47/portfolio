@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.scss'
+  styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent {
-
+  goTo(url: string) {
+    const element = document.getElementById(url);
+    if (element) {
+      element.scrollIntoView();
+    }
+  }
 }
