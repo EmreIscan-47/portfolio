@@ -78,33 +78,88 @@
   @media (max-width: 850px) {
     margin-top: 100px;
   }
+  > div {
+    > img {
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      transition: all 0.2s;
 
-  > button {
-    position: absolute;
-    top: 30%;
-    width: 160px;
-    height: 45px;
-    border-radius: 50px;
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid white;
-    color: white;
-    font-size: 20px;
-    &:hover {
-      cursor: default;
+      opacity: 0;
     }
-    @media (max-width: 1050px) {
-      width: 140px;
-      height: 40px;
+
+    > img.roll-out {
+      animation: roll-out 0.2s ease-out forwards;
     }
-    @media (max-width: 850px) {
-      position: relative;
-      top: 20%;
+
+    > img.roll-in {
+      animation: roll-in 0.2s ease-in forwards;
     }
-    @media (max-width: 450px) {
-      width: 120px;
-      height: 40px;
-      font-size: 16px;
+
+    > button {
+      position: absolute;
+      top: 30%;
+      width: 160px;
+      height: 45px;
+      border-radius: 50px;
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid white;
+      color: white;
+      font-size: 20px;
+      transition: all 0.2s;
+      text-wrap: nowrap;
+      box-shadow: inset 0 0 0 0 #3355ff;
+      &:hover {
+        cursor: pointer;
+        width: 250px;
+        box-shadow: inset 250px 0 0 0 #3355ff;
+      }
+      @media (max-width: 1050px) {
+        width: 140px;
+        height: 40px;
+      }
+      @media (max-width: 850px) {
+        position: relative;
+        top: 20%;
+      }
+      @media (max-width: 450px) {
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
+      }
     }
+  }
+}
+
+@keyframes roll-out {
+  0% {
+    transform: translateX(20px) rotate(90deg);
+  }
+
+  50% {
+    transform: translateX(60px) rotate(180deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(100px) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes roll-in {
+  0% {
+    transform: translateX(100px) rotate(-90deg);
+  }
+
+  50% {
+    transform: translateX(60px) rotate(-180deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(0px) rotate(-360deg);
+    opacity: 0;
   }
 }
 

@@ -6,16 +6,28 @@
 <section class="t-p-section">
   <div>
     <div class="main-wrapper">
-      <button>Hello world</button>
+      <div>
+        <img [class.roll-out] = "helloWorldHover" [class.roll-in] = "rollIn"  src="./../../../assets/img/hero/waving_hand.png" alt="">
+        <button
+          (mouseenter)="helloWorldHover = true; rollIn = false"
+          (mouseleave)="helloWorldHover = false; rollIn = true"
+        >
+          @if (helloWorldHover) {I'M EMRE ISCAN } @else { Hello world }
+        </button>
+      </div>
 
       <div class="frontend-wrapper">
         <div>
           <span
-            *ngFor="let item of firstWrapper; let isFirst = first; let i = index"
+            *ngFor="
+              let item of firstWrapper;
+              let isFirst = first;
+              let i = index
+            "
             (mouseenter)="onMouseEnter(i)"
             (mouseleave)="onMouseLeave()"
             [class.firstLetter]="isFirst"
-            [class.active] = "hoveredIndex === i"
+            [class.active]="hoveredIndex === i"
             >{{ item }}</span
           >
 
