@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -16,6 +18,13 @@ export class HeaderComponent {
 
   dropDownActive = true;
   styleStatus = 0;
+
+constructor(private router: Router) {}
+
+   goToHomePage(){
+      this.router.navigate(['/homepage']);
+   }
+   
 
   openDropdown() {
     if (this.otherLayout) {
@@ -47,4 +56,6 @@ export class HeaderComponent {
       this.dropDownOpen = false;
     }, 2000);
   }
+
+
 }

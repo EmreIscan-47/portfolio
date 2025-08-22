@@ -78,14 +78,27 @@
   @media (max-width: 850px) {
     margin-top: 100px;
   }
-  > div {
+  > div:first-child {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    @media (max-width: 850px) {
+      width: 250px;
+    }
     > img {
       position: absolute;
-      top: 25%;
-      left: 25%;
+      top: 90%;
+      left: 35%;
       transition: all 0.2s;
 
       opacity: 0;
+      @media (max-width: 850px) {
+        top: 50%;
+      }
+
+      @media (max-width: 450px) {
+        left: 25%;
+      }
     }
 
     > img.roll-out {
@@ -98,7 +111,7 @@
 
     > button {
       position: absolute;
-      top: 30%;
+      top: 120%;
       width: 160px;
       height: 45px;
       border-radius: 50px;
@@ -120,12 +133,15 @@
       }
       @media (max-width: 850px) {
         position: relative;
-        top: 20%;
+        top: 80%;
       }
       @media (max-width: 450px) {
         width: 120px;
         height: 40px;
         font-size: 16px;
+        &:hover {
+          width: 200px;
+        }
       }
     }
   }
@@ -175,7 +191,7 @@
     > span {
       position: relative;
       display: inline-block;
-      /*  letter-spacing: 0.05em; */
+      height: 60px;
       font-size: 148px;
       color: white;
       font-weight: 700;

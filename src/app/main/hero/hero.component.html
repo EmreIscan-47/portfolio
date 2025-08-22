@@ -9,6 +9,7 @@
       <div>
         <img [class.roll-out] = "helloWorldHover" [class.roll-in] = "rollIn"  src="./../../../assets/img/hero/waving_hand.png" alt="">
         <button
+           (click)="goTo('about')"
           (mouseenter)="helloWorldHover = true; rollIn = false"
           (mouseleave)="helloWorldHover = false; rollIn = true"
         >
@@ -31,14 +32,6 @@
             >{{ item }}</span
           >
 
-          <!--   <span>F</span>
-          <span>r</span>
-          <span>o</span>
-          <span>n</span>
-          <span>t</span>
-          <span>e</span>
-          <span>n</span>
-          <span>d</span> -->
         </div>
         <div class="polaroid">
           <img

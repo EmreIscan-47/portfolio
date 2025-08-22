@@ -6,7 +6,8 @@ import { provideRouter, Routes } from '@angular/router';
 import { ProjectShowcaseComponent } from './app/main/project-showcase/project-showcase.component';
 
 const routes: Routes = [
-  { path: '', component: MainComponent },
+
+  { path: 'homepage', component: MainComponent },
   { path: 'project-showcase', component: ProjectShowcaseComponent },
 ];
 

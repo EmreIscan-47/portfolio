@@ -1,6 +1,6 @@
 <section class="header-wrapper">
   <div class="header-mobile-content">
-    <div (mouseenter)="yellowlogo = true" (mouseleave)="yellowlogo = false">
+    <div (click)="goToHomePage()" (mouseenter)="yellowlogo = true" (mouseleave)="yellowlogo = false">
       @if (yellowlogo) {
       <img src="./../../../../assets/img/header/logo_hover.png" alt="" />
       } @else {
@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="header-content">
-    <div (mouseenter)="yellowlogo = true" (mouseleave)="yellowlogo = false">
+    <div (click)="goToHomePage()" (mouseenter)="yellowlogo = true" (mouseleave)="yellowlogo = false">
       @if (yellowlogo) {
       <img src="./../../../../assets/img/header/logo_hover.png" alt="" />
       } @else {

@@ -1,19 +1,46 @@
 <section class="footer-wrapper">
   <div>
     <img src="./../../../../assets/img/logo-no-hover.png" alt="" />
-<div>
-  <h2>© Emre Iscan 2025</h2>
-   <div>
-      
-      <h2>Legal Notice</h2>
-      <img src="./../../../../assets/img/3.png" alt="" />
+    <div>
+      <h2>© Emre Iscan 2025</h2>
+      <div>
+        <h2>Legal Notice</h2>
+        <img src="./../../../../assets/img/3.png" alt="" />
+      </div>
     </div>
-</div>
-   
   </div>
-  <div>
-    <button>GitHub</button>
-    <button>LinkedIn</button>
-    <button>Email</button>
+  <div class="footer-links">
+    <div>
+      <img
+        [class.roll-out]="gitHubRoll"
+        [class.roll-in]="!gitHubRoll && gitHubCountOne == 1"
+        class="github-roll"
+        src="./../../../../assets/img/footer/github.png"
+        alt=""
+      />
+      <button (mouseenter)="rollIn(1)" (mouseleave)="rollOut(1)">GitHub</button>
+    </div>
+    <div>
+      <img
+        [class.roll-out]="linkedInRoll"
+        [class.roll-in]="!linkedInRoll && linkedInCountOne == 1"
+        class="linked-in-roll"
+        src="./../../../../assets/img/footer/linked-In.png"
+        alt=""
+      />
+      <button (mouseenter)="rollIn(2)" (mouseleave)="rollOut(2)">
+        LinkedIn
+      </button>
+    </div>
+    <div>
+      <img
+        [class.roll-out]="mailRoll"
+        [class.roll-in]="!mailRoll && mailCountOne == 1"
+        class="mail-roll"
+        src="./../../../../assets/img/footer/mail.png"
+        alt=""
+      />
+      <button (mouseenter)="rollIn(3)" (mouseleave)="rollOut(3)">Email</button>
+    </div>
   </div>
 </section>

@@ -58,10 +58,16 @@
         > img {
           position: absolute;
           width: 90px;
+          top: -5px;
+    
           margin-left: 15px;
           clip-path: inset(0 100% 0 0);
 
           transition: clip-path 0.3s ease;
+            @media (max-width: 750px) {
+              top: 0;
+              left: 90px;
+   }
         }
         &:hover > img {
           clip-path: inset(0 0 0 0);
@@ -70,22 +76,42 @@
     }
   }
   > div:last-of-type {
-    display: flex;
-    align-items: end;
+  }
+}
+
+.footer-links {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding-left: 200px;
+  width: 100%;
+
+  margin-right: 80px;
+  margin-bottom: 20px;
+  @media (max-width: 1250px) {
     justify-content: space-between;
-    padding-left: 200px;
-    width: 100%;
+    gap: 0;
+    padding-left: 0;
+  }
+  @media (max-width: 750px) {
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    > img {
+      width: 32px;
+      transition: all 0.2s;
+      opacity: 0;
 
-    margin-right: 80px;
-    margin-bottom: 20px;
-    @media (max-width: 1250px) {
-      justify-content: space-between;
-      gap: 0;
-      padding-left: 0;
-    }
-    @media (max-width: 750px) {
-    }
+      > img.roll-out {
+        animation: roll-out 0.2s ease-out forwards;
+      }
 
+      > img.roll-in {
+        animation: roll-in 0.2s ease-in forwards;
+      }
+    }
     > button {
       width: 100px;
       height: 40px;
@@ -101,5 +127,65 @@
         box-shadow: inset 0 -50px 0 0 #3355ff;
       }
     }
+  }
+}
+
+
+
+     
+.github-roll.roll-in {
+ animation: roll-in 0.3s ease-in forwards;
+}
+
+.linked-in-roll.roll-in{
+ animation: roll-in 0.3s ease-in forwards;
+}
+
+.mail-roll.roll-in{
+ animation: roll-in 0.3s ease-in forwards;
+}
+
+.github-roll.roll-out {
+ animation: roll-out 0.3s ease-out forwards;
+}
+
+.linked-in-roll.roll-out {
+ animation: roll-out 0.3s ease-out forwards;
+}
+
+.mail-roll.roll-out {
+ animation: roll-out 0.3s ease-out forwards;
+}
+
+
+@keyframes roll-out {
+  0% {
+    transform: translateX(20px) rotate(90deg);
+  }
+
+  50% {
+    transform: translateX(30px) rotate(180deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(60px) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes roll-in {
+  0% {
+    transform: translateX(60px) rotate(-90deg);
+  }
+
+  50% {
+    transform: translateX(30px) rotate(-180deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(20px) rotate(-360deg);
+    opacity: 0;
   }
 }
