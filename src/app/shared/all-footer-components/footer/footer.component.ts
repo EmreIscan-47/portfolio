@@ -22,9 +22,11 @@ export class FooterComponent {
         this.gitHubRoll = true;
         break;
       case 2:
+         this.linkedInCountOne = 1;
         this.linkedInRoll = true;
         break;
       case 3:
+         this.mailCountOne = 1;
         this.mailRoll = true;
         break;
       default:
