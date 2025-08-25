@@ -159,24 +159,83 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  > div {
+  > div:nth-child(1) {
+    position: relative;
+    cursor: default;
+   
+    > h3 {
+      font-family: "Bricolage";
+      font-size: 12px;
+           color: rgba(248, 122, 85, 1);
+      margin: 0 0 0;
+    }
+    > img {
+      position: absolute;
+      top: 0;
+      left: -5px;
+      width: 25px;
+      height: 27px;
+      clip-path: inset(0 100% 100% 0);
+      transition: clip-path 0.3s ease;
+    }
+  }
+
+  > div:nth-child(2) {
     display: flex;
     justify-content: center;
     align-items: center;
     > svg:first-child {
       position: absolute;
-      right: 48px;
+      transition: all 0.3s;
     }
   }
-  > h3:first-child {
-    color: rgba(248, 122, 85, 1);
+  > div:nth-child(3) {
+    position: relative;
+    cursor: default;
+    > h3 {
+      font-family: "Bricolage";
+      font-size: 12px;
+        color: rgba(248, 122, 85, 1);
+      margin: 0 0 0;
+    }
+    > img {
+      position: absolute;
+      top: 0;
+      left: -5px;
+      width: 25px;
+      height: 25px;
+      clip-path: inset(0 100% 100% 0);
+      transition: clip-path 0.3s ease;
+    }
   }
-  > h3 {
-    font-family: "Bricolage";
-    font-size: 12px;
-    color: white;
-    margin: 0 0 0;
+
+  > div:nth-child(1).language-animation {
+    cursor: pointer;
+     > h3 {
+      color: white !important;
+    }
+    &:hover > img {
+      clip-path: inset(0 0 0 0);
+    }
   }
+
+  > div:nth-child(3).language-animation {
+    cursor: pointer;
+     > h3 {
+         color: white !important;
+    }
+    &:hover > img {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+}
+
+.language-en {
+right: 48px;
+}
+
+.language-de {
+right: 20px;
 }
 
 @keyframes fade-in-right {
@@ -346,7 +405,6 @@
 .dropDownDeactivatedShowcase {
   animation: dropdownDeactivateShowcase 0.21s ease-out forwards;
 }
-
 
 @keyframes dropdownActive {
   0% {

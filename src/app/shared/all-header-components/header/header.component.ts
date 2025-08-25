@@ -14,6 +14,7 @@ export class HeaderComponent {
   yellowlogo = false;
   dropDownOpen = false;
   closeButtonActive = false;
+  languageAnimation = true;
   @Input() otherLayout = false;
 
   dropDownActive = true;
@@ -55,6 +56,15 @@ constructor(private router: Router) {}
       this.closeButtonActive = false;
       this.dropDownOpen = false;
     }, 2000);
+  }
+
+  changeLanguage(language: string) {
+
+    if (language == "DE") {
+      this.languageAnimation = true;
+    } else {
+      this.languageAnimation = false;
+    }
   }
 
 

@@ -1,6 +1,10 @@
 <section class="header-wrapper">
   <div class="header-mobile-content">
-    <div (click)="goToHomePage()" (mouseenter)="yellowlogo = true" (mouseleave)="yellowlogo = false">
+    <div
+      (click)="goToHomePage()"
+      (mouseenter)="yellowlogo = true"
+      (mouseleave)="yellowlogo = false"
+    >
       @if (yellowlogo) {
       <img src="./../../../../assets/img/header/logo_hover.png" alt="" />
       } @else {
@@ -16,7 +20,11 @@
     </div>
   </div>
   <div class="header-content">
-    <div (click)="goToHomePage()" (mouseenter)="yellowlogo = true" (mouseleave)="yellowlogo = false">
+    <div
+      (click)="goToHomePage()"
+      (mouseenter)="yellowlogo = true"
+      (mouseleave)="yellowlogo = false"
+    >
       @if (yellowlogo) {
       <img src="./../../../../assets/img/header/logo_hover.png" alt="" />
       } @else {
@@ -41,9 +49,20 @@
     </div>
 
     <div class="language-switch">
-      <h3>EN</h3>
+      <div
+        (click)="changeLanguage('EN')"
+        [class.language-animation]="languageAnimation == true"
+      >
+        <img src="./../../../../assets/img/header/toggle-en.png" alt="" />
+        <h3>EN</h3>
+      </div>
       <div>
         <svg
+          [ngClass]="{
+      'language-de ': languageAnimation == true,
+      'language-en': languageAnimation == false,
+      'overlay-hidden': styleStatus === 2 || styleStatus === 4,
+    }"
           width="16"
           height="16"
           viewBox="0 0 16 16"
@@ -70,7 +89,13 @@
           />
         </svg>
       </div>
-      <h3>DE</h3>
+      <div
+        (click)="changeLanguage('DE')"
+        [class.language-animation]="languageAnimation == false"
+      >
+        <img src="./../../../../assets/img/header/toggle-de.png" alt="" />
+        <h3>DE</h3>
+      </div>
     </div>
   </div>
 </section>
@@ -131,9 +156,18 @@
       </div>
 
       <div class="language-switch">
-        <h3>EN</h3>
+        <div (click)="changeLanguage('EN')" [class.language-animation]="languageAnimation == true">
+          <img src="./../../../../assets/img/header/toggle-en.png" alt="" />
+          <h3>EN</h3>
+        </div>
+
         <div>
           <svg
+            [ngClass]="{
+      'language-de ': languageAnimation == true,
+      'language-en': languageAnimation == false,
+      'overlay-hidden': styleStatus === 2 || styleStatus === 4,
+    }"
             width="16"
             height="16"
             viewBox="0 0 16 16"
@@ -160,7 +194,10 @@
             />
           </svg>
         </div>
-        <h3>DE</h3>
+        <div (click)="changeLanguage('DE')" [class.language-animation]="languageAnimation == false">
+          <img src="./../../../../assets/img/header/toggle-en.png" alt="" />
+          <h3>DE</h3>
+        </div>
       </div>
 
       <section class="socials-section">
