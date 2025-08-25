@@ -259,11 +259,12 @@ button.buttonAbled {
   @media (max-width: 1250px) {
     margin-bottom: 30px;
   }
-  > mat-checkbox {
-    padding: 2px;
-    color: #3355ff;
+  > img {
+   
     &:hover {
-      background-color: #3355ff6a;
+      background-color: #3355ff6a !important;
+
+      transition: all 0.2s;
     }
   }
   > h2 {
@@ -272,6 +273,7 @@ button.buttonAbled {
     font-weight: 300;
     font-size: 15px;
     color: white;
+    margin: 0 0 0;
     @media (max-width: 500px) {
       font-size: 10px;
       line-height: 1.8;
@@ -279,6 +281,10 @@ button.buttonAbled {
     > a {
       text-decoration: none;
       color: #3355ff;
+    }
+
+    &:hover >a {
+      color: #f7c518;
     }
   }
 }

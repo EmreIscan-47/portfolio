@@ -1,17 +1,26 @@
 import { Component } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FooterComponent } from '../../shared/all-footer-components/footer/footer.component';
 @Component({
   selector: 'app-contact-info',
   standalone: true,
-  imports: [MatCheckboxModule, FooterComponent],
+  imports: [FooterComponent],
   templateUrl: './contact-info.component.html',
-  styleUrl: './contact-info.component.scss'
+  styleUrl: './contact-info.component.scss',
 })
+
 export class ContactInfoComponent {
-isButtonDisabled = true;
- toggleButton() {
-    this.isButtonDisabled = !this.isButtonDisabled;
+  isButtonDisabled = true;
+
+  toggleCheckbox() {
+    let checkboxREF = document.getElementById('checkbox') as HTMLImageElement;
+    let filename = checkboxREF.src.substring(checkboxREF.src.lastIndexOf('/') + 1);
+
+    if (filename =='checkbox-checked.png') {
+      checkboxREF.src = './../../../assets/img/contact-info/checkbox-default.png';
+      this.isButtonDisabled = true;
+    } else {
+      checkboxREF.src = './../../../assets/img/contact-info/checkbox-checked.png';
+      this.isButtonDisabled = false;
+    }
   }
 }

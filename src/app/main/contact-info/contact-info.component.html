@@ -45,8 +45,8 @@
         </div>
       </div>
 
-      <div class="checkbox-content mat-typography">
-        <mat-checkbox></mat-checkbox>
+      <div class="checkbox-content">
+         <img id="checkbox" (click)="toggleCheckbox()" src="./../../../assets/img/contact-info/checkbox-default.png" alt="">
         <h2>
           I've read the <a href="">privacy policy</a> and agree to the
           processing of my data as outlined.
@@ -54,7 +54,7 @@
       </div>
       <div>
         <img src="./../../../assets/img/contact-info/line.png" alt="" />
-        <button (click)="toggleButton()" [disabled] = "isButtonDisabled" [class.buttonAbled] = "!isButtonDisabled">Send</button>
+        <button [disabled] = "isButtonDisabled" [class.buttonAbled] = "!isButtonDisabled">Send</button>
       </div>
     </div>
    
