@@ -10,6 +10,7 @@ import { FooterComponent } from '../../shared/all-footer-components/footer/foote
 
 export class ContactInfoComponent {
   isButtonDisabled = true;
+  borderBlue: Number = 0;
 
   toggleCheckbox() {
     let checkboxREF = document.getElementById('checkbox') as HTMLImageElement;
@@ -22,5 +23,9 @@ export class ContactInfoComponent {
       checkboxREF.src = './../../../assets/img/contact-info/checkbox-checked.png';
       this.isButtonDisabled = false;
     }
+  }
+
+  borderActive(borderNumber: Number) {
+   this.borderBlue = borderNumber;
   }
 }

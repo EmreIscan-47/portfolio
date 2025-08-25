@@ -164,15 +164,27 @@
           font-size: 14px;
         }
       }
-
       &:hover {
-        border-top: 0.1em solid #3355ff;
         border-bottom: 0.1em solid #3355ff;
       }
 
       &:hover > h2:first-child {
         color: #de6d4c;
       }
+    }
+
+    > div:nth-child(1) {
+      &:hover {
+        border-top: 0.1em solid #3355ff;
+        border-bottom: 0.1em solid #3355ff;
+      }
+    }
+    > div:nth-child(1).active {
+      border-bottom: 0.1em solid #3355ff;
+    }
+
+    > div:nth-child(2).active {
+      border-bottom: 0.1em solid #3355ff;
     }
   }
 
@@ -223,7 +235,7 @@ button.buttonAbled {
   transform-origin: right bottom;
   border: 1px solid rgb(255, 255, 255) !important;
   color: rgb(255, 255, 255) !important;
-   box-shadow: 2px 4px rgb(255, 255, 255) !important;
+  box-shadow: 2px 4px rgb(255, 255, 255) !important;
   &:hover {
     cursor: pointer !important;
     box-shadow: none !important;
@@ -260,7 +272,6 @@ button.buttonAbled {
     margin-bottom: 30px;
   }
   > img {
-   
     &:hover {
       background-color: #3355ff6a !important;
 
@@ -283,7 +294,7 @@ button.buttonAbled {
       color: #3355ff;
     }
 
-    &:hover >a {
+    &:hover > a {
       color: #f7c518;
     }
   }

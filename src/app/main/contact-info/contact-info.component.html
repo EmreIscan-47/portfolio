@@ -3,12 +3,9 @@
 </section>
 
 <section class="section-contacts">
-   <div>
-      <img
-        src="./../../../assets/img/contact-info/contacts-sticker.png"
-        alt=""
-      />
-    </div>
+  <div>
+    <img src="./../../../assets/img/contact-info/contacts-sticker.png" alt="" />
+  </div>
   <div class="top-contacts-wrapper">
     <div>
       <h2>CONTACT ME</h2>
@@ -31,22 +28,27 @@
 
     <div class="form-content">
       <div>
-        <div>
+        <div [class.active] = "borderBlue == 1">
           <h2>What's your name?</h2>
           <h2>Your name goes here</h2>
         </div>
-        <div>
+        <div [class.active] = "borderBlue == 2" (mouseenter)="borderActive(1)" (mouseleave)="borderActive(0)">
           <h2>What's your email?</h2>
           <h2>youremail&#64;email.com</h2>
         </div>
-        <div>
+        <div (mouseenter)="borderActive(2)" (mouseleave)="borderActive(0)">
           <h2>How can I help you?</h2>
           <h2>Hello Lukas, I am interested in...</h2>
         </div>
       </div>
 
       <div class="checkbox-content">
-         <img id="checkbox" (click)="toggleCheckbox()" src="./../../../assets/img/contact-info/checkbox-default.png" alt="">
+        <img
+          id="checkbox"
+          (click)="toggleCheckbox()"
+          src="./../../../assets/img/contact-info/checkbox-default.png"
+          alt=""
+        />
         <h2>
           I've read the <a href="">privacy policy</a> and agree to the
           processing of my data as outlined.
@@ -54,10 +56,14 @@
       </div>
       <div>
         <img src="./../../../assets/img/contact-info/line.png" alt="" />
-        <button [disabled] = "isButtonDisabled" [class.buttonAbled] = "!isButtonDisabled">Send</button>
+        <button
+          [disabled]="isButtonDisabled"
+          [class.buttonAbled]="!isButtonDisabled"
+        >
+          Send
+        </button>
       </div>
     </div>
-   
   </div>
-    <app-footer></app-footer>
+  <app-footer></app-footer>
 </section>
