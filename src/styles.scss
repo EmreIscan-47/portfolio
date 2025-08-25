@@ -6,6 +6,10 @@ body {
   scroll-behavior: smooth;
 }
 
+:root {
+  --move-up: -20px;
+}
+
 body.dropdown-active {
   overflow: hidden;
 }
