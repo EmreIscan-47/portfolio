@@ -6,13 +6,11 @@ import { provideRouter, Routes } from '@angular/router';
 import { ProjectShowcaseComponent } from './app/main/project-showcase/project-showcase.component';
 
 const routes: Routes = [
-
+  { path: '', redirectTo: 'homepage', pathMatch: 'full' },
   { path: 'homepage', component: MainComponent },
   { path: 'project-showcase', component: ProjectShowcaseComponent },
 ];
 
 bootstrapApplication(AppComponent, {
-  providers: [
-    provideRouter(routes)
-  ]
+  providers: [provideRouter(routes)],
 });

@@ -141,9 +141,13 @@
   > div:first-of-type {
     margin-bottom: 30px;
     > div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       border-top: 0.01em solid #3355ff00;
       border-bottom: 0.01em solid #f7c518;
-      > h2:first-child {
+      padding: 20px 0;
+      > label {
         margin: 0 0 0;
         margin-top: 10px;
         margin-left: 20px;
@@ -155,20 +159,27 @@
         }
       }
 
-      > h2:last-child {
+      > input {
         margin-left: 20px;
         font-weight: 300;
         font-size: 18px;
         color: white;
+        background-color: transparent;
+        outline: none;
+        border: none;
         @media (max-width: 500px) {
           font-size: 14px;
+        }
+        &::placeholder {
+          color: white;
+          opacity: 1;
         }
       }
       &:hover {
         border-bottom: 0.1em solid #3355ff;
       }
 
-      &:hover > h2:first-child {
+      &:hover > label {
         color: #de6d4c;
       }
     }
@@ -209,7 +220,7 @@
         display: block;
       }
     }
-    > button {
+    > input {
       width: 150px;
       height: 40px;
       border-radius: 50px;
@@ -230,7 +241,7 @@
   }
 }
 
-button.buttonAbled {
+input.buttonAbled {
   transition: all 0.1s;
   transform-origin: right bottom;
   border: 1px solid rgb(255, 255, 255) !important;

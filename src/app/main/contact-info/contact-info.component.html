@@ -26,44 +26,85 @@
       </div>
     </div>
 
-    <div class="form-content">
-      <div>
-        <div [class.active] = "borderBlue == 1">
-          <h2>What's your name?</h2>
-          <h2>Your name goes here</h2>
+    <form
+      (ngSubmit)="isButtonDisabled ? disabledClick() : onSubmit(contactForm)"
+      #contactForm="ngForm"
+    >
+      <div class="form-content">
+        <div>
+          <div [class.active]="borderBlue == 1">
+            <label for="name">What's your name?</label>
+            <input
+              [(ngModel)]="contactData.name"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name goes here"
+              required
+            />
+            <!--  <h2>Your name goes here</h2> -->
+          </div>
+          <div
+            [class.active]="borderBlue == 2"
+            (mouseenter)="borderActive(1)"
+            (mouseleave)="borderActive(0)"
+          >
+            <label for="email">What's your email?</label>
+            <input
+              [(ngModel)]="contactData.email"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="youremail&#64;email.com"
+              pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+              required
+            />
+          </div>
+          <div (mouseenter)="borderActive(2)" (mouseleave)="borderActive(0)">
+            <label for="message">How can I help you?</label>
+            <input
+              [(ngModel)]="contactData.message"
+              type="text"
+              name="message"
+              id="message"
+              placeholder="Hello Lukas, I am interested in..."
+              required
+            />
+          </div>
         </div>
-        <div [class.active] = "borderBlue == 2" (mouseenter)="borderActive(1)" (mouseleave)="borderActive(0)">
-          <h2>What's your email?</h2>
-          <h2>youremail&#64;email.com</h2>
-        </div>
-        <div (mouseenter)="borderActive(2)" (mouseleave)="borderActive(0)">
-          <h2>How can I help you?</h2>
-          <h2>Hello Lukas, I am interested in...</h2>
-        </div>
-      </div>
 
-      <div class="checkbox-content">
-        <img
-          id="checkbox"
-          (click)="toggleCheckbox()"
-          src="./../../../assets/img/contact-info/checkbox-default.png"
-          alt=""
-        />
-        <h2>
-          I've read the <a href="">privacy policy</a> and agree to the
-          processing of my data as outlined.
-        </h2>
+        <div class="checkbox-content">
+          <img
+            id="checkbox"
+            (click)="toggleCheckbox()"
+            src="./../../../assets/img/contact-info/checkbox-default.png"
+            alt=""
+          />
+          <input
+            type="checkbox"
+            name="agree"
+            [(ngModel)]="contactData.agree"
+            hidden
+            required
+          />
+          <h2>
+            I've read the <a href="">privacy policy</a> and agree to the
+            processing of my data as outlined.
+          </h2>
+        </div>
+        <div>
+          <img src="./../../../assets/img/contact-info/line.png" alt="" />
+          <input
+            type="submit"
+            name="submit"
+            id="submit"
+            value="Send"
+            [disabled]="!contactForm.valid"
+            [class.buttonAbled]="contactForm.valid"
+          />
+        </div>
       </div>
-      <div>
-        <img src="./../../../assets/img/contact-info/line.png" alt="" />
-        <button
-          [disabled]="isButtonDisabled"
-          [class.buttonAbled]="!isButtonDisabled"
-        >
-          Send
-        </button>
-      </div>
-    </div>
+    </form>
   </div>
   <app-footer></app-footer>
 </section>
