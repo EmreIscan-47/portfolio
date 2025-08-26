@@ -27,7 +27,7 @@
     </div>
 
     <form
-      (ngSubmit)="isButtonDisabled ? disabledClick() : onSubmit(contactForm)"
+      (ngSubmit)="onSubmit(contactForm)"
       #contactForm="ngForm"
     >
       <div class="form-content">
@@ -36,10 +36,11 @@
             <label for="name">What's your name?</label>
             <input
               [(ngModel)]="contactData.name"
+               [ngClass] = "{'input-error': !contactData.name && contactForm.touched && formSubmitted && contactData.name.trim() == ''}"
               type="text"
               id="name"
               name="name"
-              placeholder="Your name goes here"
+              placeholder=" {{namePlaceholder}}"
               required
             />
             <!--  <h2>Your name goes here</h2> -->
@@ -52,10 +53,11 @@
             <label for="email">What's your email?</label>
             <input
               [(ngModel)]="contactData.email"
-              type="email"
+              [ngClass] = "{'input-error': !contactData.email && contactForm.touched && formSubmitted && contactData.email.trim() == ''}"
+              type="text"
               id="email"
               name="email"
-              placeholder="youremail&#64;email.com"
+              placeholder="{{emailPlaceholder}}"
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
               required
             />
@@ -64,33 +66,40 @@
             <label for="message">How can I help you?</label>
             <input
               [(ngModel)]="contactData.message"
+              [ngClass] = "{'input-error': !contactData.message && contactForm.touched  && formSubmitted && contactData.message.trim() == ''}"
               type="text"
               name="message"
               id="message"
-              placeholder="Hello Lukas, I am interested in..."
+              placeholder="{{messagePlaceholder}}"
               required
             />
           </div>
         </div>
 
         <div class="checkbox-content">
-          <img
-            id="checkbox"
-            (click)="toggleCheckbox()"
-            src="./../../../assets/img/contact-info/checkbox-default.png"
-            alt=""
-          />
-          <input
-            type="checkbox"
-            name="agree"
-            [(ngModel)]="contactData.agree"
-            hidden
-            required
-          />
-          <h2>
-            I've read the <a href="">privacy policy</a> and agree to the
-            processing of my data as outlined.
-          </h2>
+          <div>
+            <img
+              id="checkbox"
+              (click)="toggleCheckbox()"
+              src="./../../../assets/img/contact-info/checkbox-default.png"
+              alt=""
+            />
+            <input
+              #checkbox="ngModel"
+              type="checkbox"
+              name="agree"
+              [(ngModel)]="contactData.agree"
+              hidden
+              required
+            />
+            <h2>
+              I've read the <a href="">privacy policy</a> and agree to the
+              processing of my data as outlined.
+            </h2>
+          </div>
+          @if (!checkbox.valid && checkbox.touched) {
+          <span>Please accept the privacy policy.</span>
+          }
         </div>
         <div>
           <img src="./../../../assets/img/contact-info/line.png" alt="" />
@@ -99,8 +108,8 @@
             name="submit"
             id="submit"
             value="Send"
-            [disabled]="!contactForm.valid"
-            [class.buttonAbled]="contactForm.valid"
+           
+            [class.buttonAbled]="contactForm.valid "
           />
         </div>
       </div>
