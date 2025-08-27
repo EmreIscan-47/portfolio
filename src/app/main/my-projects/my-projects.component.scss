@@ -81,7 +81,7 @@
       height: 250px;
     }
 
-    > img:first-child {
+    > .laptop-animation-no-hover {
       width: 500px;
       height: 300px;
       --move-up: -20px;
@@ -93,6 +93,18 @@
         width: 100%;
         height: auto;
       }
+    }
+
+    > .laptop-animation-hover {
+      width: 500px;
+      height: 300px;
+      object-fit: cover;
+      transition: all 0.3s ease;
+         transform-origin: right top;
+      transform: translateY(-50px);
+
+      animation: downHover 0.3s ease forwards;
+
     }
 
     > img:nth-child(2) {
@@ -113,12 +125,6 @@
         width: 70px !important;
         height: 70px;
       }
-    }
-
-    &:hover > img:first-child {
-      --move-up: 0;
-      animation-play-state: paused;
-      transform: scale(1.05) translateY(var(--move-up));
     }
 
     > div:nth-child(3) {
@@ -151,8 +157,9 @@
       top: 80%;
       right: 10%;
     }
+
     &:hover > div:nth-child(3) {
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.37), transparent);
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     }
     &:hover > div:last-child {
       display: flex;
@@ -166,16 +173,22 @@
   }
 }
 
+@keyframes downHover {
+  to {
+    transform: translateY(-30px);
+  }
+}
+
 .epl-content {
   > h3 {
     font-weight: 600;
   }
-  > span {
-  }
+
   > div:first-of-type {
     position: relative;
     border-radius: 50px;
     overflow: hidden;
+    height: 304px;
     @media (max-width: 700px) {
       border-radius: 30px;
       height: auto;
@@ -185,7 +198,7 @@
       width: 100%;
       height: 40%;
       border-radius: 0 0 0 50px;
-      top: 230px;
+      top: 200px;
       @media (max-width: 700px) {
         border-radius: 0 0 0 30px;
         top: 70px;
@@ -200,7 +213,7 @@
     }
     > img {
       width: 100%;
-      height: 355.59px;
+      height: 308.59px;
       border-radius: 50px;
       object-fit: cover;
       transform-origin: right top;
@@ -236,6 +249,7 @@
     position: relative;
     border-radius: 50px;
     overflow: hidden;
+
     @media (max-width: 700px) {
       border-radius: 30px;
       height: auto;
@@ -245,7 +259,7 @@
       width: 100%;
       height: 40%;
       border-radius: 0 0 0 50px;
-      top: 230px;
+      top: 200px;
 
       @media (max-width: 500px) {
         top: 180px;
@@ -271,7 +285,7 @@
     }
     > img {
       width: 100%;
-      height: 100%;
+      height: 304px;
       object-fit: contain;
       transform-origin: right top;
       transition: transform 0.3s ease;

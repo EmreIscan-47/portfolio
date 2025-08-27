@@ -12,8 +12,13 @@
     >
   </div>
   <div class="join-content">
-    <div>
-      <img src="./../../../assets/img/my-projects/laptop.png" alt="" />
+    <div (mouseenter)="laptopHover = true" (mouseleave)="laptopHover = false">
+      @if (!laptopHover) {
+     <img class="laptop-animation-no-hover" src="./../../../assets/img/my-projects/laptop.png" alt="" />
+      } @else {
+    <img class="laptop-animation-hover"  src="./../../../assets/img/my-projects/laptop.png" alt="" />
+      }
+ 
       <img src="./../../../assets/img/my-projects/sticker.png" alt="" />
       <div></div>
       <div class="project-detail-desktop-button">

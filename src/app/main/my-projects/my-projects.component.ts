@@ -10,6 +10,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './my-projects.component.scss'
 })
 export class MyProjectsComponent {
+laptopHover = false;
+
 constructor(private router: Router) {}
 
 goToProject(Number: number) {
