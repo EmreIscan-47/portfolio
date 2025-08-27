@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../../shared/all-header-components/header/header.component';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent, TranslateModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
+  constructor(private translate: TranslateService) {}
 
   firstWrapper = ['F', 'r', 'o', 'n', 't', 'e', 'd'];
   secondWrapper = ['D', 'E', 'V','E','L', 'O','P','E', 'R'];

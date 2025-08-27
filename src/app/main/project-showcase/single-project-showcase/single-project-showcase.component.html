@@ -1,0 +1,83 @@
+<section class="section-project-showcase">
+  <div (click)= "goToProject(previousProject)">
+    <img src="./../../../assets/img/project-showcase/orange-arrow.png" alt="" />
+    <h3>Go Back</h3>
+  </div>
+  <div class="top-showcase-wrapper">
+    <div class="left-showcase-wrapper">
+      <div>
+        <h1>{{'project-showcase.'+ this.currentProject +'.title' | translate}}</h1>
+        <img
+          src="./../../../assets/img/project-showcase/blue_line.png"
+          alt=""
+        />
+      </div>
+      <div>
+        <div>
+          <h4>{{'project-showcase.'+ this.currentProject+'.description.description-title' | translate}}</h4>
+          <span
+            > {{'project-showcase.'+ this.currentProject+'.description.description-text' | translate}}</span
+          >
+        </div>
+
+        <div>
+          <h4>{{'project-showcase.'+ this.currentProject+'.implementation-details.implementation-title' | translate}}</h4>
+          <span
+            >{{'project-showcase.'+ currentProject+'.implementation-details.implementation-text' | translate}}</span
+          >
+        </div>
+        <div>
+          <h3>
+            {{'project-showcase.'+ currentProject+'.duration.duration-text' | translate}}
+            <h3> {{'project-showcase.'+ currentProject+'.duration.duration-time' | translate}}</h3>
+          </h3>
+        </div>
+        <div class="skill-set">
+          <div *ngFor="let item of skillSet; let i = index">
+            <img src="{{ skillSet[i].logo }}" alt="" />
+            <h3>{{ skillSet[i].name }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-showcase-wrapper">
+      <div>
+        <div>
+          <img
+            src={{firstPicture}}
+            alt=""
+          />
+          <img
+            src="{{secondPicture}}"
+            alt=""
+          />
+        </div>
+        <div>
+          <button><a href="">GitHub</a></button>
+          <button><a href="">Live Test</a></button>
+        </div>
+        <div class="project-arrow">
+          <div (click)= "goToProject(previousProject)">
+            <img
+              src="./../../../assets/img/project-showcase/orange-arrow.png"
+              alt=""
+            />
+            <h3>Go Back</h3>
+          </div>
+          <div (click)= "goToProject(nextProject)"> 
+            <h3>New Project</h3>
+            <img
+              src="./../../../assets/img/project-showcase/yellow-arrow.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div (click)= "goToProject(nextProject)">
+    <h3>New Project</h3>
+    <img src="./../../../assets/img/project-showcase/yellow-arrow.png" alt="" />
+  </div>
+</section>

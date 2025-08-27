@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 export class MyProjectsComponent {
 constructor(private router: Router) {}
 
-goToProject(){
-  this.router.navigate(['project-showcase'])
+goToProject(Number: number) {
+  this.router.navigate(['project-showcase', Number]);
 }
 }

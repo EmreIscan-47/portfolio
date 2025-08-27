@@ -1,16 +1,9 @@
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { ProjectShowcaseComponent } from './main/project-showcase/project-showcase.component';
-import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
-
+  { path: '', redirectTo: 'homepage', pathMatch: 'full' as const },
   { path: 'homepage', component: MainComponent },
-  { path: 'project-showcase', component: ProjectShowcaseComponent },
+  { path: 'project-showcase/:id', component: ProjectShowcaseComponent }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}

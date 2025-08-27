@@ -1,0 +1,39 @@
+{
+  "WELCOME": "Get in touch",
+  "project-showcase": {
+    "el-polo-loco": {
+    "title": "El Polo Loco",
+    "description":{ "description-title": "Description", "description-text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."},
+    "implementation-details": { "implementation-title": "Implementation Details", "implementation-text": "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way."},
+    "duration": {
+      "duration-text": "Duration:",
+      "duration-time": "3 weeks"
+    },
+    "source-code": "Source code"
+  },
+  "join": {
+    "title": "JOIN",
+    "description":{ "description-title": "Description", "description-text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."},
+    "implementation-details": { "implementation-title": "Implementation Details", "implementation-text": "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way."},
+    "duration": {
+      "duration-text": "Duration:",
+      "duration-time": "3 weeks"
+    },
+    "source-code": "Source code"
+  },
+  "pokeDex": {
+    "title": "PokeDex",
+    "description":{ "description-title": "Description", "description-text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."},
+    "implementation-details": { "implementation-title": "Implementation Details", "implementation-text": "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way."},
+    "duration": {
+      "duration-text": "Duration:",
+      "duration-time": "3 weeks"
+    },
+    "source-code": "Source code"
+  }
+  }
+  
+}
+
+
+

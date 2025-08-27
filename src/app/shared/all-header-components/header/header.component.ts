@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -20,17 +21,16 @@ export class HeaderComponent {
   dropDownActive = true;
   styleStatus = 0;
 
-constructor(private router: Router) {}
+  constructor(private router: Router, private translate: TranslateService) {}
 
-   goToHomePage(){
-      this.router.navigate(['/homepage']);
-   }
-   
+  goToHomePage() {
+    this.router.navigate(['/homepage']);
+  }
 
   openDropdown() {
     if (this.otherLayout) {
-      console.log("yo");
-      
+      console.log('yo');
+
       this.styleStatus = 3;
     } else {
       this.styleStatus = 1;
@@ -44,7 +44,7 @@ constructor(private router: Router) {}
   }
 
   closeDropdown() {
-     if (this.otherLayout) {
+    if (this.otherLayout) {
       this.styleStatus = 4;
     } else {
       this.styleStatus = 2;
@@ -59,13 +59,11 @@ constructor(private router: Router) {}
   }
 
   changeLanguage(language: string) {
-
-    if (language == "DE") {
+    this.translate.use(language);
+    if (language == 'de') {
       this.languageAnimation = true;
     } else {
       this.languageAnimation = false;
     }
   }
-
-
 }
