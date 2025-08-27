@@ -100,11 +100,14 @@
       height: 300px;
       object-fit: cover;
       transition: all 0.3s ease;
-         transform-origin: right top;
-      transform: translateY(-50px);
+      transform-origin: right top;
+      transform: translateY(-30px);
 
       animation: downHover 0.3s ease forwards;
-
+      @media (max-width: 700px) {
+        width: 100%;
+        height: auto;
+      }
     }
 
     > img:nth-child(2) {
@@ -133,6 +136,11 @@
       height: 40%;
       border-radius: 0 0 0 50px;
       top: 240px;
+         @media (max-width: 700px) {
+        top: 150px;
+
+        z-index: 3;
+      }
 
       @media (max-width: 500px) {
         top: 180px;
@@ -175,7 +183,7 @@
 
 @keyframes downHover {
   to {
-    transform: translateY(-30px);
+    transform: translateY(-20px);
   }
 }
 
