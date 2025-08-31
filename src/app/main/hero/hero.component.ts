@@ -13,7 +13,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class HeroComponent {
   constructor(private translate: TranslateService) {}
 
-  firstWrapper = ['F', 'r', 'o', 'n', 't', 'e', 'd'];
+  firstWrapper = ['F', 'r', 'o', 'n', 't', 'e', 'n', 'd'];
   secondWrapper = ['D', 'E', 'V','E','L', 'O','P','E', 'R'];
   hoveredIndex: Number | null = null;
   helloWorldHover:boolean = false;

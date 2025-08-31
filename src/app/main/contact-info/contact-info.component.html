@@ -8,17 +8,13 @@
   </div>
   <div class="top-contacts-wrapper">
     <div>
-      <h2>CONTACT ME</h2>
-      <h1>Ready to work together?</h1>
+      <h2>{{'contact-me.title.title_1'| translate}}</h2>
+      <h1>{{'contact-me.title.title_2'| translate}}</h1>
       <span
-        >Encourage people to contact you and describe what role you are
-        interested in. Express confidence in your ability to make a meaningful
-        contribution to a team through your expertise and enthusiasm for
-        improving your skills.
+        >{{'contact-me.description.description-text_1'| translate}}
         <br />
         <br />
-        Show interest in contributing to a new project, while highlighting the
-        value and skills you can bring to the table.</span
+        {{'contact-me.description.description-text_2'| translate}} </span
       >
 
       <div>
@@ -33,7 +29,7 @@
       <div class="form-content">
         <div>
           <div [class.active]="borderBlue == 1">
-            <label for="name">What's your name?</label>
+            <label for="name">{{'contact-me.form.name.name-q'| translate}}</label>
             <input
               [(ngModel)]="contactData.name"
                [ngClass] = "{'input-error': !contactData.name && contactForm.touched && formSubmitted && contactData.name.trim() == ''}"
@@ -50,7 +46,7 @@
             (mouseenter)="borderActive(1)"
             (mouseleave)="borderActive(0)"
           >
-            <label for="email">What's your email?</label>
+            <label for="email">{{'contact-me.form.email.email-q'| translate}}</label>
             <input
               [(ngModel)]="contactData.email"
               [ngClass] = "{'input-error': !contactData.email && contactForm.touched && formSubmitted && contactData.email.trim() == ''}"
@@ -63,7 +59,7 @@
             />
           </div>
           <div (mouseenter)="borderActive(2)" (mouseleave)="borderActive(0)">
-            <label for="message">How can I help you?</label>
+            <label for="message">{{'contact-me.form.message.message-q'| translate}}</label>
             <input
               [(ngModel)]="contactData.message"
               [ngClass] = "{'input-error': !contactData.message && contactForm.touched  && formSubmitted && contactData.message.trim() == ''}"
@@ -93,12 +89,12 @@
               required
             />
             <h2>
-              I've read the <a href="">privacy policy</a> and agree to the
-              processing of my data as outlined.
+              {{'contact-me.form.privacy-policy.privacy-policy_1'| translate}} <a href="">{{'contact-me.form.privacy-policy.privacy-hyper-link'| translate}}</a> {{'contact-me.form.privacy-policy.privacy-policy_2'| translate}}
+             
             </h2>
           </div>
           @if (!checkbox.valid && checkbox.touched) {
-          <span>Please accept the privacy policy.</span>
+          <span> {{'contact-me.form.privacy-policy.privacy-warning'| translate}} </span>
           }
         </div>
         <div>

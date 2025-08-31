@@ -1,37 +1,42 @@
 <section class="section-projects">
   <div class="projects-content">
-    <h3>MY CRAFT</h3>
+    <h3>{{ "my-projects.title.title_1" | translate }}</h3>
     <div>
-      <h1>Projects</h1>
+      <h1>{{ "my-projects.title.title_2" | translate }}</h1>
       <img src="./../../../assets/img/my-projects/linear.png" alt="" />
     </div>
-    <span
-      >Encourage people to take a look and interact with your projects.
-      Highlight your approach to creating responsive, user-friendly projects
-      with efficient code.</span
-    >
+    <span>{{ "my-projects.description" | translate }}</span>
   </div>
   <div class="join-content">
     <div (mouseenter)="laptopHover = true" (mouseleave)="laptopHover = false">
       @if (!laptopHover) {
-     <img class="laptop-animation-no-hover" src="./../../../assets/img/my-projects/laptop.png" alt="" />
+      <img
+        class="laptop-animation-no-hover"
+        src="./../../../assets/img/my-projects/laptop.png"
+        alt=""
+      />
       } @else {
-    <img class="laptop-animation-hover"  src="./../../../assets/img/my-projects/laptop.png" alt="" />
+      <img
+        class="laptop-animation-hover"
+        src="./../../../assets/img/my-projects/laptop.png"
+        alt=""
+      />
       }
- 
+
       <img src="./../../../assets/img/my-projects/sticker.png" alt="" />
       <div></div>
       <div class="project-detail-desktop-button">
-        <button (click)="goToProject(2)">Project details</button>
+        <button (click)="goToProject(2)">
+          {{ "my-projects.button" | translate }}
+        </button>
       </div>
     </div>
-    <h3>Join</h3>
-    <span
-      >Task manager inspired by the Kanban System. Create and organize tasks
-      using drag and drop functions, assign users and categories.
-    </span>
+    <h3>{{ "my-projects.project_2.title" | translate }}</h3>
+    <span>{{ "my-projects.project_2.description" | translate }} </span>
     <div class="project-detail-mobile-button">
-      <button (click)="goToProject(2)">Project details</button>
+      <button (click)="goToProject(2)">
+        {{ "my-projects.button" | translate }}
+      </button>
     </div>
   </div>
   <div class="epl-content">
@@ -39,16 +44,17 @@
       <img src="./../../../assets/img/my-projects/el-pollo-loco.jpg" alt="" />
       <div></div>
       <div class="project-detail-desktop-button">
-        <button (click)="goToProject(1)">Project details</button>
+        <button (click)="goToProject(1)">
+          {{ "my-projects.button" | translate }}
+        </button>
       </div>
     </div>
-    <h3>El Pollo Loco</h3>
-    <span>
-      Jump, run and throw game based on object-oriented approach. Help Pepe to
-      find coins and tabasco salsa to fight against the crazy hen.</span
-    >
+    <h3>{{ "my-projects.project_1.title" | translate }}</h3>
+    <span> {{ "my-projects.project_1.description" | translate }}</span>
     <div class="project-detail-mobile-button">
-      <button (click)="goToProject(1)">Project details</button>
+      <button (click)="goToProject(1)">
+        {{ "my-projects.button" | translate }}
+      </button>
     </div>
   </div>
   <div class="other-content">
@@ -56,17 +62,17 @@
       <img src="./../../../assets/img/my-projects/PokeDex_1.jpg" alt="" />
       <div></div>
       <div class="project-detail-desktop-button">
-        <button (click)="goToProject(3)">Project details</button>
+        <button (click)="goToProject(3)">
+          {{ "my-projects.button" | translate }}
+        </button>
       </div>
     </div>
-    <h3>Join</h3>
-    <span
-      >This App is a Slack Clone App. It revolutionizes team communication and
-      collaboration with its intuitive interface, real-time messaging, and
-      robust channel organization.</span
-    >
+    <h3>{{ "my-projects.project_3.title" | translate }}</h3>
+    <span>{{ "my-projects.project_3.description" | translate }}</span>
     <div class="project-detail-mobile-button">
-      <button (click)="goToProject(3)">Project details</button>
+      <button (click)="goToProject(3)">
+        {{ "my-projects.button" | translate }}
+      </button>
     </div>
   </div>
 </section>

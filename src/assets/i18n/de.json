@@ -1,36 +1,162 @@
 {
-  "WELCOME": "Komm in Berührung",
+  "WELCOME": "Kontakt aufnehmen",
+  "header": {
+    "about-me": "Über mich",
+    "skills": "Fähigkeiten",
+    "project": "Projekte",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "welcome": { "welcome_1": "Hallo Welt", "welcome_2": "ICH BIN EMRE ISCAN" },
+    "contact-me": "Kontakt aufnehmen"
+  },
+  "about-me": {
+    "title": { "title_1": "WER IST EMRE", "title_2": "Über mich" },
+    "description": {
+      "description-text_1": "Hallo, ich bin Emre. Mit einem Hintergrund in Wirtschaftsinformatik und viel praktischer Erfahrung als Frontend-Entwickler habe ich viele Facetten der IT-Welt kennengelernt. Programmieren ist meine Leidenschaft, weil es sowohl ein logischer als auch ein kreativer Prozess ist, der Problemlösung mit Design verbindet. Inspiration ziehe ich daraus, die unmittelbaren Auswirkungen meiner Arbeit zu sehen – sei es, eine App flüssiger laufen zu lassen oder ein besseres Nutzererlebnis zu gestalten. Mit jeder Coding-Herausforderung strebe ich nach der praktischsten und elegantesten Lösung und lerne dabei aus jedem Hindernis, um mich ständig zu verbessern.",
+      "description-text_2": "Lass uns zusammenarbeiten und etwas Bemerkenswertes erschaffen!"
+    },
+    "contact-me": "Lass uns reden",
+    "ripped-text": {
+      "ripped-text_1": "Ansässig in Sulzbach an der Murr",
+      "ripped-text_2": "Bereit zum Umzug",
+      "ripped-text_3": "Offen für Remote-Arbeit"
+    }
+  },
+  "skill-set": {
+    "title": { "title_1": "MEIN STACK", "title_2": "Fähigkeiten" },
+    "description": "Während meines Lernweges habe ich viele Projekte abgeschlossen, in denen ich verschiedene Kerntechnologien angewendet habe. Ich bin entschlossen, neue Tools zu erlernen, um relevant und effektiv zu bleiben. Dieser Ansatz stellt sicher, dass ich mich in einem schnelllebigen Umfeld weiterentwickle:",
+    "pull-me": "Zieh, um zu enthüllen"
+  },
+  "my-projects": {
+    "title": { "title_1": "MEIN HANDWERK", "title_2": "Projekte" },
+    "description": "Von acht Projekten habe ich die ausgewählt, die meine Fähigkeiten am besten zeigen. Jedes Projekt ist komplett und bereit zum Testen. Der Fokus lag auf sauberen Coding-Standards und feinen Details in der Umsetzung. Dein Feedback ist sehr willkommen.",
+    "button": "Projektdetails",
+    "project_1": {
+      "title": "El Polo Loco",
+      "description": "Jump-and-Run-Spiel basierend auf objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+    },
+    "project_2": {
+      "title": "Join",
+      "description": "Auf dem Kanban-System basierender Task-Manager. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
+    },
+    "project_3": {
+      "title": "PokeDex",
+      "description": "Eine Webanwendung, die detaillierte Informationen über verschiedene Pokémon bietet, einschließlich ihrer Werte, Fähigkeiten und Entwicklungen."
+    }
+  },
+  "colleague-thoughts": {
+    "title": {
+      "title_1": "IN IHREN WORTEN:",
+      "title_2": "Gedanken der Kollegen"
+    },
+    "description": "Hier ist, was einige meiner Kollegen über die Zusammenarbeit mit mir zu sagen haben. Ihr Feedback hebt meine Stärken und den positiven Einfluss hervor, den ich auf unsere Projekte und die Teamdynamik habe.",
+    "colleague_1": {
+      "name": "Tobias Lange",
+      "role": "Frontend-Entwickler",
+      "feedback": "Emre ist ein äußerst talentierter Frontend-Entwickler, der stets qualitativ hochwertige Arbeit liefert. Seine Detailgenauigkeit und Fähigkeit, Designkonzepte in funktionale Webanwendungen umzusetzen, ist beeindruckend. Er ist ein großartiger Teamplayer und bereit, stets die Extrameile zu gehen, um den Projekterfolg sicherzustellen."
+    },
+    "colleague_2": {
+      "name": "John Doe",
+      "role": "Frontend-Entwickler",
+      "feedback": "Die Zusammenarbeit mit Emre war eine Freude. Er verfügt über ein starkes Verständnis von Frontend-Technologien und ist immer bestrebt, zu lernen und seine Fähigkeiten zu verbessern. Seine Problemlösungsfähigkeiten und Kreativität machen ihn zu einer wertvollen Bereicherung für jedes Entwicklerteam."
+    },
+    "colleague_3": {
+      "name": "Sarah Johnson",
+      "role": "Frontend-Entwickler",
+      "feedback": "Emre hat ein hervorragendes Auge für Design und Benutzererfahrung. Er arbeitet effektiv mit Designern zusammen, um sicherzustellen, dass das Endprodukt nicht nur großartig aussieht, sondern auch reibungslos funktioniert. Seine Hingabe, benutzerfreundliche Anwendungen zu erstellen, ist in seiner Arbeit klar erkennbar."
+    }
+  },
+  "contact-me": {
+    "title": {
+      "title_1": "KONTAKTIERE MICH",
+      "title_2": "Bereit für eine Zusammenarbeit?"
+    },
+    "description": {
+      "description-text_1": "Bitte zögere nicht, mich zu kontaktieren und Rollen oder Projekte zu teilen, für die ich gut geeignet sein könnte.",
+      "description-text_2": "Mit meinen Fähigkeiten und meiner Lernbereitschaft freue ich mich darauf, deinem Team einen Mehrwert zu bieten."
+    },
+    "form": {
+      "name": {
+        "name-q": "Wie heißt du?",
+        "name-input": "Dein Name hier",
+        "name-warning": "xxx"
+      },
+      "email": {
+        "email-q": "Wie lautet deine E-Mail?",
+        "email-input": "deineemail@email.com",
+        "email-warning": "xxx"
+      },
+      "message": {
+        "message-q": "Wie kann ich dir helfen?",
+        "message-input": "Hallo Lukas, ich interessiere mich für...",
+        "message-warning": "xxx"
+      },
+      "privacy-policy": {
+        "privacy-policy_1": "Ich habe die",
+        "privacy-hyper-link": "Datenschutzerklärung",
+        "privacy-policy_2": "gelesen und stimme der Verarbeitung meiner Daten gemäß den Angaben zu.",
+        "privacy-warning": "Bitte akzeptiere die Datenschutzerklärung"
+      },
+      "placeholder-warning": {
+        "name-warning": "Hoppla! Dein Name fehlt ",
+        "email-warning": "Hoppla! Deine E-Mail-Adresse fehlt",
+        "message-warning": "Was soll entwickelt werden?"
+      },
+      "send": "Senden"
+    },
+    "button": "Kontaktiere mich"
+  },
   "project-showcase": {
+    "back": "Zurück",
+    "new-project": "Neues Projekt",
     "el-polo-loco": {
-    "title": "El Polo Loco",
-    "description":{ "description-title": "Description", "description-text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."},
-    "implementation-details": { "implementation-title": "Implementation Details", "implementation-text": "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way."},
-    "duration": {
-      "duration-text": "Duration:",
-      "duration-time": "3 weeks"
+      "title": "El Polo Loco",
+      "description": {
+        "description-title": "Beschreibung",
+        "description-text": "Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+      },
+      "implementation-details": {
+        "implementation-title": "Umsetzungsdetails",
+        "implementation-text": "Das Projekt wurde mit objektorientiertem JavaScript entwickelt und bewegliche Objekte, zeichnbare Elemente, Level und Audio in separate Komponenten aufgeteilt. Die größte Herausforderung bestand darin, flüssige Animationen zu gewährleisten und gleichzeitig zeitbasierte Prozesse wie Intervalle und Timeouts zu verwalten. Dieser Ansatz sorgte für sauberen Code und vertiefte meine Erfahrung in Animation, Timing und Audiokoordination."
+      },
+      "duration": {
+        "duration-text": "Dauer:",
+        "duration-time": "6 Wochen"
+      },
+      "source-code": "Quellcode"
     },
-    "source-code": "Source code"
-  },
-  "join": {
-    "title": "JOIN",
-    "description":{ "description-title": "Description", "description-text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."},
-    "implementation-details": { "implementation-title": "Implementation Details", "implementation-text": "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way."},
-    "duration": {
-      "duration-text": "Duration:",
-      "duration-time": "3 weeks"
+    "join": {
+      "title": "JOIN",
+      "description": {
+        "description-title": "Beschreibung",
+        "description-text": "Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
+      },
+      "implementation-details": {
+        "implementation-title": "Umsetzungsdetails",
+        "implementation-text": "Join wurde von drei Entwicklern als Teamarbeit erstellt und war unser erstes vollständig Git-gemanagtes, kollaboratives Projekt. Es führte uns in professionelle Entwicklungszyklen und Versionskontroll-Workflows ein. Mit Firebase Realtime Database werden Aufgaben und Kontakte live über Geräte hinweg verwaltet. Das Projekt hat die Bedeutung von starker Teamkoordination in komplexen Softwareentwicklungen verdeutlicht."
+      },
+      "duration": {
+        "duration-text": "Dauer:",
+        "duration-time": "6 Wochen"
+      },
+      "source-code": "Quellcode"
     },
-    "source-code": "Source code"
-  },
-  "pokeDex": {
-    "title": "PokeDex",
-    "description":{ "description-title": "Description", "description-text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."},
-    "implementation-details": { "implementation-title": "Implementation Details", "implementation-text": "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way."},
-    "duration": {
-      "duration-text": "Duration:",
-      "duration-time": "3 weeks"
-    },
-    "source-code": "Source code"
+    "pokeDex": {
+      "title": "PokeDex",
+      "description": {
+        "description-title": "Beschreibung",
+        "description-text": "Eine Webanwendung, die detaillierte Informationen über verschiedene Pokémon bietet, darunter ihre Werte, Fähigkeiten und Entwicklungen."
+      },
+      "implementation-details": {
+        "implementation-title": "Umsetzungsdetails",
+        "implementation-text": "Dieses Projekt stellte meine erste praktische Erfahrung mit API-Integration dar. Obwohl ich anfangs Schwierigkeiten hatte, die Antworten zu verstehen und die Daten zu strukturieren, gewann ich zunehmend das Vertrauen, genau die Daten abzufragen, die ich benötigte, und sie an den richtigen Stellen im Frontend zu integrieren. Diese Erfahrung zeigte mir, wie lohnend es ist, rohe externe Daten in ein flüssiges, interaktives Nutzererlebnis zu verwandeln."
+      },
+      "duration": {
+        "duration-text": "Dauer:",
+        "duration-time": "2 Wochen"
+      },
+      "source-code": "Quellcode"
+    }
   }
-  }
-  
 }

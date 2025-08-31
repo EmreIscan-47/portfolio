@@ -13,7 +13,7 @@
           (mouseenter)="helloWorldHover = true; rollIn = false"
           (mouseleave)="helloWorldHover = false; rollIn = true"
         >
-          @if (helloWorldHover) {I'M EMRE ISCAN } @else { Hello world }
+          @if (helloWorldHover) { {{'hero.welcome.welcome_2'| translate}} } @else { {{'hero.welcome.welcome_1'| translate}} }
         </button>
       </div>
 
@@ -48,7 +48,7 @@
       </div>
     </div>
     <div>
-      <button (click)="goTo('contact-me')">{{'WELCOME'| translate}}</button>
+      <button (click)="goTo('contact-me')">{{'hero.contact-me'| translate}}</button>
     </div>
     <div class="polaroid-mobile">
       <img

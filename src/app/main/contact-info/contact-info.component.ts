@@ -3,10 +3,11 @@ import { FooterComponent } from '../../shared/all-footer-components/footer/foote
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-contact-info',
   standalone: true,
-  imports: [FooterComponent, FormsModule, HttpClientModule, CommonModule],
+  imports: [FooterComponent, FormsModule, HttpClientModule, CommonModule, TranslateModule],
   templateUrl: './contact-info.component.html',
   styleUrl: './contact-info.component.scss',
 })
@@ -28,6 +29,10 @@ export class ContactInfoComponent {
     message: '',
     agree: false,
   };
+
+
+
+   constructor(private translate: TranslateService) {}
 
   toggleCheckbox() {
     let checkboxREF = document.getElementById('checkbox') as HTMLImageElement;
@@ -104,15 +109,15 @@ export class ContactInfoComponent {
 
   notValidForm(ngForm: NgForm) {
     if (!this.contactData.name) {
-      this.namePlaceholder = 'Oops! it seems your name is missing ';
+      this.namePlaceholder = this.translate.instant('contact-me.form.placeholder-warning.name-warning') ; ;
     }
     if (!this.contactData.email) {
       this.contactData.email.trim();
-      this.emailPlaceholder = 'Hoppla! your email is required';
+      this.emailPlaceholder = this.translate.instant('contact-me.form.placeholder-warning.email-warning') ;
     }
     if (!this.contactData.message) {
 
-      this.messagePlaceholder = 'What do you need to develop?';
+      this.messagePlaceholder = this.translate.instant('contact-me.form.placeholder-warning.message-warning')  ;   ;
     }
   }
 
