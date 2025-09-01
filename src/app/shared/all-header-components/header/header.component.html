@@ -51,7 +51,7 @@
     <div class="language-switch">
       <div
         (click)="changeLanguage('en')"
-        [class.language-animation]="languageAnimation == true"
+        [class.language-animation]="languageAnimation == false"
       >
         <img src="./../../../../assets/img/header/toggle-en.png" alt="" />
         <h3>EN</h3>
@@ -59,8 +59,8 @@
       <div>
         <svg
           [ngClass]="{
-      'language-de ': languageAnimation == true,
-      'language-en': languageAnimation == false,
+      'language-de ': languageAnimation == false,
+      'language-en': languageAnimation == true,
       'overlay-hidden': styleStatus === 2 || styleStatus === 4,
     }"
           width="16"
@@ -91,7 +91,7 @@
       </div>
       <div
         (click)="changeLanguage('de')"
-        [class.language-animation]="languageAnimation == false"
+        [class.language-animation]="languageAnimation == true"
       >
         <img src="./../../../../assets/img/header/toggle-de.png" alt="" />
         <h3>DE</h3>
@@ -156,7 +156,7 @@
       </div>
 
       <div class="language-switch">
-        <div (click)="changeLanguage('en')" [class.language-animation]="languageAnimation == true">
+        <div (click)="changeLanguage('en')" [class.language-animation]="languageAnimation == false">
           <img src="./../../../../assets/img/header/toggle-en.png" alt="" />
           <h3>EN</h3>
         </div>
@@ -164,8 +164,8 @@
         <div>
           <svg
             [ngClass]="{
-      'language-de ': languageAnimation == true,
-      'language-en': languageAnimation == false,
+      'language-de ': languageAnimation == false,
+      'language-en': languageAnimation == true,
       'overlay-hidden': styleStatus === 2 || styleStatus === 4,
     }"
             width="16"
@@ -194,7 +194,7 @@
             />
           </svg>
         </div>
-        <div (click)="changeLanguage('de')" [class.language-animation]="languageAnimation == false">
+        <div (click)="changeLanguage('de')" [class.language-animation]="languageAnimation == true">
           <img src="./../../../../assets/img/header/toggle-en.png" alt="" />
           <h3>DE</h3>
         </div>

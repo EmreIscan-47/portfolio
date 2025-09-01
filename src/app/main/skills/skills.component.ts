@@ -6,8 +6,20 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+  styleUrl: './skills.component.scss',
 })
 export class SkillsComponent {
-   constructor(private translate: TranslateService) {}
+  isGermanActive: boolean = false;
+
+  constructor(private translate: TranslateService) {
+    this.checkLanguage();
+
+    this.translate.onLangChange.subscribe(() => {
+      this.checkLanguage();
+    });
+  }
+
+  checkLanguage() {
+    this.isGermanActive = this.translate.currentLang === 'de';
+  }
 }

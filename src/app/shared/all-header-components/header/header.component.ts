@@ -61,9 +61,9 @@ export class HeaderComponent {
   changeLanguage(language: string) {
     this.translate.use(language);
     if (language == 'de') {
-      this.languageAnimation = true;
-    } else {
       this.languageAnimation = false;
+    } else {
+      this.languageAnimation = true;
     }
   }
 }

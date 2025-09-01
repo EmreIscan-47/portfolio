@@ -107,6 +107,9 @@
     },
     "button": "Kontaktiere mich"
   },
+  "footer": {
+    "legal-notice": "Impressum"
+  },
   "project-showcase": {
     "back": "Zurück",
     "new-project": "Neues Projekt",

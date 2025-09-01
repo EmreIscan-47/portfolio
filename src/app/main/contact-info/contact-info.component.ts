@@ -31,8 +31,20 @@ export class ContactInfoComponent {
   };
 
 
+  isGermanActive: boolean = false;
 
-   constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService) {
+    this.checkLanguage();
+
+
+    this.translate.onLangChange.subscribe(() => {
+      this.checkLanguage();
+    });
+  }
+
+  checkLanguage() {
+    this.isGermanActive = this.translate.currentLang === 'de';
+  }
 
   toggleCheckbox() {
     let checkboxREF = document.getElementById('checkbox') as HTMLImageElement;
@@ -109,7 +121,7 @@ export class ContactInfoComponent {
 
   notValidForm(ngForm: NgForm) {
     if (!this.contactData.name) {
-      this.namePlaceholder = this.translate.instant('contact-me.form.placeholder-warning.name-warning') ; ;
+      this.namePlaceholder = this.translate.instant('contact-me.form.placeholder-warning.name-warning');
     }
     if (!this.contactData.email) {
       this.contactData.email.trim();

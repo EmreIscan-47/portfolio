@@ -6,7 +6,7 @@
   <div>
     <div>
       <div class="skill-set-header">
-        <div><h2>{{'skill-set.title.title_1'| translate}}</h2></div>
+        <div><h2 [class.deActive] ="isGermanActive">{{'skill-set.title.title_1'| translate}}</h2></div>
         <div>
           <h1>{{'skill-set.title.title_2'| translate}}</h1>
           <img src="./../../../assets/img/skills/circle-skills.png" alt="" />
@@ -14,7 +14,7 @@
       </div>
       <div class="skills-introduction">
         <img src="./../../../assets/img/skills/skills-papel.png" alt="" />
-        <span
+        <span [class.deActive] ="isGermanActive"
           >{{'skill-set.description'| translate}}
         </span>
       </div>

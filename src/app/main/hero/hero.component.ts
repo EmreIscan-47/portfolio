@@ -8,26 +8,47 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, HeaderComponent, TranslateModule],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss'
+  styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
-  constructor(private translate: TranslateService) {}
-
   firstWrapper = ['F', 'r', 'o', 'n', 't', 'e', 'n', 'd'];
-  secondWrapper = ['D', 'E', 'V','E','L', 'O','P','E', 'R'];
+  secondWrapper = ['D', 'E', 'V', 'E', 'L', 'O', 'P', 'E', 'R'];
   hoveredIndex: Number | null = null;
-  helloWorldHover:boolean = false;
+  helloWorldHover: boolean = false;
   rollIn = false;
+  isGermanActive: boolean = false;
+
+  constructor(private translate: TranslateService) {
+    this.changeWrapper();
+    this.checkLanguage();
+
+    this.translate.onLangChange.subscribe(() => {
+      this.changeWrapper();
+      this.checkLanguage();
+    });
+  }
+
+  checkLanguage() {
+    this.isGermanActive = this.translate.currentLang === 'de';
+  }
+
+  changeWrapper() {
+    if (this.translate.currentLang === 'de') {
+      this.secondWrapper = ['E', 'N', 'T', 'W', 'I', 'C', 'K', 'L', 'E', 'R'];
+    } else {
+      this.secondWrapper = ['D', 'E', 'V', 'E', 'L', 'O', 'P', 'E', 'R'];
+    }
+  }
 
   onMouseEnter(i: Number) {
-   this.hoveredIndex= i;
+    this.hoveredIndex = i;
   }
 
   onMouseLeave() {
-  this.hoveredIndex = null;
+    this.hoveredIndex = null;
   }
 
-   goTo(url: string) {
+  goTo(url: string) {
     const element = document.getElementById(url);
     if (element) {
       element.scrollIntoView();

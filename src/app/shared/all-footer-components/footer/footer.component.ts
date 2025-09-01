@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
@@ -14,6 +15,21 @@ export class FooterComponent {
   gitHubCountOne = 0;
   linkedInCountOne = 0;
   mailCountOne = 0;
+
+  isGermanActive: boolean = false;
+
+  constructor(private translate: TranslateService) {
+    this.checkLanguage();
+
+
+    this.translate.onLangChange.subscribe(() => {
+      this.checkLanguage();
+    });
+  }
+
+  checkLanguage() {
+    this.isGermanActive = this.translate.currentLang === 'de';
+  }
 
   rollIn(imgRollNumer: Number) {
     switch (imgRollNumer) {

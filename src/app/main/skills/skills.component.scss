@@ -73,6 +73,9 @@
       width: 100px;
       color: white;
     }
+    > h2.deActive{
+      width: 120px;
+    }
   }
 
   > div:last-child {
@@ -181,6 +184,17 @@
       width: 200px;
       font-size: 8px;
       top: 75px;
+    }
+  }
+
+  >span.deActive {
+    width: 650px;
+    @media (max-width: 1250px) {
+      width: 350px;
+    }
+    @media (max-width: 500px) {
+      font-size: 7px;
+      width: 250px;
     }
   }
 }

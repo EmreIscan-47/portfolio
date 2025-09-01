@@ -99,6 +99,12 @@
       }
     }
 
+    >h1.deActive {
+     @media (max-width: 550px) {
+        font-size: 30px;
+      }
+    }
+
     > span {
       font-weight: 400;
       font-size: 18px;

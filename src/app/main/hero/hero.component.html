@@ -17,7 +17,7 @@
         </button>
       </div>
 
-      <div class="frontend-wrapper">
+      <div [class.deActive]="isGermanActive" class="frontend-wrapper">
         <div>
           <span
             *ngFor="
@@ -41,14 +41,14 @@
           <span>Emre :)</span>
         </div>
       </div>
-      <div class="dev-wrapper">
+      <div [class.deActive]="isGermanActive" class="dev-wrapper">
         <div>
           <span *ngFor="let item of secondWrapper">{{ item }}</span>
         </div>
       </div>
     </div>
     <div>
-      <button (click)="goTo('contact-me')">{{'hero.contact-me'| translate}}</button>
+      <button [class.deActive]="isGermanActive" (click)="goTo('contact-me')">{{'hero.contact-me'| translate}}</button>
     </div>
     <div class="polaroid-mobile">
       <img
