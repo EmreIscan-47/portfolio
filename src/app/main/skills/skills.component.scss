@@ -268,7 +268,20 @@
 .section-sticker {
   position: absolute;
   top: 40%;
-  right: 10%;
+  right: 35%;
+   @media (max-width: 3450px) {
+    right: 28%;
+  }
+  @media (max-width: 2420px) {
+    right: 20%;
+  }
+  @media (max-width: 1920px) {
+    right: 15%;
+  }
+
+  @media (max-width: 1520px) {
+    right: 10%;
+  }
   @media (max-width: 1300px) {
     right: 5%;
   }
@@ -278,6 +291,7 @@
   > img {
     width: 200px;
     transform: rotate(8deg);
+    transition: all 0.3s ease;
     @media (max-width: 1250px) {
       width: 150px;
     }
