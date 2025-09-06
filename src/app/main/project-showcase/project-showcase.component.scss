@@ -12,19 +12,30 @@
   @media (max-width: 1250px) {
     background-image: url("/assets/img/project-showcase/showcase-background-rotate.png");
     background-position: 50% -40px;
+
     height: 1000px;
   }
 
   @media (max-width: 750px) {
-    height: 1000px;
-    background-position: 50% 0 !important;
+
+        background-size: 150%;
   }
 
+   @media (max-width: 580px) {
+height: 1100px;
+        background-size: 220%;
+  }
   @media (max-width: 400px) {
     background-image: url("/assets/img/project-showcase/showcase-mobile-background.png");
-
+  background-size: 110%;
     height: 1200px;
     background-position: 50% 0px;
   }
+
+    @media (max-width: 340px) {
+      background-size: 120%;
+  }
+
+
 }
 

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -17,10 +18,12 @@ export class FooterComponent {
   mailCountOne = 0;
 
   isGermanActive: boolean = false;
+  onHover: boolean = false;
+  @Input() otherLayout = false;
 
-  constructor(private translate: TranslateService) {
+  constructor(private router: Router, private translate: TranslateService) {
     this.checkLanguage();
-
+    console.log(this.otherLayout);
 
     this.translate.onLangChange.subscribe(() => {
       this.checkLanguage();
@@ -31,6 +34,23 @@ export class FooterComponent {
     this.isGermanActive = this.translate.currentLang === 'de';
   }
 
+  goToPage(url: string) {
+    this.router.navigate([url]);
+    console.log("yo");
+    
+  }
+
+  goToStartPage() {
+    const startPage = document.getElementById('hero');
+    if (this.otherLayout) {
+      this.router.navigate(['homepage']);
+    } else {
+      if (startPage) {
+        startPage.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+
   rollIn(imgRollNumer: Number) {
     switch (imgRollNumer) {
       case 1:
@@ -38,11 +58,11 @@ export class FooterComponent {
         this.gitHubRoll = true;
         break;
       case 2:
-         this.linkedInCountOne = 1;
+        this.linkedInCountOne = 1;
         this.linkedInRoll = true;
         break;
       case 3:
-         this.mailCountOne = 1;
+        this.mailCountOne = 1;
         this.mailRoll = true;
         break;
       default:

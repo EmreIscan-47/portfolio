@@ -17,6 +17,7 @@ export class HeroComponent {
   helloWorldHover: boolean = false;
   rollIn = false;
   isGermanActive: boolean = false;
+  laughSmiley: boolean = false;
 
   constructor(private translate: TranslateService) {
     this.changeWrapper();

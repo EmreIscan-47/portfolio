@@ -4,10 +4,11 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-contact-info',
   standalone: true,
-  imports: [FooterComponent, FormsModule, HttpClientModule, CommonModule, TranslateModule],
+  imports: [FooterComponent, FormsModule, HttpClientModule, CommonModule, TranslateModule, RouterModule],
   templateUrl: './contact-info.component.html',
   styleUrl: './contact-info.component.scss',
 })

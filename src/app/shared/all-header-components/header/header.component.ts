@@ -16,15 +16,31 @@ export class HeaderComponent {
   dropDownOpen = false;
   closeButtonActive = false;
   languageAnimation = true;
-  @Input() otherLayout = false;
+  @Input() otherLayout= false;
+  isGermanActive: boolean = false;
 
   dropDownActive = true;
   styleStatus = 0;
 
-  constructor(private router: Router, private translate: TranslateService) {}
+  constructor(private router: Router, private translate: TranslateService) {
+    this.checkLanguage();
+    console.log(this.otherLayout);
 
+    this.translate.onLangChange.subscribe(() => {
+      this.checkLanguage();
+    });
+  }
+
+  checkLanguage() {
+    this.isGermanActive = this.translate.currentLang === 'de';
+  }
   goToHomePage() {
     this.router.navigate(['/homepage']);
+  }
+
+  log(){
+    console.log(this.yellowlogo);
+    
   }
 
   openDropdown() {

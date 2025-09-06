@@ -70,6 +70,11 @@
   }
 }
 
+.hero-logo {
+  width: 85px !important;
+
+}
+
 .skills-a {
   position: relative;
 
@@ -91,6 +96,11 @@
     clip-path: inset(0 100% 0 0);
 
     transition: clip-path 0.5s ease;
+  }
+  > img.deActive {
+    width: 150px;
+    height: 30px;
+    top: -5px;
   }
 
   &:hover > img {

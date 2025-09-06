@@ -1,11 +1,30 @@
 <section class="footer-wrapper">
   <div>
-    <img src="./../../../../assets/img/logo-no-hover.png" alt="" />
+    <img
+      (click)="goToStartPage()"
+      (mouseenter)="onHover = true"
+      (mouseleave)="onHover = false"
+      [src]="
+        onHover
+          ? './../../../../assets/img/footer/logo-hover.svg'
+          : ' ./../../../../assets/img/footer/logo-no-hover.svg'
+      "
+      alt=""
+    />
+    
+
     <div>
-      <h2>© Emre Iscan 2025</h2>
+      <h2 [class.active]="otherLayout">© Emre Iscan 2025</h2>
       <div>
-        <h2>{{'footer.legal-notice'| translate}}</h2>
-        <img src="./../../../../assets/img/3.png" alt="" />
+        <h2 [class.active]="otherLayout">
+          {{ "footer.legal-notice" | translate }}
+        </h2>
+
+        <img
+          (click)="goToPage('legal-notice')"
+          src="./../../../../assets/img/3.png"
+          alt=""
+        />
       </div>
     </div>
   </div>
@@ -18,7 +37,13 @@
         src="./../../../../assets/img/footer/github.png"
         alt=""
       />
-      <button (mouseenter)="rollIn(1)" (mouseleave)="rollOut(1)">GitHub</button>
+      <button
+        [class.active]="otherLayout"
+        (mouseenter)="rollIn(1)"
+        (mouseleave)="rollOut(1)"
+      >
+        GitHub
+      </button>
     </div>
     <div>
       <img
@@ -28,7 +53,11 @@
         src="./../../../../assets/img/footer/linked-In.png"
         alt=""
       />
-      <button (mouseenter)="rollIn(2)" (mouseleave)="rollOut(2)">
+      <button
+        [class.active]="otherLayout"
+        (mouseenter)="rollIn(2)"
+        (mouseleave)="rollOut(2)"
+      >
         LinkedIn
       </button>
     </div>
@@ -40,7 +69,13 @@
         src="./../../../../assets/img/footer/mail.png"
         alt=""
       />
-      <button (mouseenter)="rollIn(3)" (mouseleave)="rollOut(3)">Email</button>
+      <button
+        [class.active]="otherLayout"
+        (mouseenter)="rollIn(3)"
+        (mouseleave)="rollOut(3)"
+      >
+        Email
+      </button>
     </div>
   </div>
 </section>

@@ -6,6 +6,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { ContactInfoComponent } from './contact-info/contact-info.component';
 import { FooterComponent } from '../shared/all-footer-components/footer/footer.component';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @Component({
   selector: 'app-main',

@@ -1,20 +1,25 @@
-
 <section class="hero-background">
-<!--   <img src="./../../../assets/img/hero-background.png" alt="" /> -->
+  <!--   <img src="./../../../assets/img/hero-background.png" alt="" /> -->
 </section>
 
 <section class="t-p-section">
-   <app-header></app-header>
+  <app-header></app-header>
   <div>
     <div class="main-wrapper">
       <div>
-        <img [class.roll-out] = "helloWorldHover" [class.roll-in] = "rollIn"  src="./../../../assets/img/hero/waving_hand.png" alt="">
+        <img
+          [class.roll-out]="helloWorldHover"
+          [class.roll-in]="rollIn"
+          src="./../../../assets/img/hero/waving_hand.png"
+          alt=""
+        />
         <button
-           (click)="goTo('about')"
+          (click)="goTo('about')"
           (mouseenter)="helloWorldHover = true; rollIn = false"
           (mouseleave)="helloWorldHover = false; rollIn = true"
         >
-          @if (helloWorldHover) { {{'hero.welcome.welcome_2'| translate}} } @else { {{'hero.welcome.welcome_1'| translate}} }
+          @if (helloWorldHover) { {{ "hero.welcome.welcome_2" | translate }} }
+          @else { {{ "hero.welcome.welcome_1" | translate }} }
         </button>
       </div>
 
@@ -32,14 +37,17 @@
             [class.active]="hoveredIndex === i"
             >{{ item }}</span
           >
-
         </div>
-        <div class="polaroid">
+        <div
+          (mouseenter)="laughSmiley = true"
+          (mouseleave)="laughSmiley = false"
+          class="polaroid"
+        >
           <img
             src="./../../../assets/img/Polaroid-Frame-Mockup copia 1.png"
             alt=""
           />
-          <span>Emre :)</span>
+          <span>Emre :@if(laughSmiley) {D} @else {)} </span>
         </div>
       </div>
       <div [class.deActive]="isGermanActive" class="dev-wrapper">
@@ -49,17 +57,22 @@
       </div>
     </div>
     <div>
-      <button [class.deActive]="isGermanActive" (click)="goTo('contact-me')">{{'hero.contact-me'| translate}}</button>
+      <button [class.deActive]="isGermanActive" (click)="goTo('contact-me')">
+        {{ "hero.contact-me" | translate }}
+      </button>
     </div>
-    <div class="polaroid-mobile">
+    <div
+      (mouseenter)="laughSmiley = true"
+      (mouseleave)="laughSmiley = false"
+      class="polaroid-mobile"
+    >
       <img
         src="./../../../assets/img/Polaroid-Frame-Mockup copia 1.png"
         alt=""
       />
-      <span>Emre :)</span>
+      <span>Emre :@if(laughSmiley) {D} @else {)}</span>
     </div>
   </div>
- 
 </section>
 
 <section class="socials-section">
