@@ -6,14 +6,14 @@
       (mouseleave)="yellowlogo = false"
     >
       
-      <img  class="hero-logo" [src]="yellowlogo ? './../../../../assets/img/header/logo-hover.svg' : './../../../../assets/img/header/logo-no-hover.svg'" alt="" />
+      <img  class="hero-logo" [src]="yellowlogo ? './assets/img/header/logo-hover.svg' : './assets/img/header/logo-no-hover.svg'" alt="" />
      
     </div>
     <div (click)="openDropdown()" clickable>
       @if (dropDownOpen) {
-      <img src="./../../../../assets/img/header/hover_dropdown.png" alt="" />
+      <img src="./assets/img/header/hover_dropdown.png" alt="" />
       } @else {
-      <img src="./../../../../assets/img/header/default_dropdown.png" alt="" />
+      <img src="./assets/img/header/default_dropdown.png" alt="" />
       }
     </div>
   </div>
@@ -24,28 +24,28 @@
       (mouseleave)="yellowlogo = false;  log()"
     >
     
-      <img class="hero-logo" [src]="yellowlogo ? './../../../../assets/img/header/logo-hover.svg' : './../../../../assets/img/header/logo-no-hover.svg'" alt="" />
+      <img class="hero-logo" [src]="yellowlogo ? './assets/img/header/logo-hover.svg' : './assets/img/header/logo-no-hover.svg'" alt="" />
      
     </div>
     <div class="about-me-a" [ngClass]="{ 'about-me-a-showcase': otherLayout }">
       <a href="homepage#about">{{ "header.about-me" | translate }}</a>
-      <img src="./../../../../assets/img/1.png" alt="" />
+      <img src="./assets/img/1.png" alt="" />
     </div>
     <div class="skills-a" [ngClass]="{ 'skills-a-showcase': otherLayout }">
       <a href="homepage#skills">{{ "header.skills" | translate }}</a>
       <img
         [class.deActive]="isGermanActive"
-        src="./../../../../assets/img/2.png"
+        src="./assets/img/2.png"
         alt=""
       />
     </div>
     <div class="projects-a" [ngClass]="{ 'projects-a-showcase': otherLayout }">
       <a href="homepage#my-projects">{{ "header.project" | translate }}</a>
-      <img src="./../../../../assets/img/3.png" alt="" />
+      <img src="./assets/img/3.png" alt="" />
     </div>
     <div class="contact-a" [ngClass]="{ 'contacts-a-showcase': otherLayout }">
       <a href="homepage#contact-me">{{ "header.contact" | translate }}</a>
-      <img src="./../../../../assets/img/4.png" alt="" />
+      <img src="./assets/img/4.png" alt="" />
     </div>
 
     <div class="language-switch">
@@ -53,7 +53,7 @@
         (click)="changeLanguage('en')"
         [class.language-animation]="languageAnimation == false"
       >
-        <img src="./../../../../assets/img/header/toggle-en.png" alt="" />
+        <img src="./assets/img/header/toggle-en.png" alt="" />
         <h3>EN</h3>
       </div>
       <div>
@@ -93,7 +93,7 @@
         (click)="changeLanguage('de')"
         [class.language-animation]="languageAnimation == true"
       >
-        <img src="./../../../../assets/img/header/toggle-de.png" alt="" />
+        <img src="./assets/img/header/toggle-de.png" alt="" />
         <h3>DE</h3>
       </div>
     </div>
@@ -123,18 +123,18 @@
     <div>
       <div (mouseenter)="yellowlogo = true; log()" (mouseleave)="yellowlogo = false;  log()">
         @if (yellowlogo) {
-        <img class="hero-logo" src="./../../../../assets/img/header/logo-hover.svg" alt="" />
+        <img class="hero-logo" src="./assets/img/header/logo-hover.svg" alt="" />
         } @else {
-        <img class="hero-logo"  src="./../../../../assets/img/header/logo-no-hover.svg" alt="" />
+        <img class="hero-logo"  src="./assets/img/header/logo-no-hover.svg" alt="" />
         }
 
       </div>
 
       <div (click)="closeDropdown()" clickable>
         @if (closeButtonActive) {
-        <img src="./../../../../assets/img/header/close_hover.png" alt="" />
+        <img src="./assets/img/header/close_hover.png" alt="" />
         } @else {
-        <img src="./../../../../assets/img/header/close_dropdown.png" alt="" />
+        <img src="./assets/img/header/close_dropdown.png" alt="" />
         }
       </div>
     </div>
@@ -143,25 +143,25 @@
         <a (click)="closeDropdown()" href="homepage#about">{{
           "header.about-me" | translate
         }}</a>
-        <img src="./../../../../assets/img/1.png" alt="" />
+        <img src="./assets/img/1.png" alt="" />
       </div>
       <div class="skills-a">
         <a (click)="closeDropdown()" href="homepage#skills">{{
           "header.skills" | translate
         }}</a>
-        <img src="./../../../../assets/img/2.png" alt="" />
+        <img src="./assets/img/2.png" alt="" />
       </div>
       <div class="projects-a">
         <a (click)="closeDropdown()" href="homepage#my-projects">{{
           "header.project" | translate
         }}</a>
-        <img src="./../../../../assets/img/3.png" alt="" />
+        <img src="./assets/img/3.png" alt="" />
       </div>
       <div class="contact-a">
         <a (click)="closeDropdown()" href="homepage#contact-me">{{
           "header.contact" | translate
         }}</a>
-        <img src="./../../../../assets/img/4.png" alt="" />
+        <img src="./assets/img/4.png" alt="" />
       </div>
 
       <div class="language-switch">
@@ -169,7 +169,7 @@
           (click)="changeLanguage('en')"
           [class.language-animation]="languageAnimation == false"
         >
-          <img src="./../../../../assets/img/header/toggle-en.png" alt="" />
+          <img src="./assets/img/header/toggle-en.png" alt="" />
           <h3>EN</h3>
         </div>
 
@@ -210,7 +210,7 @@
           (click)="changeLanguage('de')"
           [class.language-animation]="languageAnimation == true"
         >
-          <img src="./../../../../assets/img/header/toggle-en.png" alt="" />
+          <img src="./assets/img/header/toggle-en.png" alt="" />
           <h3>DE</h3>
         </div>
       </div>
@@ -218,13 +218,13 @@
       <section class="socials-section">
         <div>
           <button>
-            <img src="./../../../assets/img/linked-In.png" alt="" />
+            <img src="./assets/img/linked-In.png" alt="" />
           </button>
           <button>
-            <img src="./../../../assets/img/github.png" alt="" />
+            <img src="./assets/img/github.png" alt="" />
           </button>
           <button>
-            <img src="./../../../assets/img/mail.png" alt="" />
+            <img src="./assets/img/mail.png" alt="" />
           </button>
         </div>
       </section>

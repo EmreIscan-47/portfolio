@@ -7,9 +7,7 @@
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  @media (max-width: 650px) {
-    min-height: 920px;
-  }
+
 }
 
 .t-p-section {
@@ -92,7 +90,7 @@
     @media (max-width: 850px) {
   
       width: 250px;
-       height: 150px;
+       height: 120px;
     }
     > img {
       position: absolute;
@@ -102,7 +100,7 @@
 
       opacity: 0;
       @media (max-width: 850px) {
-        top: 50%;
+        top: 45%;
         left: 40%;
       }
 

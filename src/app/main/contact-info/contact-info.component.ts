@@ -55,11 +55,11 @@ export class ContactInfoComponent {
     this.contactData.agree = !this.contactData.agree;
     if (filename == 'checkbox-checked.png') {
       checkboxREF.src =
-        './../../../assets/img/contact-info/checkbox-default.png';
+        './assets/img/contact-info/checkbox-default.png';
       this.isButtonDisabled = true;
     } else {
       checkboxREF.src =
-        './../../../assets/img/contact-info/checkbox-checked.png';
+        './assets/img/contact-info/checkbox-checked.png';
       this.isButtonDisabled = false;
     }
   }
