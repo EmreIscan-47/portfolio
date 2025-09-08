@@ -26,53 +26,53 @@ export class SingleProjectShowcaseComponent {
 
   elPoloLocoSkills = [
   {
-      logo: './../../../assets/img/project-showcase/HTML.png',
+      logo: './assets/img/project-showcase/HTML.png',
       name: 'HTML',
     },
     {
-      logo: './../../../assets/img/project-showcase/CSS.png',
+      logo: './assets/img/project-showcase/CSS.png',
       name: 'CSS',
     },
     {
-      logo: './../../../assets/img/project-showcase/Js.png',
+      logo: './assets/img/project-showcase/Js.png',
       name: 'JavaScript',
     },
   ];
 
   joinSkills = [
     {
-      logo: './../../../assets/img/project-showcase/HTML.png',
+      logo: './assets/img/project-showcase/HTML.png',
       name: 'HTML',
     },
     {
-      logo: './../../../assets/img/project-showcase/CSS.png',
+      logo: './assets/img/project-showcase/CSS.png',
       name: 'CSS',
     },
     {
-      logo: './../../../assets/img/project-showcase/Js.png',
+      logo: './assets/img/project-showcase/Js.png',
       name: 'JavaScript',
     },
       {
-      logo: './../../../assets/img/project-showcase/Firebase.png',
+      logo: './assets/img/project-showcase/Firebase.png',
       name: 'Firebase',
     },
   ];
 
   pokeDexSkills = [
     {
-      logo: './../../../assets/img/project-showcase/HTML.png',
+      logo: './assets/img/project-showcase/HTML.png',
       name: 'HTML',
     },
     {
-      logo: './../../../assets/img/project-showcase/CSS.png',
+      logo: './assets/img/project-showcase/CSS.png',
       name: 'CSS',
     },
     {
-      logo: './../../../assets/img/project-showcase/Js.png',
+      logo: './assets/img/project-showcase/Js.png',
       name: 'JavaScript',
     },
     {
-      logo: './../../../assets/img/project-showcase/Rest-Api.png',
+      logo: './assets/img/project-showcase/Rest-Api.png',
       name: 'RestAPI',
     },
   ];
@@ -106,8 +106,8 @@ export class SingleProjectShowcaseComponent {
       console.log("el-polo-loco");
       
       this.skillSet = this.elPoloLocoSkills;
-      this.firstPicture = "./../../../assets/img/project-showcase/el-pollo-loco.jpg";
-      this.secondPicture = "./../../../assets/img/project-showcase/golden-logo.png";
+      this.firstPicture = "./assets/img/project-showcase/el-pollo-loco.jpg";
+      this.secondPicture = "./assets/img/project-showcase/golden-logo.png";
       console.log(
         this.firstPicture,
         this.secondPicture
@@ -115,12 +115,12 @@ export class SingleProjectShowcaseComponent {
       
     } else if (currentProject === 'join') {
       this.skillSet = this.joinSkills;
-      this.firstPicture = "./../../../assets/img/project-showcase/Join.jpg";
-    this.secondPicture = "./../../../assets/img/project-showcase/join-sticker.png";
+      this.firstPicture = "./assets/img/project-showcase/Join.jpg";
+    this.secondPicture = "./assets/img/project-showcase/join-sticker.png";
     } else {
       this.skillSet = this.pokeDexSkills;
-this.firstPicture = "./../../../assets/img/project-showcase/PokeDex.jpg";
-    this.secondPicture = "./../../../assets/img/project-showcase/golden-logo.png";
+this.firstPicture = "./assets/img/project-showcase/PokeDex.jpg";
+    this.secondPicture = "./assets/img/project-showcase/golden-logo.png";
     console.log("yo");
     
     }
