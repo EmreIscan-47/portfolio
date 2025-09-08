@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { MainComponent } from './main/main.component';
 import {
     TranslateService,
     TranslateModule
@@ -10,7 +9,7 @@ import {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MainComponent, RouterModule, TranslateModule],
+  imports: [CommonModule, RouterOutlet, RouterModule, TranslateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 
