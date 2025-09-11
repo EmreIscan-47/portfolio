@@ -20,8 +20,8 @@
   <div class="header-content">
     <div
       (click)="goToHomePage()"
-      (mouseenter)="yellowlogo = true;  log()"
-      (mouseleave)="yellowlogo = false;  log()"
+      (mouseenter)="yellowlogo = true"
+      (mouseleave)="yellowlogo = false"
     >
     
       <img class="hero-logo" [src]="yellowlogo ? './assets/img/header/logo-hover.svg' : './assets/img/header/logo-no-hover.svg'" alt="" />
@@ -121,7 +121,7 @@
     }"
   >
     <div>
-      <div (mouseenter)="yellowlogo = true; log()" (mouseleave)="yellowlogo = false;  log()">
+      <div (mouseenter)="yellowlogo = true" (mouseleave)="yellowlogo = false">
         @if (yellowlogo) {
         <img class="hero-logo" src="./assets/img/header/logo-hover.svg" alt="" />
         } @else {

@@ -221,6 +221,15 @@
         top: 172px;
         height: 40%;
       }
+      @media (max-width: 500px) {
+        top: 150px;
+      }
+      @media (max-width: 450px) {
+        top: 140px;
+      }
+        @media (max-width: 400px) {
+        top: 130px;
+      }
     }
     > div:last-child {
       position: absolute;
@@ -288,12 +297,12 @@
         z-index: 3;
       }
       @media (max-width: 400px) {
-        top: 155px;
+        top: 140px;
 
         z-index: 3;
       }
       @media (max-width: 350px) {
-        top: 135px;
+        top: 120px;
 
         z-index: 3;
       }
@@ -321,7 +330,7 @@
       transform: scale(1.05);
     }
     &:hover > div:nth-child(2) {
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.876), transparent);
+      background: linear-gradient(to top, rgba(0, 0, 0, 5.876), transparent);
     }
     &:hover > div:last-child {
       display: flex;

@@ -73,7 +73,7 @@
       width: 100px;
       color: white;
     }
-    > h2.deActive{
+    > h2.deActive {
       width: 120px;
     }
   }
@@ -86,20 +86,20 @@
     align-items: start;
     width: 270px;
     height: 87px;
-   @media (max-width: 1250px) {
-    height: 57px;
-  }
+    @media (max-width: 1250px) {
+      height: 57px;
+    }
     > h1 {
       position: relative;
       margin: 30px 10px 20px 20px;
-      
+
       font-size: 64px;
       font-weight: 800;
       color: white;
 
       z-index: 3;
-       @media (max-width: 1250px) {
-            margin: 12px 10px 20px 20px;
+      @media (max-width: 1250px) {
+        margin: 12px 10px 20px 20px;
         font-size: 42px;
       }
     }
@@ -113,14 +113,12 @@
       animation: skills-img 3.5s ease-in;
       transform-origin: right bottom;
       animation-iteration-count: infinite;
-       @media (max-width: 1250px) {
+      @media (max-width: 1250px) {
         width: 180px;
         top: 0px;
         left: 90px;
       }
     }
-
-    
   }
 }
 
@@ -187,7 +185,7 @@
     }
   }
 
-  >span.deActive {
+  > span.deActive {
     width: 600px;
     font-size: 15px;
     @media (max-width: 1250px) {
@@ -271,7 +269,7 @@
   position: absolute;
   top: 40%;
   right: 35%;
-   @media (max-width: 3450px) {
+  @media (max-width: 3450px) {
     right: 28%;
   }
   @media (max-width: 2420px) {
@@ -297,6 +295,9 @@
     @media (max-width: 1250px) {
       width: 150px;
     }
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -318,6 +319,9 @@
     transform: rotate(8deg);
     @media (max-width: 1250px) {
       width: 150px;
+    }
+    &:hover {
+      cursor: pointer;
     }
   }
 }

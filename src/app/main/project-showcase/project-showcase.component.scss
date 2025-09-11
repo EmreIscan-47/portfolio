@@ -17,25 +17,25 @@
   }
 
   @media (max-width: 750px) {
-
-        background-size: 150%;
+    background-size: 150%;
   }
 
-   @media (max-width: 580px) {
-height: 1100px;
-        background-size: 220%;
+  @media (max-width: 580px) {
+    height: 1100px;
+    background-size: 200%;
+  }
+
+  @media (max-width: 450px) {
+    background-size: 240%;
   }
   @media (max-width: 400px) {
     background-image: url("./../../../assets/img/project-showcase/showcase-mobile-background.png");
-  background-size: 110%;
+    background-size: 110%;
     height: 1200px;
     background-position: 50% 0px;
   }
 
-    @media (max-width: 340px) {
-      background-size: 120%;
+  @media (max-width: 340px) {
+    background-size: 120%;
   }
-
-
 }
-

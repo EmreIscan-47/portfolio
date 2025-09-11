@@ -71,6 +71,7 @@
 }
 
 .hero-logo {
+  cursor: pointer;
   width: 85px !important;
 
 }
@@ -295,7 +296,7 @@ right: 20px;
 
 .dropdown-menu {
   position: absolute;
-  background-image: url("/assets/img/hero-background.png");
+  background-image: url("./../../../../assets/img/hero-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;

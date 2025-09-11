@@ -24,7 +24,6 @@ export class HeaderComponent {
 
   constructor(private router: Router, private translate: TranslateService) {
     this.checkLanguage();
-    console.log(this.otherLayout);
 
     this.translate.onLangChange.subscribe(() => {
       this.checkLanguage();
@@ -35,18 +34,13 @@ export class HeaderComponent {
     this.isGermanActive = this.translate.currentLang === 'de';
   }
   goToHomePage() {
-    this.router.navigate(['/homepage']);
+    this.router.navigate(['/']);
   }
 
-  log(){
-    console.log(this.yellowlogo);
-    
-  }
+
 
   openDropdown() {
     if (this.otherLayout) {
-      console.log('yo');
-
       this.styleStatus = 3;
     } else {
       this.styleStatus = 1;

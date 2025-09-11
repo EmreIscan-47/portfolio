@@ -5,8 +5,7 @@ import { LegalNoticeComponent } from './main/legal-notice/legal-notice.component
 import { PrivacyPolicyComponent } from './main/privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'homepage', pathMatch: 'full' as const },
-  { path: 'homepage', component: MainComponent },
+  { path: '', component: MainComponent },
   { path: 'project-showcase/:id', component: ProjectShowcaseComponent },
   { path: 'legal-notice', component: LegalNoticeComponent},
   {path: 'privacy-policy', component: PrivacyPolicyComponent},

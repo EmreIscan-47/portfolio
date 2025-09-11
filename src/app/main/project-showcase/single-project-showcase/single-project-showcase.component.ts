@@ -14,9 +14,10 @@ export class SingleProjectShowcaseComponent {
 
   constructor(private translate: TranslateService) {}
 
-
   currentProject: string = '';
   previousProject: number = 0;
+  currentLink: string = '';
+  currentGitLink: string = '';
   nextProject: number = 0;
 
   firstPicture: string = '';
@@ -25,7 +26,7 @@ export class SingleProjectShowcaseComponent {
   skillSet: { logo: string; name: string }[] = [];
 
   elPoloLocoSkills = [
-  {
+    {
       logo: './assets/img/project-showcase/HTML.png',
       name: 'HTML',
     },
@@ -52,7 +53,7 @@ export class SingleProjectShowcaseComponent {
       logo: './assets/img/project-showcase/Js.png',
       name: 'JavaScript',
     },
-      {
+    {
       logo: './assets/img/project-showcase/Firebase.png',
       name: 'Firebase',
     },
@@ -103,27 +104,19 @@ export class SingleProjectShowcaseComponent {
     this.previousProject = previousProject;
     this.nextProject = nextProject;
     if (currentProject === 'el-polo-loco') {
-      console.log("el-polo-loco");
-      
-      this.skillSet = this.elPoloLocoSkills;
-      this.firstPicture = "./assets/img/project-showcase/el-pollo-loco.jpg";
-      this.secondPicture = "./assets/img/project-showcase/golden-logo.png";
-      console.log(
-        this.firstPicture,
-        this.secondPicture
-      );
-      
+      this.changeSingleProject(this.elPoloLocoSkills, './assets/img/project-showcase/el-pollo-loco.jpg', './assets/img/project-showcase/golden-logo.png', 'https://www.el-polo-loco.emre-iscan.com/index.html', 'https://github.com/EmreIscan-47/el-pollo-loco');
     } else if (currentProject === 'join') {
-      this.skillSet = this.joinSkills;
-      this.firstPicture = "./assets/img/project-showcase/Join.jpg";
-    this.secondPicture = "./assets/img/project-showcase/join-sticker.png";
+      this.changeSingleProject(this.joinSkills, './assets/img/project-showcase/Join.jpg', './assets/img/project-showcase/join-sticker.png', 'https://join.emre-iscan.com/html/index.html' , 'https://github.com/Yogibear-pixel-99/join');
     } else {
-      this.skillSet = this.pokeDexSkills;
-this.firstPicture = "./assets/img/project-showcase/PokeDex.jpg";
-    this.secondPicture = "./assets/img/project-showcase/golden-logo.png";
-    console.log("yo");
-    
+      this.changeSingleProject(this.pokeDexSkills, './assets/img/project-showcase/PokeDex.jpg', './assets/img/project-showcase/golden-logo.png', 'https://www.pokedex.emre-iscan.com/index.html', 'https://github.com/EmreIscan-47/pokedex');
     }
   }
 
+  changeSingleProject(skillSet: { logo: string; name: string }[], firstPicture: string, secondPicture: string, currentLink: string, currentGitLink: string) {
+  this.skillSet = skillSet;
+  this.firstPicture = firstPicture;
+  this.secondPicture = secondPicture;
+  this.currentLink = currentLink;
+  this.currentGitLink = currentGitLink;
+  }
 }

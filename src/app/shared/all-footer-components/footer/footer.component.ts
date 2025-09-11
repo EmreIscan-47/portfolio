@@ -23,8 +23,6 @@ export class FooterComponent {
 
   constructor(private router: Router, private translate: TranslateService) {
     this.checkLanguage();
-    console.log(this.otherLayout);
-
     this.translate.onLangChange.subscribe(() => {
       this.checkLanguage();
     });
@@ -36,7 +34,6 @@ export class FooterComponent {
 
   goToPage(url: string) {
     this.router.navigate([url]);
-    console.log("yo");
     
   }
 
