@@ -82,4 +82,8 @@ export class FooterComponent {
         break;
     }
   }
+
+  openLink(link: string) {
+    window.open(link, '_blank');
+  }
 }

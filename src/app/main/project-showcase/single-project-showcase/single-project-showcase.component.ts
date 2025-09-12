@@ -119,4 +119,8 @@ export class SingleProjectShowcaseComponent {
   this.currentLink = currentLink;
   this.currentGitLink = currentGitLink;
   }
+
+  openLink(link: string) {
+    window.open(link, '_blank');
+  }
 }

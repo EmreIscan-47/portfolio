@@ -54,6 +54,7 @@
         @media (max-width: 500px) {
           font-weight: 400;
         }
+       
       }
       > h2.active {
         color: black !important;
@@ -63,6 +64,8 @@
         display: flex;
         flex-direction: column;
         > h2 {
+          position: relative;
+          z-index: 2;
           font-weight: 500;
           font-size: 18px;
           color: white;
@@ -70,6 +73,9 @@
           @media (max-width: 750px) {
             text-align: end;
           }
+          &:hover{
+          cursor: pointer;
+        }
         }
         > h2.active {
           color: black !important;

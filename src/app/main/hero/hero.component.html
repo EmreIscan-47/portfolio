@@ -51,8 +51,8 @@
         </div>
       </div>
       <div [class.deActive]="isGermanActive" class="dev-wrapper">
-        <div>
-          <span *ngFor="let item of secondWrapper">{{ item }}</span>
+        <div >
+          <span *ngFor="let item of secondWrapper; let isLast = last; let i = index" [class.lastLetter]="isLast">{{ item }}</span>
         </div>
       </div>
     </div>
@@ -77,13 +77,13 @@
 
 <section class="socials-section">
   <div>
-    <button>
+    <button (click) = "openLink('https://www.linkedin.com/in/emre-is-919740301/')">
       <img src="./assets/img/linked-In.png" alt="" />
     </button>
-    <button>
+    <button (click) = "openLink('https://github.com/EmreIscan-47')">
       <img src="./assets/img/github.png" alt="" />
     </button>
-    <button>
+    <button (click) = "openLink('https://www.linkedin.com/in/emre-is-919740301/')">
       <img src="./assets/img/mail.png" alt="" />
     </button>
   </div>

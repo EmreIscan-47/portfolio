@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { HeaderComponent } from '../../shared/all-header-components/header/header.component';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -29,6 +29,7 @@ export class HeroComponent {
     });
   }
 
+
   checkLanguage() {
     this.isGermanActive = this.translate.currentLang === 'de';
   }
@@ -54,5 +55,9 @@ export class HeroComponent {
     if (element) {
       element.scrollIntoView();
     }
+  }
+
+  openLink(link: string) {
+    window.open(link, '_blank');
   }
 }

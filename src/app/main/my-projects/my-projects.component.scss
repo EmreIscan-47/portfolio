@@ -34,7 +34,6 @@
 
   margin-top: 40px;
   > h3 {
-    margin-block-start: 0;
     margin-block-end: 0;
   }
   > div {
@@ -77,6 +76,7 @@
 
 .join-content {
   > h3 {
+    margin-block-start: 1.2em;
     font-weight: 600;
   }
   > div:first-of-type {
@@ -198,6 +198,7 @@
 
 .epl-content {
   > h3 {
+    margin-block-start: 1.2em;
     font-weight: 600;
   }
 
@@ -227,7 +228,7 @@
       @media (max-width: 450px) {
         top: 140px;
       }
-        @media (max-width: 400px) {
+      @media (max-width: 400px) {
         top: 130px;
       }
     }
@@ -269,6 +270,7 @@
     margin-block-end: 2rem;
   }
   > h3 {
+    margin-block-start: 1.2em;
     font-weight: 600;
   }
   > div:first-of-type {

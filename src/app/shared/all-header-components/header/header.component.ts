@@ -16,7 +16,7 @@ export class HeaderComponent {
   dropDownOpen = false;
   closeButtonActive = false;
   languageAnimation = true;
-  @Input() otherLayout= false;
+  @Input() otherLayout = false;
   isGermanActive: boolean = false;
 
   dropDownActive = true;
@@ -37,7 +37,9 @@ export class HeaderComponent {
     this.router.navigate(['/']);
   }
 
-
+  openLink(link: string) {
+    window.open(link, '_blank');
+  }
 
   openDropdown() {
     if (this.otherLayout) {
