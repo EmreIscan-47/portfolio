@@ -32,7 +32,8 @@
             <label for="name">{{'contact-me.form.name.name-q'| translate}}</label>
             <input
               [(ngModel)]="contactData.name"
-               [ngClass] = "{'input-error': !contactData.name && contactForm.touched && formSubmitted && contactData.name.trim() == ''}"
+               [ngClass] = "{'input-error': !contactData.name && contactForm.touched && nameIsNotValid}"
+               (blur) = "nameIsNotValid = namePlaceHolderNotValid()"
               type="text"
               id="name"
               name="name"
@@ -49,7 +50,8 @@
             <label for="email">{{'contact-me.form.email.email-q'| translate}}</label>
             <input
               [(ngModel)]="contactData.email"
-              [ngClass] = "{'input-error': !contactData.email && contactForm.touched && formSubmitted && contactData.email.trim() == ''}"
+              [ngClass] = "{'input-error': !contactData.email && contactForm.touched && emailIsNotValid}"
+              (blur) = "emailIsNotValid = emailNotValid()"
               type="text"
               id="email"
               name="email"
@@ -62,7 +64,8 @@
             <label for="message">{{'contact-me.form.message.message-q'| translate}}</label>
             <input
               [(ngModel)]="contactData.message"
-              [ngClass] = "{'input-error': !contactData.message && contactForm.touched  && formSubmitted && contactData.message.trim() == ''}"
+              [ngClass] = "{'input-error': !contactData.message && contactForm.touched && messageIsNotValid }"
+              (blur)="messageIsNotValid = messageNotValid()"
               type="text"
               name="message"
               id="message"

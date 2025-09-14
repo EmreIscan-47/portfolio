@@ -223,7 +223,7 @@
       @media (max-width: 450px) {
         font-size: 52px;
       }
-       @media (max-width: 400px) {
+      @media (max-width: 400px) {
         font-size: 40px;
       }
     }
@@ -343,13 +343,13 @@
         font-size: 72px !important;
         width: 1em;
       }
-       @media (max-width: 500px) {
+      @media (max-width: 500px) {
         font-size: 60px !important;
       }
       @media (max-width: 450px) {
         font-size: 50px !important;
       }
-        @media (max-width: 400px) {
+      @media (max-width: 400px) {
         font-size: 40px !important;
       }
     }
@@ -435,13 +435,18 @@
   @media (max-width: 850px) {
     position: relative;
     display: block;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   > img {
     display: block;
     max-width: 100%;
     height: auto;
+    filter: grayscale(100%);
+    &:hover {
+      animation: polaroidImage 2s ease-in-out forwards;
+      filter: grayscale(0%);
+    }
   }
 
   > span {
@@ -454,6 +459,36 @@
     font-size: 24px;
     transform: rotate(8deg);
     font-family: "Kalam";
+  }
+}
+
+.polaroid {
+  > img {
+    filter: grayscale(100%);
+    &:hover {
+      animation: polaroidImage 1s ease-in-out forwards;
+      filter: grayscale(0%);
+    }
+  }
+}
+@keyframes polaroidImage {
+  0% {
+    filter: grayscale(0%) brightness(120%);
+  }
+  10% {
+    filter: grayscale(0%) brightness(100%);
+  }
+  25% {
+    filter: grayscale(0%) brightness(120%);
+  }
+  40% {
+    filter: grayscale(0%) brightness(100%);
+  }
+  60% {
+    filter: grayscale(0%) brightness(120%);
+  }
+  100% {
+    filter: grayscale(0%) brightness(100%);
   }
 }
 

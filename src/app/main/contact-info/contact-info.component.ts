@@ -8,7 +8,14 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-contact-info',
   standalone: true,
-  imports: [FooterComponent, FormsModule, HttpClientModule, CommonModule, TranslateModule, RouterModule],
+  imports: [
+    FooterComponent,
+    FormsModule,
+    HttpClientModule,
+    CommonModule,
+    TranslateModule,
+    RouterModule,
+  ],
   templateUrl: './contact-info.component.html',
   styleUrl: './contact-info.component.scss',
 })
@@ -22,6 +29,10 @@ export class ContactInfoComponent {
   emailPlaceholder = 'youremail@email.com';
   messagePlaceholder = 'Hello Lukas, I am interested in...';
 
+  nameIsNotValid = false;
+  emailIsNotValid = false;
+  messageIsNotValid = false;
+
   http = inject(HttpClient);
 
   contactData = {
@@ -31,12 +42,10 @@ export class ContactInfoComponent {
     agree: false,
   };
 
-
   isGermanActive: boolean = false;
 
   constructor(private translate: TranslateService) {
     this.checkLanguage();
-
 
     this.translate.onLangChange.subscribe(() => {
       this.checkLanguage();
@@ -54,12 +63,10 @@ export class ContactInfoComponent {
     );
     this.contactData.agree = !this.contactData.agree;
     if (filename == 'checkbox-checked.png') {
-      checkboxREF.src =
-        './assets/img/contact-info/checkbox-default.png';
+      checkboxREF.src = './assets/img/contact-info/checkbox-default.png';
       this.isButtonDisabled = true;
     } else {
-      checkboxREF.src =
-        './assets/img/contact-info/checkbox-checked.png';
+      checkboxREF.src = './assets/img/contact-info/checkbox-checked.png';
       this.isButtonDisabled = false;
     }
   }
@@ -93,13 +100,15 @@ export class ContactInfoComponent {
     }
   }
 
-  trimAll(){
-    this.contactData= {
-    name: this.contactData.name.trim(),
-    email: this.contactData.email?.trim(),
-    message: this.contactData.message.trim(),
-    agree: this.contactData.agree,
-  };
+  trimAll() {
+    if (!this.contactData.name == null) {
+      this.contactData = {
+        name: this.contactData.name.trim(),
+        email: this.contactData.email?.trim(),
+        message: this.contactData.message.trim(),
+        agree: this.contactData.agree,
+      };
+    }
   }
 
   validForm(ngForm: NgForm) {
@@ -109,6 +118,8 @@ export class ContactInfoComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.toggleCheckbox();
+            this.contactData.agree = false;
           },
           error: (error) => {
             console.error(error);
@@ -117,21 +128,65 @@ export class ContactInfoComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
+      this.toggleCheckbox();
+      this.contactData.agree = false;
     }
   }
 
   notValidForm(ngForm: NgForm) {
     if (!this.contactData.name) {
-      this.namePlaceholder = this.translate.instant('contact-me.form.placeholder-warning.name-warning');
+      this.namePlaceholder = this.translate.instant(
+        'contact-me.form.placeholder-warning.name-warning'
+      );
     }
-    if (!this.contactData.email) {
+    if (!this.contactData.email && this.contactData.email != null) {
       this.contactData.email.trim();
-      this.emailPlaceholder = this.translate.instant('contact-me.form.placeholder-warning.email-warning') ;
+      this.emailPlaceholder = this.translate.instant(
+        'contact-me.form.placeholder-warning.email-warning'
+      );
     }
     if (!this.contactData.message) {
-
-      this.messagePlaceholder = this.translate.instant('contact-me.form.placeholder-warning.message-warning')  ;   ;
+      this.messagePlaceholder = this.translate.instant(
+        'contact-me.form.placeholder-warning.message-warning'
+      );
     }
+  }
+
+  namePlaceHolderNotValid() {
+    this.trimAll();
+    if (!this.contactData.name) {
+      this.namePlaceholder = this.translate.instant(
+        'contact-me.form.placeholder-warning.name-warning'
+      );
+      return true;
+    }
+    return false;
+  }
+
+  emailNotValid() {
+    this.trimAll();
+    console.log("yoo");
+    
+    if (!this.contactData.email && this.contactData.email != null) {
+      this.contactData.email.trim();
+      this.emailPlaceholder = this.translate.instant(
+        'contact-me.form.placeholder-warning.email-warning'
+      );
+      return true;
+    }
+
+    return false;
+  }
+
+  messageNotValid() {
+ 
+    if (!this.contactData.message) {
+      this.messagePlaceholder = this.translate.instant(
+        'contact-me.form.placeholder-warning.message-warning'
+      );
+      return true;
+    }
+    return false;
   }
 
   disabledClick() {
