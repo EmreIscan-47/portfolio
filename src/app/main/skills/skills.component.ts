@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -11,11 +11,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class SkillsComponent {
   isGermanActive: boolean = false;
   changeImg: number = 0;
-  currentImg = './../../../assets/img/skills/pull-me-en.png';
-  pulledImg = './../../../assets/img/skills/pull-me-pulled.png';
-  finishedImg = './../../../assets/img/skills/pull-me-en-finished.png';
+  currentImg: string = './../../../assets/img/skills/pull-me-en.png';
+  pulledImg: string = './../../../assets/img/skills/pull-me-pulled.png';
+  finishedImg: string = './../../../assets/img/skills/pull-me-en-finished.png';
+  isViewed: boolean = false;
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private el: ElementRef) {
     this.checkLanguage();
 
     this.translate.onLangChange.subscribe(() => {
@@ -23,12 +24,28 @@ export class SkillsComponent {
     });
   }
 
+  ngAfterViewInit(): void {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.isViewed = true;
+          } else {
+            this.isViewed = false;
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(this.el.nativeElement);
+  }
+
   checkLanguage() {
     this.isGermanActive = this.translate.currentLang === 'de';
     if (this.isGermanActive) {
       this.currentImg = './../../../assets/img/skills/pull-me-de.png';
       this.finishedImg = './../../../assets/img/skills/pull-me-de-finished.png';
-      
     } else {
       this.currentImg = './../../../assets/img/skills/pull-me-en.png';
       this.finishedImg = './../../../assets/img/skills/pull-me-en-finished.png';
@@ -37,22 +54,21 @@ export class SkillsComponent {
 
   pullSticker() {
     if (this.changeImg === 0) {
-     this.changeImg = 1;
+      this.changeImg = 1;
       this.currentImg = this.pulledImg;
-         setTimeout(() => {
-      this.currentImg = this.finishedImg;
-    }, 500);
+      setTimeout(() => {
+        this.currentImg = this.finishedImg;
+      }, 500);
     } else {
       this.changeImg = 0;
       this.currentImg = this.pulledImg;
-         setTimeout(() => {
-
-      this.currentImg =  this.isGermanActive
-        ? './../../../assets/img/skills/pull-me-de.png'
-        : './../../../assets/img/skills/pull-me-en.png';;
-    }, 500);
+      setTimeout(() => {
+        this.currentImg = this.isGermanActive
+          ? './../../../assets/img/skills/pull-me-de.png'
+          : './../../../assets/img/skills/pull-me-en.png';
+      }, 500);
     }
-   /*  setTimeout(() => {
+    /*  setTimeout(() => {
       this.changeImg = 2;
       this.currentImg = this.finishedImg;
     }, 1000);

@@ -25,7 +25,7 @@ export class SingleProjectShowcaseComponent {
 
   skillSet: { logo: string; name: string }[] = [];
 
-  elPoloLocoSkills = [
+  elPoloLocoSkills: { logo: string; name: string }[] = [
     {
       logo: './assets/img/project-showcase/HTML.png',
       name: 'HTML',
@@ -40,7 +40,7 @@ export class SingleProjectShowcaseComponent {
     },
   ];
 
-  joinSkills = [
+  joinSkills: { logo: string; name: string }[] = [
     {
       logo: './assets/img/project-showcase/HTML.png',
       name: 'HTML',
@@ -59,7 +59,7 @@ export class SingleProjectShowcaseComponent {
     },
   ];
 
-  pokeDexSkills = [
+  pokeDexSkills: { logo: string; name: string }[] = [
     {
       logo: './assets/img/project-showcase/HTML.png',
       name: 'HTML',
@@ -99,25 +99,53 @@ export class SingleProjectShowcaseComponent {
     }
   }
 
-  changeProject(currentProject: string, previousProject: number, nextProject: number) {
+  changeProject(
+    currentProject: string,
+    previousProject: number,
+    nextProject: number
+  ) {
     this.currentProject = currentProject;
     this.previousProject = previousProject;
     this.nextProject = nextProject;
     if (currentProject === 'el-polo-loco') {
-      this.changeSingleProject(this.elPoloLocoSkills, './assets/img/project-showcase/el-pollo-loco.jpg', './assets/img/project-showcase/golden-logo.png', 'https://www.el-polo-loco.emre-iscan.com/index.html', 'https://github.com/EmreIscan-47/el-pollo-loco');
+      this.changeSingleProject(
+        this.elPoloLocoSkills,
+        './assets/img/project-showcase/el-pollo-loco.jpg',
+        './assets/img/project-showcase/golden-logo.png',
+        'https://www.el-polo-loco.emre-iscan.com/index.html',
+        'https://github.com/EmreIscan-47/el-pollo-loco'
+      );
     } else if (currentProject === 'join') {
-      this.changeSingleProject(this.joinSkills, './assets/img/project-showcase/Join.jpg', './assets/img/project-showcase/join-sticker.png', 'https://join.emre-iscan.com/html/index.html' , 'https://github.com/Yogibear-pixel-99/join');
+      this.changeSingleProject(
+        this.joinSkills,
+        './assets/img/project-showcase/Join.jpg',
+        './assets/img/project-showcase/join-sticker.png',
+        'https://join.emre-iscan.com/html/index.html',
+        'https://github.com/Yogibear-pixel-99/join'
+      );
     } else {
-      this.changeSingleProject(this.pokeDexSkills, './assets/img/project-showcase/PokeDex.jpg', './assets/img/project-showcase/golden-logo.png', 'https://www.pokedex.emre-iscan.com/index.html', 'https://github.com/EmreIscan-47/pokedex');
+      this.changeSingleProject(
+        this.pokeDexSkills,
+        './assets/img/project-showcase/PokeDex.jpg',
+        './assets/img/project-showcase/golden-logo.png',
+        'https://www.pokedex.emre-iscan.com/index.html',
+        'https://github.com/EmreIscan-47/pokedex'
+      );
     }
   }
 
-  changeSingleProject(skillSet: { logo: string; name: string }[], firstPicture: string, secondPicture: string, currentLink: string, currentGitLink: string) {
-  this.skillSet = skillSet;
-  this.firstPicture = firstPicture;
-  this.secondPicture = secondPicture;
-  this.currentLink = currentLink;
-  this.currentGitLink = currentGitLink;
+  changeSingleProject(
+    skillSet: { logo: string; name: string }[],
+    firstPicture: string,
+    secondPicture: string,
+    currentLink: string,
+    currentGitLink: string
+  ) {
+    this.skillSet = skillSet;
+    this.firstPicture = firstPicture;
+    this.secondPicture = secondPicture;
+    this.currentLink = currentLink;
+    this.currentGitLink = currentGitLink;
   }
 
   openLink(link: string) {

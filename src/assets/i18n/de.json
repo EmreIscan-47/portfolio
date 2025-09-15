@@ -103,6 +103,7 @@
         "email-warning": "Hoppla! Deine E-Mail-Adresse fehlt",
         "message-warning": "Was soll entwickelt werden?"
       },
+      "accepted": "Ihre Kontaktanfrage wurde erfolgreich übermittelt. Vielen Dank!",
       "send": "Senden"
     },
     "button": "Kontaktiere mich"
@@ -161,5 +162,7 @@
       },
       "source-code": "Quellcode"
     }
-  }
+  },
+  "privacy-policy": "Datenschutzerklärung",
+  "legal-notice": "Impressum"
 }

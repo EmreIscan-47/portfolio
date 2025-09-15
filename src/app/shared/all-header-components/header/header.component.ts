@@ -12,15 +12,19 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  yellowlogo = false;
-  dropDownOpen = false;
-  closeButtonActive = false;
-  languageAnimation = true;
-  @Input() otherLayout = false;
-  isGermanActive: boolean = false;
+ yellowlogo: boolean = false;
+dropDownOpen: boolean = false;
+closeButtonActive: boolean = false;
+languageAnimation: boolean = true;
 
-  dropDownActive = true;
-  styleStatus = 0;
+@Input() otherLayout: boolean = false;
+@Input() otherLayout_2: boolean = false;
+
+isGermanActive: boolean = false;
+
+dropDownActive: boolean = true;
+styleStatus: number = 0;
+
 
   constructor(private router: Router, private translate: TranslateService) {
     this.checkLanguage();

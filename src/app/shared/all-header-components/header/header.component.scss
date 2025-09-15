@@ -13,6 +13,11 @@
   );
 }
 
+.header-wrapper.active {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
 .header-mobile-content {
   display: none;
   @media (max-width: 850px) {

@@ -466,23 +466,27 @@
   > img {
     filter: grayscale(100%);
     &:hover {
-      animation: polaroidImage 1s ease-in-out forwards;
+      animation: polaroidImage 2s ease-in-out forwards;
       filter: grayscale(0%);
     }
   }
 }
+
 @keyframes polaroidImage {
   0% {
-    filter: grayscale(0%) brightness(120%);
-  }
-  10% {
     filter: grayscale(0%) brightness(100%);
+  }
+  3% {
+    filter: grayscale(0%) brightness(200%);
+  }
+  5% {
+    filter: grayscale(0%) brightness(500%);
+  }
+  8% {
+    filter: grayscale(0%) brightness(1000%);
   }
   25% {
-    filter: grayscale(0%) brightness(120%);
-  }
-  40% {
-    filter: grayscale(0%) brightness(100%);
+    filter: grayscale(0%) brightness(1000%);
   }
   60% {
     filter: grayscale(0%) brightness(120%);
@@ -492,29 +496,3 @@
   }
 }
 
-/* .photo-section {
-position: absolute;
-width:87%;
-
-  > div {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 75vh;
-    > img {
-     
-    }
-
-    > span {
-      
-
-      font-family: "Kalam";
-      font-weight: 700;
-      font-size: 1.5rem;
-      white-space: nowrap;
-      transform: rotate(8deg);
-      color: #000000;
-      z-index: 20;
-    }
-  }
-} */

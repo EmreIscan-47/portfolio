@@ -8,6 +8,10 @@
   min-height: 900px;
   max-height: none;
   padding: 0 20px;
+
+  opacity: 0;
+  transform: translate(-500px);
+  transition: all 1s;
   @media (max-width: 1250px) {
     margin-bottom: 100px;
   }
@@ -57,6 +61,11 @@
       }
     }
   }
+}
+
+.section-testimonials.active {
+    opacity: 1;
+  transform: translate(0);
 }
 
 @keyframes line {

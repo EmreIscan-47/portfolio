@@ -43,6 +43,9 @@
   max-width: 1920px;
   margin: 0 25%;
    height: 900px;
+   opacity: 0;
+   transform: translate(-500px);
+   transition: all 1s;
 
     @media (max-width: 2320px) {
           margin: 0 10%;
@@ -70,6 +73,11 @@
       }
     }
   }
+}
+
+.section-contacts.active {
+  opacity: 1;
+  transform: translate(0);
 }
 
 .top-contacts-wrapper {
@@ -346,6 +354,12 @@ input.buttonAbled {
     font-size: 12px;
     color: #de6d4c;
   }
+}
+
+.contact-sent {
+  font-size: 14px !important;
+  color: #4bb543 !important;
+  font-weight: 500;
 }
 
 .mat-h2,

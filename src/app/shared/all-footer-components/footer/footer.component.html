@@ -1,4 +1,4 @@
-<section class="footer-wrapper">
+<section [class.active] = "otherLayout" class="footer-wrapper">
   <div>
     <img
       (click)="goToStartPage()"
@@ -11,20 +11,15 @@
       "
       alt=""
     />
-    
 
     <div>
       <h2 [class.active]="otherLayout">© Emre Iscan 2025</h2>
       <div>
-        <h2 [class.active]="otherLayout">
+        <h2 (click)="goToPage('/legal-notice')" [class.active]="otherLayout">
           {{ "footer.legal-notice" | translate }}
         </h2>
 
-        <img
-          (click)="goToPage('legal-notice')"
-          src="./assets/img/3.png"
-          alt=""
-        />
+        <img src="./assets/img/3.png" alt="" />
       </div>
     </div>
   </div>
@@ -38,7 +33,7 @@
         alt=""
       />
       <button
-      (click) = "openLink('https://github.com/EmreIscan-47')"
+        (click)="openLink('https://github.com/EmreIscan-47')"
         [class.active]="otherLayout"
         (mouseenter)="rollIn(1)"
         (mouseleave)="rollOut(1)"
@@ -55,7 +50,7 @@
         alt=""
       />
       <button
-      (click) = "openLink('https://www.linkedin.com/in/emre-is-919740301/')"
+        (click)="openLink('https://www.linkedin.com/in/emre-is-919740301/')"
         [class.active]="otherLayout"
         (mouseenter)="rollIn(2)"
         (mouseleave)="rollOut(2)"

@@ -7,6 +7,9 @@
   max-width: 1920px;
   margin: 0 30%;
   margin-top: 300px !important;
+    opacity: 0;
+  transform: translate(-500px);
+  transition: all 1s;
 
   @media (max-width: 3000px) {
     margin: 0 20%;
@@ -25,6 +28,11 @@
       height: auto;
     }
   }
+}
+
+.section-projects.active {
+  opacity: 1;
+  transform: translate(0);
 }
 
 .projects-content {

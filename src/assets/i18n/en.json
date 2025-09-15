@@ -103,6 +103,7 @@
         "email-warning": "Hoppla! your email is required",
         "message-warning": "What do you need to develop?"
       },
+      "accepted": "Your contact request has been successfully submitted. Thank you!",
       "send": "Send"
     },
     "button": "Contact me"
@@ -161,5 +162,7 @@
       },
       "source-code": "Source code"
     }
-  }
+  },
+  "privacy-policy": "Privacy Policy",
+  "legal-notice": "Legal Notice"
 }

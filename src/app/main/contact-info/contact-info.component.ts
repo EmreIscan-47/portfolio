@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject } from '@angular/core';
 import { FooterComponent } from '../../shared/all-footer-components/footer/footer.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -20,22 +20,29 @@ import { RouterModule } from '@angular/router';
   styleUrl: './contact-info.component.scss',
 })
 export class ContactInfoComponent {
-  isButtonDisabled = true;
-  isChecked = false;
+  isButtonDisabled: boolean = true;
+  isChecked: boolean = false;
   borderBlue: Number = 0;
-  formSubmitted = false;
+  formSubmitted: boolean = false;
 
-  namePlaceholder = 'Your name goes here';
-  emailPlaceholder = 'youremail@email.com';
-  messagePlaceholder = 'Hello Lukas, I am interested in...';
+  namePlaceholder: string = 'Your name goes here';
+  emailPlaceholder: string = 'youremail@email.com';
+  messagePlaceholder: string = 'Hello Lukas, I am interested in...';
 
-  nameIsNotValid = false;
-  emailIsNotValid = false;
-  messageIsNotValid = false;
+  nameIsNotValid: boolean = false;
+  emailIsNotValid: boolean = false;
+  messageIsNotValid: boolean = false;
+
+  contactSent: boolean = false;
 
   http = inject(HttpClient);
 
-  contactData = {
+  contactData: { 
+    name: string; 
+    email: string; 
+    message: string; 
+    agree: boolean; 
+  } = {
     name: '',
     email: '',
     message: '',
@@ -43,13 +50,31 @@ export class ContactInfoComponent {
   };
 
   isGermanActive: boolean = false;
+  isViewed: boolean = false;
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private el: ElementRef) {
     this.checkLanguage();
 
     this.translate.onLangChange.subscribe(() => {
       this.checkLanguage();
     });
+  }
+
+  ngAfterViewInit(): void {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.isViewed = true;
+          } else {
+            this.isViewed = false;
+          }
+        });
+      },
+      { threshold: 0.001 }
+    );
+
+    observer.observe(this.el.nativeElement);
   }
 
   checkLanguage() {
@@ -118,8 +143,7 @@ export class ContactInfoComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
-            this.toggleCheckbox();
-            this.contactData.agree = false;
+            this.contactAccepted();
           },
           error: (error) => {
             console.error(error);
@@ -128,9 +152,18 @@ export class ContactInfoComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
-      this.toggleCheckbox();
-      this.contactData.agree = false;
+      this.contactAccepted();
     }
+  }
+
+  contactAccepted() {
+    this.toggleCheckbox();
+    this.contactData.agree = false;
+    this.contactSent = true;
+
+    setTimeout(() => {
+      this.contactSent = false;
+    }, 5000);
   }
 
   notValidForm(ngForm: NgForm) {
@@ -165,8 +198,8 @@ export class ContactInfoComponent {
 
   emailNotValid() {
     this.trimAll();
-    console.log("yoo");
-    
+    console.log('yoo');
+
     if (!this.contactData.email && this.contactData.email != null) {
       this.contactData.email.trim();
       this.emailPlaceholder = this.translate.instant(
@@ -174,12 +207,10 @@ export class ContactInfoComponent {
       );
       return true;
     }
-
     return false;
   }
 
   messageNotValid() {
- 
     if (!this.contactData.message) {
       this.messagePlaceholder = this.translate.instant(
         'contact-me.form.placeholder-warning.message-warning'

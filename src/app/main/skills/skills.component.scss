@@ -21,6 +21,9 @@
   justify-content: center;
   align-items: center;
   height: 720px;
+  opacity: 0;
+  transform: translate(-500px);
+  transition: all 1s;
   @media (max-width: 1250px) {
     align-items: start;
   }
@@ -51,6 +54,11 @@
       }
     }
   }
+}
+
+.section-skills.active {
+  opacity: 1;
+  transform: translate(0);
 }
 
 .skill-set-header {

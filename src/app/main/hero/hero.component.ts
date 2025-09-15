@@ -11,13 +11,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
-  firstWrapper = ['F', 'r', 'o', 'n', 't', 'e', 'n', 'd'];
-  secondWrapper = ['D', 'E', 'V', 'E', 'L', 'O', 'P', 'E', 'R'];
-  hoveredIndex: Number | null = null;
-  helloWorldHover: boolean = false;
-  rollIn = false;
-  isGermanActive: boolean = false;
-  laughSmiley: boolean = false;
+firstWrapper: string[] = ['F', 'r', 'o', 'n', 't', 'e', 'n', 'd'];
+secondWrapper: string[] = ['D', 'E', 'V', 'E', 'L', 'O', 'P', 'E', 'R'];
+hoveredIndex: number | null = null;
+helloWorldHover: boolean = false;
+rollIn: boolean = false;
+isGermanActive: boolean = false;
+laughSmiley: boolean = false;
 
   constructor(private translate: TranslateService) {
     this.changeWrapper();
@@ -42,7 +42,7 @@ export class HeroComponent {
     }
   }
 
-  onMouseEnter(i: Number) {
+  onMouseEnter(i: number) {
     this.hoveredIndex = i;
   }
 

@@ -1,35 +1,97 @@
 .section-legal-notice {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  @media (max-width: 1920px) {
+    align-items: normal;
+  }
 }
 
 .header-legal-notice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 450px !important;
+  gap: 100px;
+  background-image: url("/assets/img/legal-privacy/first-background.png");
+  background-size: cover;
+  background-position: bottom;
+  
+  @media (max-width: 1920px) {
+     height: 650px !important;
+  }
+  > div {
     display: flex;
     flex-direction: column;
     width: 100%;
-   height: 350px;
-   gap: 100px;
-   background-image: url("/assets/img/legal-privacy/first-background.png");
-    background-size: cover;
-    background-position: bottom;
-
-    >h1 {
-        color: white;
-        padding-left: 120px;
-        padding-top: 50px;
-        font-size: 44px;
+    height: 250px !important;
+    gap: 100px;
+    max-width: 1920px;
+    > h1 {
+      color: white;
+      padding-left: 120px;
+      padding-top: 50px;
+      font-size: 44px;
+      @media (max-width: 500px) {
+        font-size: 32px;
+        padding-left: 30px !important;
+      }
     }
+  }
 }
 
 .legal-notice-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+  overflow: auto;
+  border: none;
+  @media (max-width: 1920px) {
+    margin: 30px 300px;
+    border: 2px solid black;
+  }
 
-.footer-legal-notice {
-   
+    @media (max-width: 1250px) {
+       margin: 30px 100px; 
+  }
+  @media (max-width: 850px) {
+    margin: 30px 100px !important;
+  }
+
+  @media (max-width: 530px) {
+    margin: 30px 10px !important;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 600px;
+    margin: 30px;
+    > h1 {
+      font-size: 44px;
+      font-weight: 700;
+      @media (max-width: 1920px) {
+        font-size: 24px;
+      }
+    }
+    > h2 {
+      font-size: 34px;
+      font-weight: 700;
+      @media (max-width: 1920px) {
+        font-size: 20px;
+      }
+    }
+    > p {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.4;
+      @media (max-width: 1920px) {
+        font-size: 16px;
+      }
+    }
+  }
 }

@@ -2,7 +2,7 @@
   <img src="./assets/img/contact-info/contact-background.png" alt="" />
 </section>
 
-<section class="section-contacts">
+<section [class.active] = "isViewed" class="section-contacts">
   <div>
     <img src="./assets/img/contact-info/contacts-sticker.png" alt="" />
   </div>
@@ -98,6 +98,9 @@
           </div>
           @if (!checkbox.valid && checkbox.touched) {
           <span> {{'contact-me.form.privacy-policy.privacy-warning'| translate}} </span>
+          }
+          @if(contactSent) {
+          <span class="contact-sent"> {{'contact-me.form.accepted'| translate}} </span>
           }
         </div>
         <div>
