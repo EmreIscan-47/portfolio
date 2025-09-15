@@ -1,3 +1,4 @@
+
 .header-wrapper {
   position: absolute;
   width: 100%;
@@ -5,17 +6,12 @@
   z-index: 100;
   padding-top: 20px;
   z-index: 4;
-  background: #2a759b;
-  background: linear-gradient(
-    0deg,
-    rgba(42, 117, 155, 0) 29%,
-    rgba(6, 18, 24, 0.62) 100%
-  );
+
 }
 
 .header-wrapper.active {
-    max-width: 1920px;
-    margin: 0 auto;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .header-mobile-content {
@@ -78,7 +74,6 @@
 .hero-logo {
   cursor: pointer;
   width: 85px !important;
-
 }
 
 .skills-a {
@@ -179,11 +174,11 @@
   > div:nth-child(1) {
     position: relative;
     cursor: default;
-   
+
     > h3 {
       font-family: "Bricolage";
       font-size: 12px;
-           color: rgba(248, 122, 85, 1);
+      color: rgba(248, 122, 85, 1);
       margin: 0 0 0;
     }
     > img {
@@ -212,7 +207,7 @@
     > h3 {
       font-family: "Bricolage";
       font-size: 12px;
-        color: rgba(248, 122, 85, 1);
+      color: rgba(248, 122, 85, 1);
       margin: 0 0 0;
     }
     > img {
@@ -228,7 +223,7 @@
 
   > div:nth-child(1).language-animation {
     cursor: pointer;
-     > h3 {
+    > h3 {
       color: white !important;
     }
     &:hover > img {
@@ -238,8 +233,8 @@
 
   > div:nth-child(3).language-animation {
     cursor: pointer;
-     > h3 {
-         color: white !important;
+    > h3 {
+      color: white !important;
     }
     &:hover > img {
       clip-path: inset(0 0 0 0);
@@ -248,11 +243,11 @@
 }
 
 .language-en {
-right: 48px;
+  right: 48px;
 }
 
 .language-de {
-right: 20px;
+  right: 20px;
 }
 
 @keyframes fade-in-right {

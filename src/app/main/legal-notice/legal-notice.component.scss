@@ -1,3 +1,17 @@
+
+.header-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+   background: #2a759b;
+  background: linear-gradient(
+    0deg,
+    rgba(42, 117, 155, 0) 29%,
+    rgba(6, 18, 24, 0.62) 100%
+  );
+  margin: 0 !important;
+}
+
 .section-legal-notice {
   display: flex;
   flex-direction: column;

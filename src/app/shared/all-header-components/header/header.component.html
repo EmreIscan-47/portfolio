@@ -1,3 +1,4 @@
+
 <section [class.active]="otherLayout_2" class="header-wrapper">
   <div class="header-mobile-content">
     <div
@@ -28,11 +29,11 @@
      
     </div>
     <div class="about-me-a" [ngClass]="{ 'about-me-a-showcase': otherLayout }">
-      <a href="homepage#about">{{ "header.about-me" | translate }}</a>
+      <a href="#about">{{ "header.about-me" | translate }}</a>
       <img src="./assets/img/1.png" alt="" />
     </div>
     <div class="skills-a" [ngClass]="{ 'skills-a-showcase': otherLayout }">
-      <a href="homepage#skills">{{ "header.skills" | translate }}</a>
+      <a href="#skills">{{ "header.skills" | translate }}</a>
       <img
         [class.deActive]="isGermanActive"
         src="./assets/img/2.png"
@@ -40,11 +41,11 @@
       />
     </div>
     <div class="projects-a" [ngClass]="{ 'projects-a-showcase': otherLayout }">
-      <a href="homepage#my-projects">{{ "header.project" | translate }}</a>
+      <a href="#my-projects">{{ "header.project" | translate }}</a>
       <img src="./assets/img/3.png" alt="" />
     </div>
     <div class="contact-a" [ngClass]="{ 'contacts-a-showcase': otherLayout }">
-      <a href="homepage#contact-me">{{ "header.contact" | translate }}</a>
+      <a href="#contact-me">{{ "header.contact" | translate }}</a>
       <img src="./assets/img/4.png" alt="" />
     </div>
 
@@ -140,25 +141,25 @@
     </div>
     <div class="header-mobile">
       <div class="about-me-a">
-        <a (click)="closeDropdown()" href="homepage#about">{{
+        <a (click)="closeDropdown()" href="#about">{{
           "header.about-me" | translate
         }}</a>
         <img src="./assets/img/1.png" alt="" />
       </div>
       <div class="skills-a">
-        <a (click)="closeDropdown()" href="homepage#skills">{{
+        <a (click)="closeDropdown()" href="#skills">{{
           "header.skills" | translate
         }}</a>
         <img src="./assets/img/2.png" alt="" />
       </div>
       <div class="projects-a">
-        <a (click)="closeDropdown()" href="homepage#my-projects">{{
+        <a (click)="closeDropdown()" href="#my-projects">{{
           "header.project" | translate
         }}</a>
         <img src="./assets/img/3.png" alt="" />
       </div>
       <div class="contact-a">
-        <a (click)="closeDropdown()" href="homepage#contact-me">{{
+        <a (click)="closeDropdown()" href="#contact-me">{{
           "header.contact" | translate
         }}</a>
         <img src="./assets/img/4.png" alt="" />
