@@ -55,6 +55,8 @@ export class ContactInfoComponent {
   isGermanActive: boolean = false;
   isViewed: boolean = false;
 
+    mailTest:boolean = false;
+
   constructor(private translate: TranslateService, private el: ElementRef) {
     this.checkLanguage();
 
@@ -116,8 +118,6 @@ export class ContactInfoComponent {
     this.borderBlue = borderNumber;
   }
 
-  mailTest = true;
-
   post = {
     endPoint: 'https://www.emre-iscan.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -155,11 +155,14 @@ export class ContactInfoComponent {
   validForm(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http
-        .post(this.post.endPoint, this.post.body(this.contactData))
+        .post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
+            console.log(response);
+            
             ngForm.resetForm();
             this.contactAccepted();
+            
           },
           error: (error) => {
             console.error(error);

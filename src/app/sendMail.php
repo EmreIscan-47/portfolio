@@ -19,7 +19,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $message = $params->message;
             $accept ? $params->accept;
     
-            $recipient = 'DEINE@MAIL.de';  
+            $recipient = 'connect@emre-iscan.com';  
             $subject = "Contact From <$email>";
             $message = "From:" . $name . "<br>" . $message ;
     
