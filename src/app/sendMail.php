@@ -28,7 +28,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $headers[] = 'Content-type: text/html; charset=utf-8';
 
             // Additional headers
-            $headers[] = "From: noreply@mywebsite.com";
+            $headers[] = "From: noreply@emreiscan.com";
 
             mail($recipient, $subject, $message, implode("\r\n", $headers));
             break;

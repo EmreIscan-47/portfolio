@@ -29,11 +29,11 @@
      
     </div>
     <div class="about-me-a" [ngClass]="{ 'about-me-a-showcase': otherLayout }">
-      <a href="#about">{{ "header.about-me" | translate }}</a>
+      <a [routerLink]="['/homepage']" [fragment]="'about'">{{ "header.about-me" | translate }}</a>
       <img src="./assets/img/1.png" alt="" />
     </div>
     <div class="skills-a" [ngClass]="{ 'skills-a-showcase': otherLayout }">
-      <a href="#skills">{{ "header.skills" | translate }}</a>
+      <a [routerLink]="['/homepage']" [fragment]="'skills'">{{ "header.skills" | translate }}</a>
       <img
         [class.deActive]="isGermanActive"
         src="./assets/img/2.png"
@@ -41,11 +41,11 @@
       />
     </div>
     <div class="projects-a" [ngClass]="{ 'projects-a-showcase': otherLayout }">
-      <a href="#my-projects">{{ "header.project" | translate }}</a>
+      <a [routerLink]="['/homepage']" [fragment]="'my-projects'">{{ "header.project" | translate }}</a>
       <img src="./assets/img/3.png" alt="" />
     </div>
     <div class="contact-a" [ngClass]="{ 'contacts-a-showcase': otherLayout }">
-      <a href="#contact-me">{{ "header.contact" | translate }}</a>
+      <a [routerLink]="['/homepage']" [fragment]="'contact-me'">{{ "header.contact" | translate }}</a>
       <img src="./assets/img/4.png" alt="" />
     </div>
 
@@ -141,25 +141,25 @@
     </div>
     <div class="header-mobile">
       <div class="about-me-a">
-        <a (click)="closeDropdown()" href="#about">{{
+        <a (click)="closeDropdown()" [routerLink]="['/homepage']" [fragment]="'about'">{{
           "header.about-me" | translate
         }}</a>
         <img src="./assets/img/1.png" alt="" />
       </div>
       <div class="skills-a">
-        <a (click)="closeDropdown()" href="#skills">{{
+        <a (click)="closeDropdown()" [routerLink]="['/homepage']" [fragment]="'skills'">{{
           "header.skills" | translate
         }}</a>
         <img src="./assets/img/2.png" alt="" />
       </div>
       <div class="projects-a">
-        <a (click)="closeDropdown()" href="#my-projects">{{
+        <a (click)="closeDropdown()" [routerLink]="['/homepage']" [fragment]="'my-projects'">{{
           "header.project" | translate
         }}</a>
         <img src="./assets/img/3.png" alt="" />
       </div>
       <div class="contact-a">
-        <a (click)="closeDropdown()" href="#contact-me">{{
+        <a (click)="closeDropdown()" [routerLink]="['/homepage']" [fragment]="'contact-me'">{{
           "header.contact" | translate
         }}</a>
         <img src="./assets/img/4.png" alt="" />

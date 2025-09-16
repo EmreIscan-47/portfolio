@@ -1,5 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { InMemoryScrollingOptions, provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideTranslateService } from '@ngx-translate/core';
@@ -10,9 +10,16 @@ import { ProjectShowcaseComponent } from './main/project-showcase/project-showca
 
 import { routes } from './app.routes';
 
+import { withInMemoryScrolling } from '@angular/router';
+
+const scrollConfig: InMemoryScrollingOptions = {
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+};
+
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes),
+    provideRouter(routes, withInMemoryScrolling(scrollConfig)),
     provideAnimationsAsync(),
     provideHttpClient(),
     provideTranslateService({

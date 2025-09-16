@@ -80,12 +80,12 @@
       "name": {
         "name-q": "What's your name?",
         "name-input": "Your name goes here",
-        "name-warning": "xxx"
+        "name-warning": "Enter a valid name"
       },
       "email": {
         "email-q": "What's your email?",
         "email-input": "youremail@email.com",
-        "email-warning": "xxx"
+        "email-warning": "Enter a valid email address"
       },
       "message": {
         "message-q": "How can I help you?",

@@ -206,10 +206,12 @@
     > div:first-child {
       position: relative;
       > img:first-child {
+        position: relative;
         width: 100%;
         max-width: 560px;
         height: 300px;
         border-radius: 30px;
+        top: -5%;
         @media (max-width: 1250px) {
           max-width: 410px;
           height: 200px;

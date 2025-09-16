@@ -59,6 +59,9 @@
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
               required
             />
+            @if(!isValid) {
+              <h2 class="email-warning">{{'contact-me.form.email.email-warning' | translate}}</h2>
+            }
           </div>
           <div (mouseenter)="borderActive(2)" (mouseleave)="borderActive(0)">
             <label for="message">{{'contact-me.form.message.message-q'| translate}}</label>

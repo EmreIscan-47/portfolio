@@ -27,21 +27,24 @@ export class ContactInfoComponent {
 
   namePlaceholder: string = 'Your name goes here';
   emailPlaceholder: string = 'youremail@email.com';
-  messagePlaceholder: string = 'Hello Lukas, I am interested in...';
+  messagePlaceholder: string = 'Hello Emre, I am interested in...';
+
+  emailPattern = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/;
 
   nameIsNotValid: boolean = false;
   emailIsNotValid: boolean = false;
   messageIsNotValid: boolean = false;
+  isValid: boolean = true;
 
   contactSent: boolean = false;
 
   http = inject(HttpClient);
 
-  contactData: { 
-    name: string; 
-    email: string; 
-    message: string; 
-    agree: boolean; 
+  contactData: {
+    name: string;
+    email: string;
+    message: string;
+    agree: boolean;
   } = {
     name: '',
     email: '',
@@ -79,6 +82,19 @@ export class ContactInfoComponent {
 
   checkLanguage() {
     this.isGermanActive = this.translate.currentLang === 'de';
+    this.changePlaceHolder();
+  }
+
+  changePlaceHolder() {
+    if (this.isGermanActive) {
+      this.namePlaceholder = 'Dein Name kommt hierhin';
+      this.emailPlaceholder = 'deineemail@email.com';
+      this.messagePlaceholder = 'Hallo Emre, Ich interessiere mich für...';
+    } else {
+      this.namePlaceholder = 'Your name goes here';
+      this.emailPlaceholder = 'youremail@email.com';
+      this.messagePlaceholder = 'Hello Emre, I am interested in...';
+    }
   }
 
   toggleCheckbox() {
@@ -103,7 +119,7 @@ export class ContactInfoComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://www.emre-iscan.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -198,16 +214,24 @@ export class ContactInfoComponent {
 
   emailNotValid() {
     this.trimAll();
-    console.log('yoo');
-
+    if (this.contactData.email.length >= 1) {
+      this.validateEmail();
+    }
     if (!this.contactData.email && this.contactData.email != null) {
       this.contactData.email.trim();
       this.emailPlaceholder = this.translate.instant(
         'contact-me.form.placeholder-warning.email-warning'
       );
+
       return true;
     }
     return false;
+  }
+
+  validateEmail() {
+    return this.isValid = this.emailPattern.test(
+      this.contactData.email.trim()
+    );
   }
 
   messageNotValid() {

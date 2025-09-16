@@ -85,7 +85,7 @@
       "email": {
         "email-q": "Wie lautet deine E-Mail?",
         "email-input": "deineemail@email.com",
-        "email-warning": "xxx"
+        "email-warning": "Keine gültige E-Mail-Adresse"
       },
       "message": {
         "message-q": "Wie kann ich dir helfen?",
@@ -113,7 +113,7 @@
   },
   "project-showcase": {
     "back": "Zurück",
-    "new-project": "Neues Projekt",
+    "new-project": "Nächstes Projekt",
     "el-polo-loco": {
       "title": "El Polo Loco",
       "description": {
