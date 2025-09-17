@@ -2,42 +2,46 @@
   <img src="./assets/img/contact-info/contact-background.png" alt="" />
 </section>
 
-<section [class.active] = "isViewed" class="section-contacts">
+<section [class.active]="isViewed" class="section-contacts">
   <div>
     <img src="./assets/img/contact-info/contacts-sticker.png" alt="" />
   </div>
   <div class="top-contacts-wrapper">
     <div>
-      <h2>{{'contact-me.title.title_1'| translate}}</h2>
-      <h1 [class.deActive] = "isGermanActive" >{{'contact-me.title.title_2'| translate}}</h1>
+      <h2>{{ "contact-me.title.title_1" | translate }}</h2>
+      <h1 [class.deActive]="isGermanActive">
+        {{ "contact-me.title.title_2" | translate }}
+      </h1>
       <span
-        >{{'contact-me.description.description-text_1'| translate}}
+        >{{ "contact-me.description.description-text_1" | translate }}
         <br />
         <br />
-        {{'contact-me.description.description-text_2'| translate}} </span
-      >
+        {{ "contact-me.description.description-text_2" | translate }}
+      </span>
 
       <div>
         <img src="./assets/img/contact-info/line.png" alt="" />
       </div>
     </div>
 
-    <form
-      (ngSubmit)="onSubmit(contactForm)"
-      #contactForm="ngForm"
-    >
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="form-content">
         <div>
           <div [class.active]="borderBlue == 1">
-            <label for="name">{{'contact-me.form.name.name-q'| translate}}</label>
+            <label for="name">{{
+              "contact-me.form.name.name-q" | translate
+            }}</label>
             <input
               [(ngModel)]="contactData.name"
-               [ngClass] = "{'input-error': !contactData.name && contactForm.touched && nameIsNotValid}"
-               (blur) = "nameIsNotValid = namePlaceHolderNotValid()"
+              [ngClass]="{
+                'input-error':
+                  !contactData.name && contactForm.touched && nameIsNotValid
+              }"
+              (blur)="nameIsNotValid = namePlaceHolderNotValid()"
               type="text"
               id="name"
               name="name"
-              placeholder="{{namePlaceholder}}"
+              placeholder="{{ namePlaceholder }}"
               required
             />
             <!--  <h2>Your name goes here</h2> -->
@@ -47,32 +51,46 @@
             (mouseenter)="borderActive(1)"
             (mouseleave)="borderActive(0)"
           >
-            <label for="email">{{'contact-me.form.email.email-q'| translate}}</label>
+            <label for="email">{{
+              "contact-me.form.email.email-q" | translate
+            }}</label>
             <input
               [(ngModel)]="contactData.email"
-              [ngClass] = "{'input-error': !contactData.email && contactForm.touched && emailIsNotValid}"
-              (blur) = "emailIsNotValid = emailNotValid()"
+              [ngClass]="{
+                'input-error':
+                  !contactData.email && contactForm.touched && emailIsNotValid
+              }"
+              (blur)="emailIsNotValid = emailNotValid()"
               type="text"
               id="email"
               name="email"
-              placeholder="{{emailPlaceholder}}"
+              placeholder="{{ emailPlaceholder }}"
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
               required
             />
             @if(!isValid) {
-              <h2 class="email-warning">{{'contact-me.form.email.email-warning' | translate}}</h2>
+            <h2 class="email-warning">
+              {{ "contact-me.form.email.email-warning" | translate }}
+            </h2>
             }
           </div>
           <div (mouseenter)="borderActive(2)" (mouseleave)="borderActive(0)">
-            <label for="message">{{'contact-me.form.message.message-q'| translate}}</label>
+            <label for="message">{{
+              "contact-me.form.message.message-q" | translate
+            }}</label>
             <input
               [(ngModel)]="contactData.message"
-              [ngClass] = "{'input-error': !contactData.message && contactForm.touched && messageIsNotValid }"
+              [ngClass]="{
+                'input-error':
+                  !contactData.message &&
+                  contactForm.touched &&
+                  messageIsNotValid
+              }"
               (blur)="messageIsNotValid = messageNotValid()"
               type="text"
               name="message"
               id="message"
-              placeholder="{{messagePlaceholder}}"
+              placeholder="{{ messagePlaceholder }}"
               required
             />
           </div>
@@ -95,15 +113,25 @@
               required
             />
             <h2>
-              {{'contact-me.form.privacy-policy.privacy-policy_1'| translate}} <a [routerLink]="['/privacy-policy']" href="">{{'contact-me.form.privacy-policy.privacy-hyper-link'| translate}}</a> {{'contact-me.form.privacy-policy.privacy-policy_2'| translate}}
-             
+              {{
+                "contact-me.form.privacy-policy.privacy-policy_1" | translate
+              }}
+              <a [routerLink]="['/privacy-policy']" href="">{{
+                "contact-me.form.privacy-policy.privacy-hyper-link" | translate
+              }}</a>
+              {{
+                "contact-me.form.privacy-policy.privacy-policy_2" | translate
+              }}
             </h2>
           </div>
           @if (!checkbox.valid && checkbox.touched) {
-          <span> {{'contact-me.form.privacy-policy.privacy-warning'| translate}} </span>
-          }
-          @if(contactSent) {
-          <span class="contact-sent"> {{'contact-me.form.accepted'| translate}} </span>
+          <span>
+            {{ "contact-me.form.privacy-policy.privacy-warning" | translate }}
+          </span>
+          } @if(contactSent) {
+          <span class="contact-sent">
+            {{ "contact-me.form.accepted" | translate }}
+          </span>
           }
         </div>
         <div>
@@ -112,9 +140,8 @@
             type="submit"
             name="submit"
             id="submit"
-            value="{{'contact-me.form.send'| translate}} "
-           
-            [class.buttonAbled]="contactForm.valid "
+            value="{{ 'contact-me.form.send' | translate }} "
+            [class.buttonAbled]="contactForm.valid"
           />
         </div>
       </div>

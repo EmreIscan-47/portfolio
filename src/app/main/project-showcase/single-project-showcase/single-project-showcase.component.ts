@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -12,7 +13,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class SingleProjectShowcaseComponent {
   @Input() id!: number;
 
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService, private router: Router) {}
 
   currentProject: string = '';
   previousProject: number = 0;
@@ -97,6 +98,10 @@ export class SingleProjectShowcaseComponent {
       default:
         break;
     }
+  }
+
+  goToHomePage() {
+    this.router.navigate(['/']);
   }
 
   changeProject(

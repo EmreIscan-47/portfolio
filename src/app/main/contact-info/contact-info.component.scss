@@ -50,6 +50,13 @@
   @media (max-width: 1920px) {
     margin: 0 0;
   }
+  @media (max-width: 520px) {
+    transform: translate(-300px);
+  }
+
+  @media (max-width: 350px) {
+    transform: translate(-200px);
+  }
   > div:first-of-type {
     position: absolute;
     top: 20%;

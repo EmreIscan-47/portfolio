@@ -8,13 +8,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [HeaderComponent, FooterComponent, TranslateModule],
   templateUrl: './privacy-policy.component.html',
-  styleUrl: './privacy-policy.component.scss'
+  styleUrl: './privacy-policy.component.scss',
 })
 export class PrivacyPolicyComponent {
-showOtherLayout: boolean = true;
-isGermanActive:boolean = false;
+  showOtherLayout: boolean = true;
+  isGermanActive: boolean = false;
 
-constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService) {
     this.checkLanguage();
 
     this.translate.onLangChange.subscribe(() => {
@@ -22,10 +22,7 @@ constructor(private translate: TranslateService) {
     });
   }
 
-
   checkLanguage() {
     this.isGermanActive = this.translate.currentLang === 'de';
   }
-
-
 }

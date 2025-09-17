@@ -5,9 +5,9 @@
   margin: 0 3dvb;
   gap: 30px 200px;
   max-width: 1920px;
-  margin: 0 30%;
-  margin-top: 300px !important;
-    opacity: 0;
+  margin: 0 auto;
+  margin-top: 200px !important;
+  opacity: 0;
   transform: translate(-500px);
   transition: all 1s;
 
@@ -19,6 +19,14 @@
   }
   @media (max-width: 1800px) {
     margin: 0 3dvb;
+  }
+
+  @media (max-width: 520px) {
+    transform: translate(-300px);
+  }
+
+  @media (max-width: 350px) {
+    transform: translate(-200px);
   }
 
   > div {

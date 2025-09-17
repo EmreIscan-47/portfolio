@@ -15,8 +15,15 @@
   @media (max-width: 1250px) {
     margin-bottom: 100px;
   }
+  @media (max-width: 520px) {
+    transform: translate(-300px);
+  }
   @media (max-width: 450px) {
     margin-bottom: 150px;
+  }
+
+  @media (max-width: 350px) {
+    transform: translate(-200px);
   }
   > div:first-child {
     display: flex;
@@ -64,7 +71,7 @@
 }
 
 .section-testimonials.active {
-    opacity: 1;
+  opacity: 1;
   transform: translate(0);
 }
 

@@ -11,7 +11,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class AboutMeComponent {
   isGermanActive: boolean = false;
   isViewed: boolean = false;
-  
+
   constructor(private translate: TranslateService, private el: ElementRef) {
     this.checkLanguage();
 

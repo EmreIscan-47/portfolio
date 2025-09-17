@@ -12,10 +12,15 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [HeroComponent, MyProjectsComponent, AboutMeComponent, SkillsComponent,TestimonialsComponent,ContactInfoComponent],
+  imports: [
+    HeroComponent,
+    MyProjectsComponent,
+    AboutMeComponent,
+    SkillsComponent,
+    TestimonialsComponent,
+    ContactInfoComponent,
+  ],
   templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
+  styleUrl: './main.component.scss',
 })
-export class MainComponent {
-
-}
+export class MainComponent {}

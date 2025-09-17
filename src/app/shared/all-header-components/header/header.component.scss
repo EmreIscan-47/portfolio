@@ -1,12 +1,9 @@
-
 .header-wrapper {
   position: absolute;
   width: 100%;
-
   z-index: 100;
   padding-top: 20px;
   z-index: 4;
-
 }
 
 .header-wrapper.active {
@@ -32,8 +29,11 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 60px;
-
+  max-width: 1920px;
+  gap: 0px;
+     @media (max-width: 1920px) {
+gap: 60px;
+     }
   @media (max-width: 850px) {
     display: none;
   }

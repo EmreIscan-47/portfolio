@@ -1,35 +1,60 @@
 <section class="section-project-showcase">
-  <div (click)= "goToProject(previousProject)">
+  <div (click)="goToHomePage()">
     <img src="./assets/img/project-showcase/orange-arrow.png" alt="" />
-    <h3>{{'project-showcase.back' | translate}}</h3>
+    <h3>{{ "project-showcase.back" | translate }}</h3>
   </div>
   <div class="top-showcase-wrapper">
     <div class="left-showcase-wrapper">
       <div>
-        <h1>{{'project-showcase.'+ currentProject +'.title' | translate}}</h1>
-        <img
-          src="./assets/img/project-showcase/blue_line.png"
-          alt=""
-        />
+        <h1>
+          {{ "project-showcase." + currentProject + ".title" | translate }}
+        </h1>
+        <img src="./assets/img/project-showcase/blue_line.png" alt="" />
       </div>
       <div>
         <div>
-          <h4>{{'project-showcase.'+ currentProject+'.description.description-title' | translate}}</h4>
-          <span
-            > {{'project-showcase.'+ currentProject+'.description.description-text' | translate}}</span
+          <h4>
+            {{
+              "project-showcase." +
+                currentProject +
+                ".description.description-title" | translate
+            }}
+          </h4>
+          <span>
+            {{
+              "project-showcase." +
+                currentProject +
+                ".description.description-text" | translate
+            }}</span
           >
         </div>
 
         <div>
-          <h4>{{'project-showcase.'+ currentProject+'.implementation-details.implementation-title' | translate}}</h4>
-          <span
-            >{{'project-showcase.'+ currentProject+'.implementation-details.implementation-text' | translate}}</span
-          >
+          <h4>
+            {{
+              "project-showcase." +
+                currentProject +
+                ".implementation-details.implementation-title" | translate
+            }}
+          </h4>
+          <span>{{
+            "project-showcase." +
+              currentProject +
+              ".implementation-details.implementation-text" | translate
+          }}</span>
         </div>
         <div>
           <h3>
-            {{'project-showcase.'+ currentProject+'.duration.duration-text' | translate}}
-            <h3> {{'project-showcase.'+ currentProject+'.duration.duration-time' | translate}}</h3>
+            {{
+              "project-showcase." + currentProject + ".duration.duration-text"
+                | translate
+            }}
+            <h3>
+              {{
+                "project-showcase." + currentProject + ".duration.duration-time"
+                  | translate
+              }}
+            </h3>
           </h3>
         </div>
         <div class="skill-set">
@@ -43,41 +68,29 @@
     <div class="right-showcase-wrapper">
       <div>
         <div>
-          <img
-            src={{firstPicture}}
-            alt=""
-          />
-          <img
-            src="{{secondPicture}}"
-            alt=""
-          />
+          <img src="{{ firstPicture }}" alt="" />
+          <img src="{{ secondPicture }}" alt="" />
         </div>
         <div>
           <button (click)="openLink(currentGitLink)">GitHub</button>
           <button (click)="openLink(currentLink)">Live Test</button>
         </div>
         <div class="project-arrow">
-          <div (click)= "goToProject(previousProject)">
-            <img
-              src="./assets/img/project-showcase/orange-arrow.png"
-              alt=""
-            />
-            <h3>{{'project-showcase.back' | translate}}</h3>
+          <div (click)="goToProject(previousProject)">
+            <img src="./assets/img/project-showcase/orange-arrow.png" alt="" />
+            <h3>{{ "project-showcase.back" | translate }}</h3>
           </div>
-          <div (click)= "goToProject(nextProject)"> 
-            <h3>{{'project-showcase.new-project' | translate}}</h3>
-            <img
-              src="./assets/img/project-showcase/yellow-arrow.png"
-              alt=""
-            />
+          <div (click)="goToProject(nextProject)">
+            <h3>{{ "project-showcase.new-project" | translate }}</h3>
+            <img src="./assets/img/project-showcase/yellow-arrow.png" alt="" />
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div (click)= "goToProject(nextProject)">
-    <h3>{{'project-showcase.new-project' | translate}}</h3>
+  <div (click)="goToProject(nextProject)">
+    <h3>{{ "project-showcase.new-project" | translate }}</h3>
     <img src="./assets/img/project-showcase/yellow-arrow.png" alt="" />
   </div>
 </section>

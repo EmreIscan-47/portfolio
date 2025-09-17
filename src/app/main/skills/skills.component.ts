@@ -35,7 +35,7 @@ export class SkillsComponent {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.01 }
     );
 
     observer.observe(this.el.nativeElement);

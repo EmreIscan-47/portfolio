@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderComponent } from '../../shared/all-header-components/header/header.component';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -11,13 +11,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
-firstWrapper: string[] = ['F', 'r', 'o', 'n', 't', 'e', 'n', 'd'];
-secondWrapper: string[] = ['D', 'E', 'V', 'E', 'L', 'O', 'P', 'E', 'R'];
-hoveredIndex: number | null = null;
-helloWorldHover: boolean = false;
-rollIn: boolean = false;
-isGermanActive: boolean = false;
-laughSmiley: boolean = false;
+  firstWrapper: string[] = ['F', 'r', 'o', 'n', 't', 'e', 'n', 'd'];
+  secondWrapper: string[] = ['D', 'E', 'V', 'E', 'L', 'O', 'P', 'E', 'R'];
+  hoveredIndex: number | null = null;
+  helloWorldHover: boolean = false;
+  rollIn: boolean = false;
+  isGermanActive: boolean = false;
+  laughSmiley: boolean = false;
 
   constructor(private translate: TranslateService) {
     this.changeWrapper();
@@ -28,7 +28,6 @@ laughSmiley: boolean = false;
       this.checkLanguage();
     });
   }
-
 
   checkLanguage() {
     this.isGermanActive = this.translate.currentLang === 'de';

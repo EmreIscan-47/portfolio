@@ -18,7 +18,7 @@
     margin-top: 55px;
   }
 
-    @media (max-width: 350px) {
+  @media (max-width: 350px) {
     margin-top: 115px;
   }
 
@@ -54,7 +54,6 @@
         @media (max-width: 500px) {
           font-weight: 400;
         }
-       
       }
       > h2.active {
         color: black !important;
@@ -73,9 +72,9 @@
           @media (max-width: 750px) {
             text-align: end;
           }
-          &:hover{
-          cursor: pointer;
-        }
+          &:hover {
+            cursor: pointer;
+          }
         }
         > h2.active {
           color: black !important;
@@ -104,11 +103,11 @@
 
 .footer-wrapper.active {
   width: 1920px;
-   @media (max-width: 1920px) {
-   width: 100%;
+  @media (max-width: 1920px) {
+    width: 100%;
   }
 
- @media (max-width: 1250px) {
+  @media (max-width: 1250px) {
     margin-top: 0 !important;
   }
 }

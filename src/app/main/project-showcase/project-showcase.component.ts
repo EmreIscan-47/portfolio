@@ -11,23 +11,23 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './project-showcase.component.scss',
 })
 export class ProjectShowcaseComponent {
-showOtherLayout: boolean = true;
-projectId: number = 0;
+  showOtherLayout: boolean = true;
+  projectId: number = 0;
 
-elPoloLocoSkills: { logo: string; name: string }[] = [
-  {
-    logo: './../../../assets/img/project-showcase/Js.png',
-    name: 'JavaScript',
-  },
-  {
-    logo: './../../../assets/img/project-showcase/HTML.png',
-    name: 'HTML',
-  },
-  {
-    logo: './../../../assets/img/project-showcase/CSS.png',
-    name: 'CSS',
-  },
-];
+  elPoloLocoSkills: { logo: string; name: string }[] = [
+    {
+      logo: './../../../assets/img/project-showcase/Js.png',
+      name: 'JavaScript',
+    },
+    {
+      logo: './../../../assets/img/project-showcase/HTML.png',
+      name: 'HTML',
+    },
+    {
+      logo: './../../../assets/img/project-showcase/CSS.png',
+      name: 'CSS',
+    },
+  ];
 
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {

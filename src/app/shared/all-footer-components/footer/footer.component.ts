@@ -10,19 +10,18 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-gitHubRoll: boolean = false;
-linkedInRoll: boolean = false;
-mailRoll: boolean = false;
+  gitHubRoll: boolean = false;
+  linkedInRoll: boolean = false;
+  mailRoll: boolean = false;
 
-gitHubCountOne: number = 0;
-linkedInCountOne: number = 0;
-mailCountOne: number = 0;
+  gitHubCountOne: number = 0;
+  linkedInCountOne: number = 0;
+  mailCountOne: number = 0;
 
-isGermanActive: boolean = false;
-onHover: boolean = false;
+  isGermanActive: boolean = false;
+  onHover: boolean = false;
 
-@Input() otherLayout: boolean = false;
-
+  @Input() otherLayout: boolean = false;
 
   constructor(private router: Router, private translate: TranslateService) {
     this.checkLanguage();
@@ -37,8 +36,6 @@ onHover: boolean = false;
 
   goToPage(url: string) {
     this.router.navigate([url]);
-    console.log("yo");
-    
   }
 
   goToStartPage() {

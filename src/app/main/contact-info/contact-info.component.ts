@@ -55,7 +55,7 @@ export class ContactInfoComponent {
   isGermanActive: boolean = false;
   isViewed: boolean = false;
 
-    mailTest:boolean = false;
+  mailTest: boolean = false;
 
   constructor(private translate: TranslateService, private el: ElementRef) {
     this.checkLanguage();
@@ -155,14 +155,15 @@ export class ContactInfoComponent {
   validForm(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http
-        .post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+        .post(
+          this.post.endPoint,
+          this.post.body(this.contactData),
+          this.post.options
+        )
         .subscribe({
           next: (response) => {
-            console.log(response);
-            
             ngForm.resetForm();
             this.contactAccepted();
-            
           },
           error: (error) => {
             console.error(error);
@@ -232,9 +233,9 @@ export class ContactInfoComponent {
   }
 
   validateEmail() {
-    return this.isValid = this.emailPattern.test(
+    return (this.isValid = this.emailPattern.test(
       this.contactData.email.trim()
-    );
+    ));
   }
 
   messageNotValid() {
@@ -245,9 +246,5 @@ export class ContactInfoComponent {
       return true;
     }
     return false;
-  }
-
-  disabledClick() {
-    console.log('yo');
   }
 }
