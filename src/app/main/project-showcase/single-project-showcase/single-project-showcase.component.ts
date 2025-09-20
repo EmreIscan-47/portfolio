@@ -101,7 +101,7 @@ export class SingleProjectShowcaseComponent {
   }
 
   goToHomePage() {
-    this.router.navigate(['/']);
+      this.router.navigate(['/homepage'], { fragment: 'my-projects' });
   }
 
   changeProject(
