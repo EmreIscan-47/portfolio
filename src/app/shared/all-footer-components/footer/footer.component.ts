@@ -49,6 +49,10 @@ export class FooterComponent {
     }
   }
 
+   openMail() {
+    window.location.href = 'mailto:connect@emre-iscan.com';
+  }
+
   rollIn(imgRollNumer: Number) {
     switch (imgRollNumer) {
       case 1:

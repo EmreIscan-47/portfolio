@@ -44,6 +44,10 @@ export class HeaderComponent {
     window.open(link, '_blank');
   }
 
+  openMail() {
+    window.location.href = 'mailto:connect@emre-iscan.com';
+  }
+
   openDropdown() {
     if (this.otherLayout) {
       this.styleStatus = 3;

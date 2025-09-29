@@ -59,4 +59,8 @@ export class HeroComponent {
   openLink(link: string) {
     window.open(link, '_blank');
   }
+
+   openMail() {
+    window.location.href = 'mailto:connect@emre-iscan.com';
+  }
 }
