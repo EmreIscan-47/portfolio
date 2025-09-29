@@ -79,6 +79,9 @@
       font-size: 18px;
       color: white;
       margin-block-end: 0;
+      @media (max-width: 500px) {
+        font-size: 14px;
+      }
     }
     > img {
       width: 24px;
@@ -302,6 +305,9 @@
         font-size: 18px;
         color: white;
         margin-block-end: 0;
+         @media (max-width: 500px) {
+        font-size: 14px;
+      }
       }
       > img {
         width: 45px;

@@ -23,6 +23,9 @@
     background-position: 50% -40px;
     background-size: 100% !important;
   }
+    @media (max-width: 1250px) {
+        height: 120dvh;
+  }
 
   @media (max-width: 850px) {
     background-size: 110% !important;
@@ -44,6 +47,9 @@
     background-image: url("./../../../assets/img/project-showcase/showcase-mobile-background.png");
     background-size: 110% !important;
     background-position: 50% 0px;
+  }
+  @media (max-width: 350px) {
+        height: 1160px;
   }
 
   @media (max-width: 340px) {

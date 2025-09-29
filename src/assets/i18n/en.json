@@ -52,14 +52,14 @@
     },
     "description": "Here's what some of my colleagues have to say about working with me. Their feedback highlights my strengths and the positive impact I've had on our projects and team dynamics.",
     "colleague_1": {
-      "name": "Tobias Lange",
+      "name": "Joachim Pürcher",
       "role": "Frontend Developer",
-      "feedback": "Emre is a highly skilled front-end developer who consistently delivers high-quality work. His attention to detail and ability to translate design concepts into functional web applications is impressive. He's a great team player and always willing to go the extra mile to ensure project success."
+      "feedback": "Emre always had an open ear for my concerns and questions. Even in stressful situations, he kept track of everything and never lost sight of the big picture. His solution-oriented approach made him a reliable and thoughtful front-end developer."
     },
     "colleague_2": {
-      "name": "John Doe",
+      "name": "Lucas Hamacher",
       "role": "Frontend Developer",
-      "feedback": "Working with Emre has been a pleasure. He has a strong understanding of front-end technologies and is always eager to learn and improve his skills. His problem-solving abilities and creativity make him a valuable asset to any development team."
+      "feedback": "Working with Emre in the team was a thoroughly positive experience. His excellent understanding of how to implement complex requirements definitely saved the group time and effort. Emre's friendly manner and ability to explain things clearly also helped the team make progress. I enjoyed working with him and can definitely see myself working on another project with him in the future."
     },
     "colleague_3": {
       "name": "Sarah Johnson",

@@ -48,18 +48,18 @@
   "colleague-thoughts": {
     "title": {
       "title_1": "IN IHREN WORTEN:",
-      "title_2": "Gedanken der Kollegen"
+      "title_2": "Gedanken von Kolleg:Innen"
     },
     "description": "Hier ist, was einige meiner Kollegen über die Zusammenarbeit mit mir zu sagen haben. Ihr Feedback hebt meine Stärken und den positiven Einfluss hervor, den ich auf unsere Projekte und die Teamdynamik habe.",
     "colleague_1": {
-      "name": "Tobias Lange",
+      "name": "Joachim Pürcher",
       "role": "Frontend-Entwickler",
-      "feedback": "Emre ist ein äußerst talentierter Frontend-Entwickler, der stets qualitativ hochwertige Arbeit liefert. Seine Detailgenauigkeit und Fähigkeit, Designkonzepte in funktionale Webanwendungen umzusetzen, ist beeindruckend. Er ist ein großartiger Teamplayer und bereit, stets die Extrameile zu gehen, um den Projekterfolg sicherzustellen."
+      "feedback": "Emre hatte stets ein offenes Ohr für meine Anliegen und Fragen. Selbst in stressigen Situationen behielt er den Überblick und verlor dabei nie das große Ganze aus den Augen. Seine lösungsorientierte Art machte ihn zu einem verlässlichen und reflektierten Frontendentwickler."
     },
     "colleague_2": {
-      "name": "John Doe",
+      "name": "Lucas Hamacher",
       "role": "Frontend-Entwickler",
-      "feedback": "Die Zusammenarbeit mit Emre war eine Freude. Er verfügt über ein starkes Verständnis von Frontend-Technologien und ist immer bestrebt, zu lernen und seine Fähigkeiten zu verbessern. Seine Problemlösungsfähigkeiten und Kreativität machen ihn zu einer wertvollen Bereicherung für jedes Entwicklerteam."
+      "feedback": "Die Zusammenarbeit mit Emre im Team war durchweg positiv. Sein gutes Verständnis dafür komplexe Anforderungen umzusetzen hat der Gruppe auf jeden Fall Zeit und Mühe gespart. Was uns im Team auch weiter gebracht hat war Emres sympathische Art und seine Fähigkeit gut erklären zu können. Ich habe gerne mit ihm zusammengearbeitet und kann mir auch vorstellen in Zukunft mal wieder ein Projekt mit ihm umzusetzen."
     },
     "colleague_3": {
       "name": "Sarah Johnson",

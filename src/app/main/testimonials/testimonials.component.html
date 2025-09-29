@@ -26,7 +26,7 @@
             <h3>{{ "colleague-thoughts.colleague_1.name" | translate }}</h3>
             <h3>{{ "colleague-thoughts.colleague_1.role" | translate }}</h3>
           </div>
-          <img src="./assets/img/testimonials/linkedIn-profile.png" alt="" />
+          <img (click)="openLink('https://www.linkedin.com/in/joachim-p%C3%BCrcher-92b249345/') " src="./assets/img/testimonials/linkedIn-profile.png" alt="" />
         </div>
       </div>
     </div>
@@ -49,12 +49,12 @@
             <h3>{{ "colleague-thoughts.colleague_2.name" | translate }}</h3>
             <h3>{{ "colleague-thoughts.colleague_2.role" | translate }}</h3>
           </div>
-          <img src="./assets/img/testimonials/linkedIn-profile.png" alt="" />
+          <img (click)="openLink('https://de.linkedin.com/in/lucas-hamacher-715ba927b') "  src="./assets/img/testimonials/linkedIn-profile.png" alt="" />
         </div>
       </div>
     </div>
 
-    <div>
+    <div class="no-comment">
       <img
         class="testimonials-img-three"
         src="./assets/img/testimonials/rectangle-1.png"

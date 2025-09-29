@@ -28,4 +28,8 @@ export class TestimonialsComponent {
 
     observer.observe(this.el.nativeElement);
   }
+
+  openLink(link: string) {
+    window.open(link, '_blank');
+  }
 }
