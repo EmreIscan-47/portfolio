@@ -122,7 +122,7 @@
       },
       "implementation-details": {
         "implementation-title": "Umsetzungsdetails",
-        "implementation-text": "Das Projekt wurde mit objektorientiertem JavaScript entwickelt und bewegliche Objekte, zeichnbare Elemente, Level und Audio in separate Komponenten aufgeteilt. Die größte Herausforderung bestand darin, flüssige Animationen zu gewährleisten und gleichzeitig zeitbasierte Prozesse wie Intervalle und Timeouts zu verwalten. Dieser Ansatz sorgte für sauberen Code und vertiefte meine Erfahrung in Animation, Timing und Audiokoordination."
+        "implementation-text": "Das Projekt wurde mit objektorientiertem JavaScript entwickelt und bewegliche Objekte, darstellbare Elemente, Level und Audio in separate Komponenten aufgeteilt. Die größte Herausforderung bestand darin, flüssige Animationen zu gewährleisten und gleichzeitig zeitbasierte Prozesse wie Intervalle und Timeouts zu verwalten. Dieser Ansatz sorgte für sauberen Code und vertiefte meine Erfahrung in Animation, Timing und Audiokoordination."
       },
       "duration": {
         "duration-text": "Dauer:",
